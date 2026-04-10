@@ -1,0 +1,10 @@
+{
+  "subject_id": "IXI016-Guys-0697",
+  "candidate": "W2",
+  "NMI": 1.0923,
+  "jacobian_min": 0.1456,
+  "jacobian_max": 4.8618,
+  "jacobian_neg_ratio": 0.0,
+  "inverse_consistency_nmi_loss": 0.0724,
+  "jacobian_fail": false
+}

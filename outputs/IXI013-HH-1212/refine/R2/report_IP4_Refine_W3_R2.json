@@ -1,0 +1,20 @@
+{
+  "subject_id": "IXI013-HH-1212",
+  "step": "IP4_Refine_W3_R2",
+  "timestamp": "2026-04-08T21:51:04",
+  "status": "FAILED",
+  "duration_sec": 1383.1,
+  "metrics": {
+    "vessel_mask_volume_mm3": 0.0,
+    "refine_method": "Graph-cut / active contour, T1+T2 joint"
+  },
+  "qc_flags": {},
+  "warnings": [],
+  "errors": [
+    "MemoryError: Unable to allocate 79.1 MiB for an array with shape (180, 240, 240) and data type float64"
+  ],
+  "output_files": {
+    "vessel_mask": "C:\\Users\\ahmet\\Desktop\\BrainSeg-20260327T093216Z-1-001\\outputs\\IXI013-HH-1212\\refine\\R2\\vessel_mask.nii.gz",
+    "vessel_skeleton": "C:\\Users\\ahmet\\Desktop\\BrainSeg-20260327T093216Z-1-001\\outputs\\IXI013-HH-1212\\refine\\R2\\vessel_skeleton.nii.gz"
+  }
+}

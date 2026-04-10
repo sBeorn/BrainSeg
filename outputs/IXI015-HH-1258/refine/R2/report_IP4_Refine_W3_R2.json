@@ -1,0 +1,46 @@
+{
+  "subject_id": "IXI015-HH-1258",
+  "step": "IP4_Refine_W3_R2",
+  "timestamp": "2026-04-08T08:54:50",
+  "status": "SUCCESS",
+  "duration_sec": 94.5,
+  "metrics": {
+    "vessel_mask_volume_mm3": 87190.0,
+    "refine_method": "Graph-cut / active contour, T1+T2 joint",
+    "refine_metrics": {
+      "AD_left": {
+        "boundary_score_pre": 0.3911,
+        "boundary_score_post": 0.3911,
+        "boundary_improvement": 0.0,
+        "volume_pre_mm3": 9.0,
+        "volume_post_mm3": 9.0,
+        "volume_drift": 0.0,
+        "compactness_delta": 0.0,
+        "vessel_overlap_voxels": 0,
+        "vessel_min_dist_mm": 78.24
+      },
+      "AD_right": {
+        "boundary_score_pre": 0.4615,
+        "boundary_score_post": 0.4615,
+        "boundary_improvement": 0.0,
+        "volume_pre_mm3": 6.0,
+        "volume_post_mm3": 6.0,
+        "volume_drift": 0.0,
+        "compactness_delta": 0.0,
+        "vessel_overlap_voxels": 0,
+        "vessel_min_dist_mm": 79.06
+      }
+    }
+  },
+  "qc_flags": {},
+  "warnings": [],
+  "errors": [],
+  "output_files": {
+    "vessel_mask": "C:\\Users\\ahmet\\Desktop\\BrainSeg-20260327T093216Z-1-001\\outputs\\IXI015-HH-1258\\refine\\R2\\vessel_mask.nii.gz",
+    "vessel_skeleton": "C:\\Users\\ahmet\\Desktop\\BrainSeg-20260327T093216Z-1-001\\outputs\\IXI015-HH-1258\\refine\\R2\\vessel_skeleton.nii.gz",
+    "vessel_label_distances_csv": "C:\\Users\\ahmet\\Desktop\\BrainSeg-20260327T093216Z-1-001\\outputs\\IXI015-HH-1258\\refine\\R2\\vessel_label_distances.csv",
+    "QC_vessel_label_overlay": "C:\\Users\\ahmet\\Desktop\\BrainSeg-20260327T093216Z-1-001\\outputs\\IXI015-HH-1258\\refine\\R2\\vessel_label_overlay.png",
+    "refined_left_labels": "C:\\Users\\ahmet\\Desktop\\BrainSeg-20260327T093216Z-1-001\\outputs\\IXI015-HH-1258\\refine\\R2\\refined_left_labels",
+    "refined_right_labels": "C:\\Users\\ahmet\\Desktop\\BrainSeg-20260327T093216Z-1-001\\outputs\\IXI015-HH-1258\\refine\\R2\\refined_right_labels"
+  }
+}

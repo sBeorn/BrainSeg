@@ -1,0 +1,5782 @@
+{
+  "subject_id": "IXI012-HH-1211",
+  "step": "IP3_Propagate_W2",
+  "timestamp": "2026-04-08T12:06:48",
+  "status": "SUCCESS",
+  "duration_sec": 325.3,
+  "metrics": {
+    "fwd_transforms_found": 2,
+    "n_labels": 41,
+    "problem_labels_count": 18,
+    "fragmented_labels": [
+      "AD_left",
+      "LGNmc_left",
+      "MV_left",
+      "MV_right",
+      "Pv_left",
+      "mtt_left",
+      "mtt_right",
+      "sPf_left",
+      "sPf_right"
+    ],
+    "label_quality": {
+      "AD": {
+        "left": {
+          "label_name": "AD",
+          "side": "left",
+          "volume_mm3": 6.0,
+          "centroid_mm": [
+            89.83,
+            109.67,
+            154.17
+          ],
+          "centroid_normalized": [
+            0.4836,
+            0.4591,
+            0.692
+          ],
+          "connected_components": 2,
+          "compactness": 0.969,
+          "midline_distance_mm": 0.17,
+          "LR_volume_ratio": 1.5
+        },
+        "right": {
+          "label_name": "AD",
+          "side": "right",
+          "volume_mm3": 4.0,
+          "centroid_mm": [
+            93.0,
+            109.5,
+            155.0
+          ],
+          "centroid_normalized": [
+            0.5031,
+            0.4583,
+            0.6959
+          ],
+          "connected_components": 1,
+          "compactness": 1.1927,
+          "midline_distance_mm": 3.0
+        }
+      },
+      "AM": {
+        "left": {
+          "label_name": "AM",
+          "side": "left",
+          "volume_mm3": 38.0,
+          "centroid_mm": [
+            88.53,
+            117.87,
+            151.16
+          ],
+          "centroid_normalized": [
+            0.4756,
+            0.495,
+            0.6781
+          ],
+          "connected_components": 1,
+          "compactness": 0.7719,
+          "midline_distance_mm": 1.47,
+          "LR_volume_ratio": 1.52
+        },
+        "right": {
+          "label_name": "AM",
+          "side": "right",
+          "volume_mm3": 25.0,
+          "centroid_mm": [
+            94.28,
+            118.36,
+            151.48
+          ],
+          "centroid_normalized": [
+            0.5109,
+            0.4972,
+            0.6796
+          ],
+          "connected_components": 1,
+          "compactness": 0.6728,
+          "midline_distance_mm": 4.28
+        }
+      },
+      "AV": {
+        "left": {
+          "label_name": "AV",
+          "side": "left",
+          "volume_mm3": 230.0,
+          "centroid_mm": [
+            87.0,
+            113.91,
+            155.34
+          ],
+          "centroid_normalized": [
+            0.4662,
+            0.4777,
+            0.6974
+          ],
+          "connected_components": 1,
+          "compactness": 0.6826,
+          "midline_distance_mm": 3.0,
+          "LR_volume_ratio": 1.2299
+        },
+        "right": {
+          "label_name": "AV",
+          "side": "right",
+          "volume_mm3": 187.0,
+          "centroid_mm": [
+            95.66,
+            113.68,
+            155.55
+          ],
+          "centroid_normalized": [
+            0.5194,
+            0.4767,
+            0.6984
+          ],
+          "connected_components": 1,
+          "compactness": 0.6653,
+          "midline_distance_mm": 5.66
+        }
+      },
+      "CL": {
+        "left": {
+          "label_name": "CL",
+          "side": "left",
+          "volume_mm3": 607.0,
+          "centroid_mm": [
+            85.14,
+            101.84,
+            149.48
+          ],
+          "centroid_normalized": [
+            0.4549,
+            0.4247,
+            0.6704
+          ],
+          "connected_components": 1,
+          "compactness": 0.3726,
+          "midline_distance_mm": 4.86,
+          "LR_volume_ratio": 0.9529
+        },
+        "right": {
+          "label_name": "CL",
+          "side": "right",
+          "volume_mm3": 637.0,
+          "centroid_mm": [
+            97.46,
+            101.73,
+            149.6
+          ],
+          "centroid_normalized": [
+            0.5304,
+            0.4242,
+            0.671
+          ],
+          "connected_components": 1,
+          "compactness": 0.3753,
+          "midline_distance_mm": 7.46
+        }
+      },
+      "CM": {
+        "left": {
+          "label_name": "CM",
+          "side": "left",
+          "volume_mm3": 248.0,
+          "centroid_mm": [
+            83.62,
+            101.28,
+            142.44
+          ],
+          "centroid_normalized": [
+            0.4456,
+            0.4223,
+            0.638
+          ],
+          "connected_components": 1,
+          "compactness": 0.7624,
+          "midline_distance_mm": 6.38,
+          "LR_volume_ratio": 0.9612
+        },
+        "right": {
+          "label_name": "CM",
+          "side": "right",
+          "volume_mm3": 258.0,
+          "centroid_mm": [
+            99.05,
+            101.55,
+            142.32
+          ],
+          "centroid_normalized": [
+            0.5402,
+            0.4234,
+            0.6374
+          ],
+          "connected_components": 1,
+          "compactness": 0.7623,
+          "midline_distance_mm": 9.05
+        }
+      },
+      "CeM": {
+        "left": {
+          "label_name": "CeM",
+          "side": "left",
+          "volume_mm3": 108.0,
+          "centroid_mm": [
+            88.13,
+            112.86,
+            145.63
+          ],
+          "centroid_normalized": [
+            0.4732,
+            0.4731,
+            0.6527
+          ],
+          "connected_components": 1,
+          "compactness": 0.5845,
+          "midline_distance_mm": 1.87,
+          "LR_volume_ratio": 0.931
+        },
+        "right": {
+          "label_name": "CeM",
+          "side": "right",
+          "volume_mm3": 116.0,
+          "centroid_mm": [
+            94.26,
+            113.21,
+            145.97
+          ],
+          "centroid_normalized": [
+            0.5108,
+            0.4746,
+            0.6542
+          ],
+          "connected_components": 1,
+          "compactness": 0.6059,
+          "midline_distance_mm": 4.26
+        }
+      },
+      "Hb": {
+        "left": {
+          "label_name": "Hb",
+          "side": "left",
+          "volume_mm3": 31.0,
+          "centroid_mm": [
+            87.84,
+            98.84,
+            141.94
+          ],
+          "centroid_normalized": [
+            0.4714,
+            0.4116,
+            0.6356
+          ],
+          "connected_components": 1,
+          "compactness": 0.7902,
+          "midline_distance_mm": 2.16,
+          "LR_volume_ratio": 0.7561
+        },
+        "right": {
+          "label_name": "Hb",
+          "side": "right",
+          "volume_mm3": 41.0,
+          "centroid_mm": [
+            94.68,
+            98.83,
+            141.83
+          ],
+          "centroid_normalized": [
+            0.5134,
+            0.4115,
+            0.6352
+          ],
+          "connected_components": 1,
+          "compactness": 0.7839,
+          "midline_distance_mm": 4.68
+        }
+      },
+      "LD": {
+        "left": {
+          "label_name": "LD",
+          "side": "left",
+          "volume_mm3": 100.0,
+          "centroid_mm": [
+            83.97,
+            99.78,
+            155.05
+          ],
+          "centroid_normalized": [
+            0.4477,
+            0.4157,
+            0.6961
+          ],
+          "connected_components": 1,
+          "compactness": 0.5702,
+          "midline_distance_mm": 6.03,
+          "LR_volume_ratio": 1.0101
+        },
+        "right": {
+          "label_name": "LD",
+          "side": "right",
+          "volume_mm3": 99.0,
+          "centroid_mm": [
+            98.69,
+            99.38,
+            155.05
+          ],
+          "centroid_normalized": [
+            0.538,
+            0.414,
+            0.6961
+          ],
+          "connected_components": 1,
+          "compactness": 0.5166,
+          "midline_distance_mm": 8.69
+        }
+      },
+      "LGNmc": {
+        "left": {
+          "label_name": "LGNmc",
+          "side": "left",
+          "volume_mm3": 65.0,
+          "centroid_mm": [
+            66.35,
+            101.74,
+            132.58
+          ],
+          "centroid_normalized": [
+            0.3396,
+            0.4243,
+            0.5926
+          ],
+          "connected_components": 3,
+          "compactness": 0.4802,
+          "midline_distance_mm": 23.65,
+          "LR_volume_ratio": 1.0656
+        },
+        "right": {
+          "label_name": "LGNmc",
+          "side": "right",
+          "volume_mm3": 61.0,
+          "centroid_mm": [
+            115.79,
+            102.7,
+            132.49
+          ],
+          "centroid_normalized": [
+            0.6429,
+            0.4285,
+            0.5921
+          ],
+          "connected_components": 1,
+          "compactness": 0.4934,
+          "midline_distance_mm": 25.79
+        }
+      },
+      "LGNpc": {
+        "left": {
+          "label_name": "LGNpc",
+          "side": "left",
+          "volume_mm3": 166.0,
+          "centroid_mm": [
+            66.92,
+            100.84,
+            134.11
+          ],
+          "centroid_normalized": [
+            0.343,
+            0.4204,
+            0.5996
+          ],
+          "connected_components": 1,
+          "compactness": 0.6461,
+          "midline_distance_mm": 23.08,
+          "LR_volume_ratio": 1.0122
+        },
+        "right": {
+          "label_name": "LGNpc",
+          "side": "right",
+          "volume_mm3": 164.0,
+          "centroid_mm": [
+            115.71,
+            101.37,
+            133.96
+          ],
+          "centroid_normalized": [
+            0.6424,
+            0.4227,
+            0.5989
+          ],
+          "connected_components": 1,
+          "compactness": 0.6997,
+          "midline_distance_mm": 25.71
+        }
+      },
+      "LP": {
+        "left": {
+          "label_name": "LP",
+          "side": "left",
+          "volume_mm3": 368.0,
+          "centroid_mm": [
+            76.08,
+            94.51,
+            150.06
+          ],
+          "centroid_normalized": [
+            0.3992,
+            0.3926,
+            0.6731
+          ],
+          "connected_components": 1,
+          "compactness": 0.6671,
+          "midline_distance_mm": 13.92,
+          "LR_volume_ratio": 0.6879
+        },
+        "right": {
+          "label_name": "LP",
+          "side": "right",
+          "volume_mm3": 535.0,
+          "centroid_mm": [
+            105.89,
+            94.16,
+            150.05
+          ],
+          "centroid_normalized": [
+            0.5821,
+            0.3911,
+            0.673
+          ],
+          "connected_components": 1,
+          "compactness": 0.6511,
+          "midline_distance_mm": 15.89
+        }
+      },
+      "Li": {
+        "left": {
+          "label_name": "Li",
+          "side": "left",
+          "volume_mm3": 38.0,
+          "centroid_mm": [
+            83.68,
+            96.03,
+            138.53
+          ],
+          "centroid_normalized": [
+            0.4459,
+            0.3992,
+            0.6199
+          ],
+          "connected_components": 1,
+          "compactness": 0.6951,
+          "midline_distance_mm": 6.32,
+          "LR_volume_ratio": 0.8085
+        },
+        "right": {
+          "label_name": "Li",
+          "side": "right",
+          "volume_mm3": 47.0,
+          "centroid_mm": [
+            98.62,
+            96.77,
+            139.19
+          ],
+          "centroid_normalized": [
+            0.5375,
+            0.4025,
+            0.623
+          ],
+          "connected_components": 1,
+          "compactness": 0.693,
+          "midline_distance_mm": 8.62
+        }
+      },
+      "MAX_VOLUME": {
+        "left": {
+          "label_name": "MAX_VOLUME",
+          "side": "left",
+          "volume_mm3": 7713.0,
+          "centroid_mm": [
+            80.07,
+            101.74,
+            146.09
+          ],
+          "centroid_normalized": [
+            0.4237,
+            0.4243,
+            0.6548
+          ],
+          "connected_components": 1,
+          "compactness": 0.6332,
+          "midline_distance_mm": 9.93,
+          "LR_volume_ratio": 1.0154
+        },
+        "right": {
+          "label_name": "MAX_VOLUME",
+          "side": "right",
+          "volume_mm3": 7596.0,
+          "centroid_mm": [
+            102.45,
+            101.66,
+            145.72
+          ],
+          "centroid_normalized": [
+            0.5611,
+            0.4239,
+            0.6531
+          ],
+          "connected_components": 1,
+          "compactness": 0.6369,
+          "midline_distance_mm": 12.45
+        }
+      },
+      "MDmc": {
+        "left": {
+          "label_name": "MDmc",
+          "side": "left",
+          "volume_mm3": 123.0,
+          "centroid_mm": [
+            89.8,
+            107.37,
+            147.49
+          ],
+          "centroid_normalized": [
+            0.4834,
+            0.449,
+            0.6612
+          ],
+          "connected_components": 1,
+          "compactness": 0.6708,
+          "midline_distance_mm": 0.2,
+          "LR_volume_ratio": 1.0165
+        },
+        "right": {
+          "label_name": "MDmc",
+          "side": "right",
+          "volume_mm3": 121.0,
+          "centroid_mm": [
+            92.69,
+            107.39,
+            147.36
+          ],
+          "centroid_normalized": [
+            0.5011,
+            0.4491,
+            0.6607
+          ],
+          "connected_components": 1,
+          "compactness": 0.6162,
+          "midline_distance_mm": 2.69
+        }
+      },
+      "MDpc": {
+        "left": {
+          "label_name": "MDpc",
+          "side": "left",
+          "volume_mm3": 670.0,
+          "centroid_mm": [
+            87.03,
+            104.9,
+            148.74
+          ],
+          "centroid_normalized": [
+            0.4664,
+            0.4382,
+            0.667
+          ],
+          "connected_components": 1,
+          "compactness": 0.6645,
+          "midline_distance_mm": 2.97,
+          "LR_volume_ratio": 0.9267
+        },
+        "right": {
+          "label_name": "MDpc",
+          "side": "right",
+          "volume_mm3": 723.0,
+          "centroid_mm": [
+            95.48,
+            104.97,
+            148.91
+          ],
+          "centroid_normalized": [
+            0.5183,
+            0.4385,
+            0.6678
+          ],
+          "connected_components": 1,
+          "compactness": 0.6808,
+          "midline_distance_mm": 5.48
+        }
+      },
+      "MGN": {
+        "left": {
+          "label_name": "MGN",
+          "side": "left",
+          "volume_mm3": 166.0,
+          "centroid_mm": [
+            75.39,
+            97.54,
+            134.82
+          ],
+          "centroid_normalized": [
+            0.395,
+            0.4059,
+            0.6029
+          ],
+          "connected_components": 1,
+          "compactness": 0.7124,
+          "midline_distance_mm": 14.61,
+          "LR_volume_ratio": 0.954
+        },
+        "right": {
+          "label_name": "MGN",
+          "side": "right",
+          "volume_mm3": 174.0,
+          "centroid_mm": [
+            107.55,
+            98.03,
+            134.6
+          ],
+          "centroid_normalized": [
+            0.5923,
+            0.408,
+            0.6019
+          ],
+          "connected_components": 1,
+          "compactness": 0.7012,
+          "midline_distance_mm": 17.55
+        }
+      },
+      "MV": {
+        "left": {
+          "label_name": "MV",
+          "side": "left",
+          "volume_mm3": 10.0,
+          "centroid_mm": [
+            89.1,
+            114.0,
+            144.8
+          ],
+          "centroid_normalized": [
+            0.4791,
+            0.4781,
+            0.6488
+          ],
+          "connected_components": 4,
+          "compactness": 0.7608,
+          "midline_distance_mm": 0.9,
+          "LR_volume_ratio": 2.0
+        },
+        "right": {
+          "label_name": "MV",
+          "side": "right",
+          "volume_mm3": 5.0,
+          "centroid_mm": [
+            94.0,
+            114.2,
+            144.6
+          ],
+          "centroid_normalized": [
+            0.5092,
+            0.4789,
+            0.6479
+          ],
+          "connected_components": 3,
+          "compactness": 1.1236,
+          "midline_distance_mm": 4.0
+        }
+      },
+      "Pf": {
+        "left": {
+          "label_name": "Pf",
+          "side": "left",
+          "volume_mm3": 142.0,
+          "centroid_mm": [
+            86.37,
+            103.99,
+            140.72
+          ],
+          "centroid_normalized": [
+            0.4624,
+            0.4341,
+            0.63
+          ],
+          "connected_components": 1,
+          "compactness": 0.6206,
+          "midline_distance_mm": 3.63,
+          "LR_volume_ratio": 0.9861
+        },
+        "right": {
+          "label_name": "Pf",
+          "side": "right",
+          "volume_mm3": 144.0,
+          "centroid_mm": [
+            96.13,
+            104.19,
+            140.59
+          ],
+          "centroid_normalized": [
+            0.5223,
+            0.435,
+            0.6294
+          ],
+          "connected_components": 1,
+          "compactness": 0.6462,
+          "midline_distance_mm": 6.13
+        }
+      },
+      "Po": {
+        "left": {
+          "label_name": "Po",
+          "side": "left",
+          "volume_mm3": 53.0,
+          "centroid_mm": [
+            78.79,
+            96.6,
+            137.91
+          ],
+          "centroid_normalized": [
+            0.4159,
+            0.4018,
+            0.6171
+          ],
+          "connected_components": 1,
+          "compactness": 0.718,
+          "midline_distance_mm": 11.21,
+          "LR_volume_ratio": 1.1042
+        },
+        "right": {
+          "label_name": "Po",
+          "side": "right",
+          "volume_mm3": 48.0,
+          "centroid_mm": [
+            104.08,
+            96.85,
+            137.62
+          ],
+          "centroid_normalized": [
+            0.5711,
+            0.4029,
+            0.6158
+          ],
+          "connected_components": 1,
+          "compactness": 0.7813,
+          "midline_distance_mm": 14.08
+        }
+      },
+      "PuA": {
+        "left": {
+          "label_name": "PuA",
+          "side": "left",
+          "volume_mm3": 153.0,
+          "centroid_mm": [
+            79.8,
+            97.33,
+            143.61
+          ],
+          "centroid_normalized": [
+            0.4221,
+            0.405,
+            0.6434
+          ],
+          "connected_components": 1,
+          "compactness": 0.6954,
+          "midline_distance_mm": 10.2,
+          "LR_volume_ratio": 0.9808
+        },
+        "right": {
+          "label_name": "PuA",
+          "side": "right",
+          "volume_mm3": 156.0,
+          "centroid_mm": [
+            103.04,
+            97.4,
+            143.29
+          ],
+          "centroid_normalized": [
+            0.5647,
+            0.4053,
+            0.6419
+          ],
+          "connected_components": 1,
+          "compactness": 0.7013,
+          "midline_distance_mm": 13.04
+        }
+      },
+      "PuI": {
+        "left": {
+          "label_name": "PuI",
+          "side": "left",
+          "volume_mm3": 60.0,
+          "centroid_mm": [
+            69.55,
+            95.12,
+            134.08
+          ],
+          "centroid_normalized": [
+            0.3592,
+            0.3952,
+            0.5995
+          ],
+          "connected_components": 1,
+          "compactness": 0.7336,
+          "midline_distance_mm": 20.45,
+          "LR_volume_ratio": 0.9091
+        },
+        "right": {
+          "label_name": "PuI",
+          "side": "right",
+          "volume_mm3": 66.0,
+          "centroid_mm": [
+            113.52,
+            96.0,
+            133.65
+          ],
+          "centroid_normalized": [
+            0.6289,
+            0.3991,
+            0.5975
+          ],
+          "connected_components": 1,
+          "compactness": 0.7775,
+          "midline_distance_mm": 23.52
+        }
+      },
+      "PuL": {
+        "left": {
+          "label_name": "PuL",
+          "side": "left",
+          "volume_mm3": 404.0,
+          "centroid_mm": [
+            69.66,
+            92.51,
+            140.21
+          ],
+          "centroid_normalized": [
+            0.3599,
+            0.3838,
+            0.6277
+          ],
+          "connected_components": 1,
+          "compactness": 0.7734,
+          "midline_distance_mm": 20.34,
+          "LR_volume_ratio": 0.9854
+        },
+        "right": {
+          "label_name": "PuL",
+          "side": "right",
+          "volume_mm3": 410.0,
+          "centroid_mm": [
+            113.19,
+            92.75,
+            139.68
+          ],
+          "centroid_normalized": [
+            0.6269,
+            0.3849,
+            0.6252
+          ],
+          "connected_components": 1,
+          "compactness": 0.7207,
+          "midline_distance_mm": 23.19
+        }
+      },
+      "PuM": {
+        "left": {
+          "label_name": "PuM",
+          "side": "left",
+          "volume_mm3": 1409.0,
+          "centroid_mm": [
+            78.02,
+            91.78,
+            141.47
+          ],
+          "centroid_normalized": [
+            0.4112,
+            0.3806,
+            0.6335
+          ],
+          "connected_components": 1,
+          "compactness": 0.678,
+          "midline_distance_mm": 11.98,
+          "LR_volume_ratio": 1.0399
+        },
+        "right": {
+          "label_name": "PuM",
+          "side": "right",
+          "volume_mm3": 1355.0,
+          "centroid_mm": [
+            104.91,
+            91.79,
+            141.22
+          ],
+          "centroid_normalized": [
+            0.5761,
+            0.3807,
+            0.6324
+          ],
+          "connected_components": 1,
+          "compactness": 0.6722,
+          "midline_distance_mm": 14.91
+        }
+      },
+      "Pv": {
+        "left": {
+          "label_name": "Pv",
+          "side": "left",
+          "volume_mm3": 5.0,
+          "centroid_mm": [
+            90.2,
+            112.8,
+            149.0
+          ],
+          "centroid_normalized": [
+            0.4859,
+            0.4728,
+            0.6682
+          ],
+          "connected_components": 2,
+          "compactness": 1.193,
+          "midline_distance_mm": 0.2,
+          "LR_volume_ratio": 0.8333
+        },
+        "right": {
+          "label_name": "Pv",
+          "side": "right",
+          "volume_mm3": 6.0,
+          "centroid_mm": [
+            92.0,
+            112.17,
+            149.67
+          ],
+          "centroid_normalized": [
+            0.4969,
+            0.47,
+            0.6713
+          ],
+          "connected_components": 1,
+          "compactness": 1.0681,
+          "midline_distance_mm": 2.0
+        }
+      },
+      "RN": {
+        "left": {
+          "label_name": "RN",
+          "side": "left",
+          "volume_mm3": 355.0,
+          "centroid_mm": [
+            85.22,
+            106.5,
+            133.44
+          ],
+          "centroid_normalized": [
+            0.4553,
+            0.4452,
+            0.5965
+          ],
+          "connected_components": 1,
+          "compactness": 0.8219,
+          "midline_distance_mm": 4.78,
+          "LR_volume_ratio": 0.9673
+        },
+        "right": {
+          "label_name": "RN",
+          "side": "right",
+          "volume_mm3": 367.0,
+          "centroid_mm": [
+            97.47,
+            106.98,
+            133.41
+          ],
+          "centroid_normalized": [
+            0.5305,
+            0.4473,
+            0.5964
+          ],
+          "connected_components": 1,
+          "compactness": 0.8127,
+          "midline_distance_mm": 7.47
+        }
+      },
+      "SG": {
+        "left": {
+          "label_name": "SG",
+          "side": "left",
+          "volume_mm3": 39.0,
+          "centroid_mm": [
+            79.56,
+            95.79,
+            135.82
+          ],
+          "centroid_normalized": [
+            0.4206,
+            0.3982,
+            0.6075
+          ],
+          "connected_components": 1,
+          "compactness": 0.8716,
+          "midline_distance_mm": 10.44,
+          "LR_volume_ratio": 0.9512
+        },
+        "right": {
+          "label_name": "SG",
+          "side": "right",
+          "volume_mm3": 41.0,
+          "centroid_mm": [
+            103.59,
+            96.41,
+            135.68
+          ],
+          "centroid_normalized": [
+            0.568,
+            0.4009,
+            0.6068
+          ],
+          "connected_components": 1,
+          "compactness": 0.813,
+          "midline_distance_mm": 13.59
+        }
+      },
+      "STh": {
+        "left": {
+          "label_name": "STh",
+          "side": "left",
+          "volume_mm3": 253.0,
+          "centroid_mm": [
+            80.06,
+            112.42,
+            137.27
+          ],
+          "centroid_normalized": [
+            0.4237,
+            0.4711,
+            0.6141
+          ],
+          "connected_components": 1,
+          "compactness": 0.7236,
+          "midline_distance_mm": 9.94,
+          "LR_volume_ratio": 1.0812
+        },
+        "right": {
+          "label_name": "STh",
+          "side": "right",
+          "volume_mm3": 234.0,
+          "centroid_mm": [
+            102.41,
+            112.38,
+            137.5
+          ],
+          "centroid_normalized": [
+            0.5608,
+            0.4709,
+            0.6152
+          ],
+          "connected_components": 1,
+          "compactness": 0.695,
+          "midline_distance_mm": 12.41
+        }
+      },
+      "VAmc": {
+        "left": {
+          "label_name": "VAmc",
+          "side": "left",
+          "volume_mm3": 67.0,
+          "centroid_mm": [
+            85.51,
+            115.78,
+            147.46
+          ],
+          "centroid_normalized": [
+            0.4571,
+            0.4859,
+            0.6611
+          ],
+          "connected_components": 1,
+          "compactness": 0.6356,
+          "midline_distance_mm": 4.49,
+          "LR_volume_ratio": 1.34
+        },
+        "right": {
+          "label_name": "VAmc",
+          "side": "right",
+          "volume_mm3": 50.0,
+          "centroid_mm": [
+            96.56,
+            116.54,
+            148.6
+          ],
+          "centroid_normalized": [
+            0.5249,
+            0.4892,
+            0.6664
+          ],
+          "connected_components": 1,
+          "compactness": 0.5849,
+          "midline_distance_mm": 6.56
+        }
+      },
+      "VApc": {
+        "left": {
+          "label_name": "VApc",
+          "side": "left",
+          "volume_mm3": 488.0,
+          "centroid_mm": [
+            82.31,
+            115.56,
+            151.18
+          ],
+          "centroid_normalized": [
+            0.4375,
+            0.4849,
+            0.6782
+          ],
+          "connected_components": 1,
+          "compactness": 0.6454,
+          "midline_distance_mm": 7.69,
+          "LR_volume_ratio": 1.2109
+        },
+        "right": {
+          "label_name": "VApc",
+          "side": "right",
+          "volume_mm3": 403.0,
+          "centroid_mm": [
+            99.48,
+            116.02,
+            150.95
+          ],
+          "centroid_normalized": [
+            0.5428,
+            0.4869,
+            0.6772
+          ],
+          "connected_components": 1,
+          "compactness": 0.6553,
+          "midline_distance_mm": 9.48
+        }
+      },
+      "VLa": {
+        "left": {
+          "label_name": "VLa",
+          "side": "left",
+          "volume_mm3": 362.0,
+          "centroid_mm": [
+            79.24,
+            109.81,
+            148.37
+          ],
+          "centroid_normalized": [
+            0.4187,
+            0.4597,
+            0.6653
+          ],
+          "connected_components": 1,
+          "compactness": 0.6521,
+          "midline_distance_mm": 10.76,
+          "LR_volume_ratio": 1.1348
+        },
+        "right": {
+          "label_name": "VLa",
+          "side": "right",
+          "volume_mm3": 319.0,
+          "centroid_mm": [
+            102.62,
+            110.4,
+            148.4
+          ],
+          "centroid_normalized": [
+            0.5621,
+            0.4623,
+            0.6654
+          ],
+          "connected_components": 1,
+          "compactness": 0.6853,
+          "midline_distance_mm": 12.62
+        }
+      },
+      "VLpd": {
+        "left": {
+          "label_name": "VLpd",
+          "side": "left",
+          "volume_mm3": 656.0,
+          "centroid_mm": [
+            80.17,
+            105.99,
+            155.24
+          ],
+          "centroid_normalized": [
+            0.4244,
+            0.443,
+            0.6969
+          ],
+          "connected_components": 1,
+          "compactness": 0.6786,
+          "midline_distance_mm": 9.83,
+          "LR_volume_ratio": 1.0879
+        },
+        "right": {
+          "label_name": "VLpd",
+          "side": "right",
+          "volume_mm3": 603.0,
+          "centroid_mm": [
+            101.91,
+            105.96,
+            154.99
+          ],
+          "centroid_normalized": [
+            0.5577,
+            0.4428,
+            0.6958
+          ],
+          "connected_components": 1,
+          "compactness": 0.6878,
+          "midline_distance_mm": 11.91
+        }
+      },
+      "VLpv": {
+        "left": {
+          "label_name": "VLpv",
+          "side": "left",
+          "volume_mm3": 751.0,
+          "centroid_mm": [
+            80.2,
+            106.55,
+            147.52
+          ],
+          "centroid_normalized": [
+            0.4245,
+            0.4454,
+            0.6614
+          ],
+          "connected_components": 1,
+          "compactness": 0.5911,
+          "midline_distance_mm": 9.8,
+          "LR_volume_ratio": 1.0232
+        },
+        "right": {
+          "label_name": "VLpv",
+          "side": "right",
+          "volume_mm3": 734.0,
+          "centroid_mm": [
+            102.15,
+            106.96,
+            147.48
+          ],
+          "centroid_normalized": [
+            0.5592,
+            0.4472,
+            0.6612
+          ],
+          "connected_components": 1,
+          "compactness": 0.6124,
+          "midline_distance_mm": 12.15
+        }
+      },
+      "VM": {
+        "left": {
+          "label_name": "VM",
+          "side": "left",
+          "volume_mm3": 147.0,
+          "centroid_mm": [
+            83.09,
+            109.78,
+            142.96
+          ],
+          "centroid_normalized": [
+            0.4423,
+            0.4596,
+            0.6404
+          ],
+          "connected_components": 1,
+          "compactness": 0.6527,
+          "midline_distance_mm": 6.91,
+          "LR_volume_ratio": 0.9866
+        },
+        "right": {
+          "label_name": "VM",
+          "side": "right",
+          "volume_mm3": 149.0,
+          "centroid_mm": [
+            99.17,
+            110.19,
+            143.13
+          ],
+          "centroid_normalized": [
+            0.5409,
+            0.4614,
+            0.6411
+          ],
+          "connected_components": 1,
+          "compactness": 0.656,
+          "midline_distance_mm": 9.17
+        }
+      },
+      "VPI": {
+        "left": {
+          "label_name": "VPI",
+          "side": "left",
+          "volume_mm3": 70.0,
+          "centroid_mm": [
+            76.7,
+            99.81,
+            138.29
+          ],
+          "centroid_normalized": [
+            0.4031,
+            0.4159,
+            0.6188
+          ],
+          "connected_components": 1,
+          "compactness": 0.698,
+          "midline_distance_mm": 13.3,
+          "LR_volume_ratio": 1.0
+        },
+        "right": {
+          "label_name": "VPI",
+          "side": "right",
+          "volume_mm3": 70.0,
+          "centroid_mm": [
+            106.01,
+            100.3,
+            138.03
+          ],
+          "centroid_normalized": [
+            0.5829,
+            0.418,
+            0.6176
+          ],
+          "connected_components": 1,
+          "compactness": 0.8083,
+          "midline_distance_mm": 16.01
+        }
+      },
+      "VPLa": {
+        "left": {
+          "label_name": "VPLa",
+          "side": "left",
+          "volume_mm3": 119.0,
+          "centroid_mm": [
+            76.11,
+            101.07,
+            145.81
+          ],
+          "centroid_normalized": [
+            0.3994,
+            0.4213,
+            0.6535
+          ],
+          "connected_components": 1,
+          "compactness": 0.6477,
+          "midline_distance_mm": 13.89,
+          "LR_volume_ratio": 1.0721
+        },
+        "right": {
+          "label_name": "VPLa",
+          "side": "right",
+          "volume_mm3": 111.0,
+          "centroid_mm": [
+            106.63,
+            101.33,
+            145.18
+          ],
+          "centroid_normalized": [
+            0.5867,
+            0.4225,
+            0.6506
+          ],
+          "connected_components": 1,
+          "compactness": 0.6449,
+          "midline_distance_mm": 16.63
+        }
+      },
+      "VPLp": {
+        "left": {
+          "label_name": "VPLp",
+          "side": "left",
+          "volume_mm3": 542.0,
+          "centroid_mm": [
+            76.87,
+            98.89,
+            147.31
+          ],
+          "centroid_normalized": [
+            0.4041,
+            0.4118,
+            0.6604
+          ],
+          "connected_components": 1,
+          "compactness": 0.595,
+          "midline_distance_mm": 13.13,
+          "LR_volume_ratio": 1.0131
+        },
+        "right": {
+          "label_name": "VPLp",
+          "side": "right",
+          "volume_mm3": 535.0,
+          "centroid_mm": [
+            105.44,
+            99.06,
+            146.86
+          ],
+          "centroid_normalized": [
+            0.5794,
+            0.4126,
+            0.6583
+          ],
+          "connected_components": 1,
+          "compactness": 0.5884,
+          "midline_distance_mm": 15.44
+        }
+      },
+      "VPM": {
+        "left": {
+          "label_name": "VPM",
+          "side": "left",
+          "volume_mm3": 187.0,
+          "centroid_mm": [
+            80.55,
+            102.41,
+            140.93
+          ],
+          "centroid_normalized": [
+            0.4267,
+            0.4272,
+            0.631
+          ],
+          "connected_components": 1,
+          "compactness": 0.6297,
+          "midline_distance_mm": 9.45,
+          "LR_volume_ratio": 0.974
+        },
+        "right": {
+          "label_name": "VPM",
+          "side": "right",
+          "volume_mm3": 192.0,
+          "centroid_mm": [
+            102.02,
+            102.93,
+            140.92
+          ],
+          "centroid_normalized": [
+            0.5584,
+            0.4295,
+            0.631
+          ],
+          "connected_components": 1,
+          "compactness": 0.6288,
+          "midline_distance_mm": 12.02
+        }
+      },
+      "global": {
+        "left": {
+          "label_name": "global",
+          "side": "left",
+          "volume_mm3": 7713.0,
+          "centroid_mm": [
+            80.07,
+            101.74,
+            146.09
+          ],
+          "centroid_normalized": [
+            0.4237,
+            0.4243,
+            0.6548
+          ],
+          "connected_components": 1,
+          "compactness": 0.6332,
+          "midline_distance_mm": 9.93,
+          "LR_volume_ratio": 1.0159
+        },
+        "right": {
+          "label_name": "global",
+          "side": "right",
+          "volume_mm3": 7592.0,
+          "centroid_mm": [
+            102.45,
+            101.66,
+            145.73
+          ],
+          "centroid_normalized": [
+            0.561,
+            0.4239,
+            0.6531
+          ],
+          "connected_components": 1,
+          "compactness": 0.6376,
+          "midline_distance_mm": 12.45
+        }
+      },
+      "mtt": {
+        "left": {
+          "label_name": "mtt",
+          "side": "left",
+          "volume_mm3": 47.0,
+          "centroid_mm": [
+            86.74,
+            115.13,
+            143.36
+          ],
+          "centroid_normalized": [
+            0.4647,
+            0.483,
+            0.6422
+          ],
+          "connected_components": 3,
+          "compactness": 0.5218,
+          "midline_distance_mm": 3.26,
+          "LR_volume_ratio": 0.8393
+        },
+        "right": {
+          "label_name": "mtt",
+          "side": "right",
+          "volume_mm3": 56.0,
+          "centroid_mm": [
+            95.89,
+            115.11,
+            142.5
+          ],
+          "centroid_normalized": [
+            0.5208,
+            0.4829,
+            0.6382
+          ],
+          "connected_components": 2,
+          "compactness": 0.6128,
+          "midline_distance_mm": 5.89
+        }
+      },
+      "sPf": {
+        "left": {
+          "label_name": "sPf",
+          "side": "left",
+          "volume_mm3": 13.0,
+          "centroid_mm": [
+            85.69,
+            106.85,
+            140.23
+          ],
+          "centroid_normalized": [
+            0.4582,
+            0.4467,
+            0.6278
+          ],
+          "connected_components": 2,
+          "compactness": 0.8618,
+          "midline_distance_mm": 4.31,
+          "LR_volume_ratio": 1.3
+        },
+        "right": {
+          "label_name": "sPf",
+          "side": "right",
+          "volume_mm3": 10.0,
+          "centroid_mm": [
+            97.0,
+            106.7,
+            139.9
+          ],
+          "centroid_normalized": [
+            0.5276,
+            0.4461,
+            0.6263
+          ],
+          "connected_components": 3,
+          "compactness": 0.8388,
+          "midline_distance_mm": 7.0
+        }
+      },
+      "thalamus_body": {
+        "left": {
+          "label_name": "thalamus_body",
+          "side": "left",
+          "volume_mm3": 176.0,
+          "centroid_mm": [
+            75.42,
+            97.45,
+            134.88
+          ],
+          "centroid_normalized": [
+            0.3952,
+            0.4055,
+            0.6031
+          ],
+          "connected_components": 1,
+          "compactness": 0.7075,
+          "midline_distance_mm": 14.58,
+          "LR_volume_ratio": 0.9565
+        },
+        "right": {
+          "label_name": "thalamus_body",
+          "side": "right",
+          "volume_mm3": 184.0,
+          "centroid_mm": [
+            107.6,
+            98.09,
+            134.61
+          ],
+          "centroid_normalized": [
+            0.5927,
+            0.4083,
+            0.6019
+          ],
+          "connected_components": 1,
+          "compactness": 0.7081,
+          "midline_distance_mm": 17.6
+        }
+      }
+    },
+    "morphometrics": {
+      "AD": {
+        "geometric_left": {
+          "volume_mm3": 6.0,
+          "surface_area_mm2": 16.48,
+          "compactness": 0.969,
+          "elongation": 22.9678,
+          "flatness": 1.8839,
+          "eigenvalues_mm": [
+            1.955,
+            0.16,
+            0.085
+          ],
+          "bbox_size_mm": [
+            2.0,
+            4.0,
+            3.0
+          ],
+          "bbox_origin_vox": [
+            89,
+            108,
+            153
+          ],
+          "bbox_fill_ratio": 0.25,
+          "connected_components": 2,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 4.0,
+          "surface_area_mm2": 10.22,
+          "compactness": 1.1927,
+          "elongation": 16666666666.6667,
+          "flatness": 0.0,
+          "eigenvalues_mm": [
+            1.667,
+            0.0,
+            0.0
+          ],
+          "bbox_size_mm": [
+            1.0,
+            4.0,
+            1.0
+          ],
+          "bbox_origin_vox": [
+            93,
+            108,
+            155
+          ],
+          "bbox_fill_ratio": 1.0,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "AD",
+          "volume_mm3_left": 6.0,
+          "volume_mm3_right": 4.0,
+          "centroid_mm_left": [
+            89.83,
+            109.67,
+            154.17
+          ],
+          "centroid_mm_right": [
+            93.0,
+            109.5,
+            155.0
+          ],
+          "centroid_normalized_left": [
+            0.5511,
+            0.481,
+            0.7104
+          ],
+          "lr_volume_ratio": 1.5,
+          "midline_distance_mm_left": 2.67,
+          "midline_distance_mm_right": 0.5,
+          "centroid_mirror_error_mm": 2.167,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 0.2315,
+          "T1_median": 0.2206,
+          "T1_std": 0.2071,
+          "T1_IQR": 0.2814,
+          "T1_MAD": 0.1566,
+          "T1_outlier_ratio": 0.0,
+          "T1_gradient_energy": 0.5944,
+          "T1_LoG_energy": 0.1487
+        },
+        "intensity_right": {
+          "T1_mean": 0.5066,
+          "T1_median": 0.5291,
+          "T1_std": 0.0981,
+          "T1_IQR": 0.1365,
+          "T1_MAD": 0.065,
+          "T1_outlier_ratio": 0.0,
+          "T1_gradient_energy": 0.6962,
+          "T1_LoG_energy": 0.1285
+        }
+      },
+      "AM": {
+        "geometric_left": {
+          "volume_mm3": 38.0,
+          "surface_area_mm2": 70.81,
+          "compactness": 0.7719,
+          "elongation": 4.6818,
+          "flatness": 2.6549,
+          "eigenvalues_mm": [
+            2.138,
+            1.212,
+            0.457
+          ],
+          "bbox_size_mm": [
+            4.0,
+            6.0,
+            5.0
+          ],
+          "bbox_origin_vox": [
+            87,
+            115,
+            149
+          ],
+          "bbox_fill_ratio": 0.3167,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 25.0,
+          "surface_area_mm2": 61.45,
+          "compactness": 0.6728,
+          "elongation": 17.5306,
+          "flatness": 7.0624,
+          "eigenvalues_mm": [
+            2.713,
+            1.093,
+            0.155
+          ],
+          "bbox_size_mm": [
+            4.0,
+            5.0,
+            6.0
+          ],
+          "bbox_origin_vox": [
+            93,
+            116,
+            149
+          ],
+          "bbox_fill_ratio": 0.2083,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "AM",
+          "volume_mm3_left": 38.0,
+          "volume_mm3_right": 25.0,
+          "centroid_mm_left": [
+            88.53,
+            117.87,
+            151.16
+          ],
+          "centroid_mm_right": [
+            94.28,
+            118.36,
+            151.48
+          ],
+          "centroid_normalized_left": [
+            0.5431,
+            0.517,
+            0.6966
+          ],
+          "lr_volume_ratio": 1.52,
+          "midline_distance_mm_left": 3.97,
+          "midline_distance_mm_right": 1.78,
+          "centroid_mirror_error_mm": 2.194,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 0.6879,
+          "T1_median": 0.7805,
+          "T1_std": 0.5933,
+          "T1_IQR": 0.8098,
+          "T1_MAD": 0.4325,
+          "T1_outlier_ratio": 0.0526,
+          "T1_gradient_energy": 0.6238,
+          "T1_LoG_energy": 0.1179
+        },
+        "intensity_right": {
+          "T1_mean": 0.9041,
+          "T1_median": 0.8868,
+          "T1_std": 0.3695,
+          "T1_IQR": 0.381,
+          "T1_MAD": 0.1947,
+          "T1_outlier_ratio": 0.12,
+          "T1_gradient_energy": 0.5955,
+          "T1_LoG_energy": 0.0644
+        }
+      },
+      "AV": {
+        "geometric_left": {
+          "volume_mm3": 230.0,
+          "surface_area_mm2": 265.94,
+          "compactness": 0.6826,
+          "elongation": 11.3819,
+          "flatness": 2.2745,
+          "eigenvalues_mm": [
+            12.912,
+            2.58,
+            1.134
+          ],
+          "bbox_size_mm": [
+            5.0,
+            16.0,
+            9.0
+          ],
+          "bbox_origin_vox": [
+            85,
+            105,
+            151
+          ],
+          "bbox_fill_ratio": 0.3194,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 187.0,
+          "surface_area_mm2": 237.72,
+          "compactness": 0.6653,
+          "elongation": 16.7215,
+          "flatness": 2.8956,
+          "eigenvalues_mm": [
+            13.784,
+            2.387,
+            0.824
+          ],
+          "bbox_size_mm": [
+            6.0,
+            16.0,
+            9.0
+          ],
+          "bbox_origin_vox": [
+            93,
+            105,
+            151
+          ],
+          "bbox_fill_ratio": 0.2164,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "AV",
+          "volume_mm3_left": 230.0,
+          "volume_mm3_right": 187.0,
+          "centroid_mm_left": [
+            87.0,
+            113.91,
+            155.34
+          ],
+          "centroid_mm_right": [
+            95.66,
+            113.68,
+            155.55
+          ],
+          "centroid_normalized_left": [
+            0.5337,
+            0.4996,
+            0.7158
+          ],
+          "lr_volume_ratio": 1.2299,
+          "midline_distance_mm_left": 5.5,
+          "midline_distance_mm_right": 3.16,
+          "centroid_mirror_error_mm": 2.347,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 0.7433,
+          "T1_median": 0.9165,
+          "T1_std": 0.5435,
+          "T1_IQR": 0.6806,
+          "T1_MAD": 0.2822,
+          "T1_outlier_ratio": 0.1217,
+          "T1_gradient_energy": 0.4856,
+          "T1_LoG_energy": 0.0968
+        },
+        "intensity_right": {
+          "T1_mean": 0.9575,
+          "T1_median": 1.0276,
+          "T1_std": 0.3088,
+          "T1_IQR": 0.3166,
+          "T1_MAD": 0.1346,
+          "T1_outlier_ratio": 0.1444,
+          "T1_gradient_energy": 0.3155,
+          "T1_LoG_energy": 0.0713
+        }
+      },
+      "CL": {
+        "geometric_left": {
+          "volume_mm3": 607.0,
+          "surface_area_mm2": 930.56,
+          "compactness": 0.3726,
+          "elongation": 8.8813,
+          "flatness": 2.45,
+          "eigenvalues_mm": [
+            34.715,
+            9.577,
+            3.909
+          ],
+          "bbox_size_mm": [
+            10.0,
+            23.0,
+            15.0
+          ],
+          "bbox_origin_vox": [
+            81,
+            94,
+            142
+          ],
+          "bbox_fill_ratio": 0.1759,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 637.0,
+          "surface_area_mm2": 953.91,
+          "compactness": 0.3753,
+          "elongation": 9.2925,
+          "flatness": 2.5728,
+          "eigenvalues_mm": [
+            36.521,
+            10.112,
+            3.93
+          ],
+          "bbox_size_mm": [
+            11.0,
+            23.0,
+            16.0
+          ],
+          "bbox_origin_vox": [
+            92,
+            94,
+            141
+          ],
+          "bbox_fill_ratio": 0.1574,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "CL",
+          "volume_mm3_left": 607.0,
+          "volume_mm3_right": 637.0,
+          "centroid_mm_left": [
+            85.14,
+            101.84,
+            149.48
+          ],
+          "centroid_mm_right": [
+            97.46,
+            101.73,
+            149.6
+          ],
+          "centroid_normalized_left": [
+            0.5224,
+            0.4466,
+            0.6889
+          ],
+          "lr_volume_ratio": 0.9529,
+          "midline_distance_mm_left": 7.36,
+          "midline_distance_mm_right": 4.96,
+          "centroid_mirror_error_mm": 2.398,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 0.9429,
+          "T1_median": 1.1318,
+          "T1_std": 0.4969,
+          "T1_IQR": 0.4205,
+          "T1_MAD": 0.1654,
+          "T1_outlier_ratio": 0.1928,
+          "T1_gradient_energy": 0.2876,
+          "T1_LoG_energy": 0.066,
+          "GLCM_contrast": 2.6037,
+          "GLCM_homogeneity": 0.9984,
+          "GLCM_entropy": 0.0322,
+          "GLCM_correlation": 0.56
+        },
+        "intensity_right": {
+          "T1_mean": 0.9144,
+          "T1_median": 1.1165,
+          "T1_std": 0.5362,
+          "T1_IQR": 0.3716,
+          "T1_MAD": 0.1458,
+          "T1_outlier_ratio": 0.2057,
+          "T1_gradient_energy": 0.2971,
+          "T1_LoG_energy": 0.0709,
+          "GLCM_contrast": 2.6391,
+          "GLCM_homogeneity": 0.9983,
+          "GLCM_entropy": 0.0329,
+          "GLCM_correlation": 0.5651
+        }
+      },
+      "CM": {
+        "geometric_left": {
+          "volume_mm3": 248.0,
+          "surface_area_mm2": 250.37,
+          "compactness": 0.7624,
+          "elongation": 4.6791,
+          "flatness": 1.6956,
+          "eigenvalues_mm": [
+            7.981,
+            2.892,
+            1.706
+          ],
+          "bbox_size_mm": [
+            7.0,
+            12.0,
+            8.0
+          ],
+          "bbox_origin_vox": [
+            81,
+            97,
+            139
+          ],
+          "bbox_fill_ratio": 0.369,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 258.0,
+          "surface_area_mm2": 257.09,
+          "compactness": 0.7623,
+          "elongation": 4.8691,
+          "flatness": 1.9283,
+          "eigenvalues_mm": [
+            7.889,
+            3.124,
+            1.62
+          ],
+          "bbox_size_mm": [
+            7.0,
+            12.0,
+            9.0
+          ],
+          "bbox_origin_vox": [
+            96,
+            97,
+            138
+          ],
+          "bbox_fill_ratio": 0.3413,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "CM",
+          "volume_mm3_left": 248.0,
+          "volume_mm3_right": 258.0,
+          "centroid_mm_left": [
+            83.62,
+            101.28,
+            142.44
+          ],
+          "centroid_mm_right": [
+            99.05,
+            101.55,
+            142.32
+          ],
+          "centroid_normalized_left": [
+            0.513,
+            0.4442,
+            0.6564
+          ],
+          "lr_volume_ratio": 0.9612,
+          "midline_distance_mm_left": 8.88,
+          "midline_distance_mm_right": 6.55,
+          "centroid_mirror_error_mm": 2.325,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 1.2471,
+          "T1_median": 1.2593,
+          "T1_std": 0.1373,
+          "T1_IQR": 0.1807,
+          "T1_MAD": 0.0918,
+          "T1_outlier_ratio": 0.0323,
+          "T1_gradient_energy": 0.1182,
+          "T1_LoG_energy": 0.0499,
+          "GLCM_contrast": 0.9186,
+          "GLCM_homogeneity": 0.9986,
+          "GLCM_entropy": 0.0276,
+          "GLCM_correlation": 0.6676
+        },
+        "intensity_right": {
+          "T1_mean": 1.268,
+          "T1_median": 1.2753,
+          "T1_std": 0.1269,
+          "T1_IQR": 0.1793,
+          "T1_MAD": 0.0882,
+          "T1_outlier_ratio": 0.0349,
+          "T1_gradient_energy": 0.1136,
+          "T1_LoG_energy": 0.0438,
+          "GLCM_contrast": 0.9271,
+          "GLCM_homogeneity": 0.9987,
+          "GLCM_entropy": 0.0263,
+          "GLCM_correlation": 0.7751
+        }
+      },
+      "CeM": {
+        "geometric_left": {
+          "volume_mm3": 108.0,
+          "surface_area_mm2": 187.65,
+          "compactness": 0.5845,
+          "elongation": 15.8858,
+          "flatness": 1.4138,
+          "eigenvalues_mm": [
+            11.912,
+            1.06,
+            0.75
+          ],
+          "bbox_size_mm": [
+            5.0,
+            11.0,
+            12.0
+          ],
+          "bbox_origin_vox": [
+            86,
+            108,
+            140
+          ],
+          "bbox_fill_ratio": 0.1636,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 116.0,
+          "surface_area_mm2": 189.83,
+          "compactness": 0.6059,
+          "elongation": 18.6069,
+          "flatness": 2.0218,
+          "eigenvalues_mm": [
+            13.22,
+            1.436,
+            0.71
+          ],
+          "bbox_size_mm": [
+            4.0,
+            11.0,
+            14.0
+          ],
+          "bbox_origin_vox": [
+            93,
+            108,
+            140
+          ],
+          "bbox_fill_ratio": 0.1883,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "CeM",
+          "volume_mm3_left": 108.0,
+          "volume_mm3_right": 116.0,
+          "centroid_mm_left": [
+            88.13,
+            112.86,
+            145.63
+          ],
+          "centroid_mm_right": [
+            94.26,
+            113.21,
+            145.97
+          ],
+          "centroid_normalized_left": [
+            0.5407,
+            0.495,
+            0.6711
+          ],
+          "lr_volume_ratio": 0.931,
+          "midline_distance_mm_left": 4.37,
+          "midline_distance_mm_right": 1.76,
+          "centroid_mirror_error_mm": 2.612,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 0.6512,
+          "T1_median": 0.8239,
+          "T1_std": 0.6546,
+          "T1_IQR": 0.9514,
+          "T1_MAD": 0.4206,
+          "T1_outlier_ratio": 0.1111,
+          "T1_gradient_energy": 0.655,
+          "T1_LoG_energy": 0.1225
+        },
+        "intensity_right": {
+          "T1_mean": 0.8327,
+          "T1_median": 1.0496,
+          "T1_std": 0.4854,
+          "T1_IQR": 0.7276,
+          "T1_MAD": 0.2154,
+          "T1_outlier_ratio": 0.2069,
+          "T1_gradient_energy": 0.5437,
+          "T1_LoG_energy": 0.1036
+        }
+      },
+      "Hb": {
+        "geometric_left": {
+          "volume_mm3": 31.0,
+          "surface_area_mm2": 60.39,
+          "compactness": 0.7902,
+          "elongation": 9.5447,
+          "flatness": 3.6595,
+          "eigenvalues_mm": [
+            2.38,
+            0.913,
+            0.249
+          ],
+          "bbox_size_mm": [
+            3.0,
+            5.0,
+            5.0
+          ],
+          "bbox_origin_vox": [
+            87,
+            97,
+            140
+          ],
+          "bbox_fill_ratio": 0.4133,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 41.0,
+          "surface_area_mm2": 73.35,
+          "compactness": 0.7839,
+          "elongation": 8.227,
+          "flatness": 2.6344,
+          "eigenvalues_mm": [
+            3.026,
+            0.969,
+            0.368
+          ],
+          "bbox_size_mm": [
+            4.0,
+            5.0,
+            7.0
+          ],
+          "bbox_origin_vox": [
+            93,
+            97,
+            139
+          ],
+          "bbox_fill_ratio": 0.2929,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "Hb",
+          "volume_mm3_left": 31.0,
+          "volume_mm3_right": 41.0,
+          "centroid_mm_left": [
+            87.84,
+            98.84,
+            141.94
+          ],
+          "centroid_mm_right": [
+            94.68,
+            98.83,
+            141.83
+          ],
+          "centroid_normalized_left": [
+            0.5389,
+            0.4335,
+            0.6541
+          ],
+          "lr_volume_ratio": 0.7561,
+          "midline_distance_mm_left": 4.66,
+          "midline_distance_mm_right": 2.18,
+          "centroid_mirror_error_mm": 2.478,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 0.1977,
+          "T1_median": 0.2116,
+          "T1_std": 0.7257,
+          "T1_IQR": 0.8759,
+          "T1_MAD": 0.4826,
+          "T1_outlier_ratio": 0.0,
+          "T1_gradient_energy": 0.8861,
+          "T1_LoG_energy": 0.1242
+        },
+        "intensity_right": {
+          "T1_mean": 0.1923,
+          "T1_median": 0.0728,
+          "T1_std": 0.7083,
+          "T1_IQR": 1.2184,
+          "T1_MAD": 0.5899,
+          "T1_outlier_ratio": 0.0,
+          "T1_gradient_energy": 0.9384,
+          "T1_LoG_energy": 0.1103
+        }
+      },
+      "LD": {
+        "geometric_left": {
+          "volume_mm3": 100.0,
+          "surface_area_mm2": 182.73,
+          "compactness": 0.5702,
+          "elongation": 56.2175,
+          "flatness": 6.261,
+          "eigenvalues_mm": [
+            15.179,
+            1.691,
+            0.27
+          ],
+          "bbox_size_mm": [
+            9.0,
+            14.0,
+            6.0
+          ],
+          "bbox_origin_vox": [
+            80,
+            93,
+            153
+          ],
+          "bbox_fill_ratio": 0.1323,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 99.0,
+          "surface_area_mm2": 200.32,
+          "compactness": 0.5166,
+          "elongation": 64.7716,
+          "flatness": 6.0188,
+          "eigenvalues_mm": [
+            18.076,
+            1.68,
+            0.279
+          ],
+          "bbox_size_mm": [
+            9.0,
+            15.0,
+            7.0
+          ],
+          "bbox_origin_vox": [
+            95,
+            92,
+            152
+          ],
+          "bbox_fill_ratio": 0.1048,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "LD",
+          "volume_mm3_left": 100.0,
+          "volume_mm3_right": 99.0,
+          "centroid_mm_left": [
+            83.97,
+            99.78,
+            155.05
+          ],
+          "centroid_mm_right": [
+            98.69,
+            99.38,
+            155.05
+          ],
+          "centroid_normalized_left": [
+            0.5152,
+            0.4376,
+            0.7145
+          ],
+          "lr_volume_ratio": 1.0101,
+          "midline_distance_mm_left": 8.53,
+          "midline_distance_mm_right": 6.19,
+          "centroid_mirror_error_mm": 2.343,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 0.7943,
+          "T1_median": 0.8152,
+          "T1_std": 0.2595,
+          "T1_IQR": 0.3537,
+          "T1_MAD": 0.1817,
+          "T1_outlier_ratio": 0.04,
+          "T1_gradient_energy": 0.4247,
+          "T1_LoG_energy": 0.0905
+        },
+        "intensity_right": {
+          "T1_mean": 0.87,
+          "T1_median": 0.9053,
+          "T1_std": 0.2025,
+          "T1_IQR": 0.2439,
+          "T1_MAD": 0.1247,
+          "T1_outlier_ratio": 0.0909,
+          "T1_gradient_energy": 0.413,
+          "T1_LoG_energy": 0.0696
+        }
+      },
+      "LGNmc": {
+        "geometric_left": {
+          "volume_mm3": 65.0,
+          "surface_area_mm2": 162.8,
+          "compactness": 0.4802,
+          "elongation": 19.9958,
+          "flatness": 8.0686,
+          "eigenvalues_mm": [
+            7.602,
+            3.068,
+            0.38
+          ],
+          "bbox_size_mm": [
+            9.0,
+            10.0,
+            4.0
+          ],
+          "bbox_origin_vox": [
+            63,
+            97,
+            131
+          ],
+          "bbox_fill_ratio": 0.1806,
+          "connected_components": 3,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 61.0,
+          "surface_area_mm2": 151.89,
+          "compactness": 0.4934,
+          "elongation": 19.5527,
+          "flatness": 6.1498,
+          "eigenvalues_mm": [
+            8.447,
+            2.657,
+            0.432
+          ],
+          "bbox_size_mm": [
+            9.0,
+            10.0,
+            4.0
+          ],
+          "bbox_origin_vox": [
+            112,
+            98,
+            131
+          ],
+          "bbox_fill_ratio": 0.1694,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "LGNmc",
+          "volume_mm3_left": 65.0,
+          "volume_mm3_right": 61.0,
+          "centroid_mm_left": [
+            66.35,
+            101.74,
+            132.58
+          ],
+          "centroid_mm_right": [
+            115.79,
+            102.7,
+            132.49
+          ],
+          "centroid_normalized_left": [
+            0.4071,
+            0.4462,
+            0.611
+          ],
+          "lr_volume_ratio": 1.0656,
+          "midline_distance_mm_left": 26.15,
+          "midline_distance_mm_right": 23.29,
+          "centroid_mirror_error_mm": 2.859,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 1.1944,
+          "T1_median": 1.3205,
+          "T1_std": 0.3467,
+          "T1_IQR": 0.4842,
+          "T1_MAD": 0.1909,
+          "T1_outlier_ratio": 0.1077,
+          "T1_gradient_energy": 0.4839,
+          "T1_LoG_energy": 0.0743
+        },
+        "intensity_right": {
+          "T1_mean": 1.1083,
+          "T1_median": 1.213,
+          "T1_std": 0.4083,
+          "T1_IQR": 0.5849,
+          "T1_MAD": 0.2175,
+          "T1_outlier_ratio": 0.1311,
+          "T1_gradient_energy": 0.4434,
+          "T1_LoG_energy": 0.0674
+        }
+      },
+      "LGNpc": {
+        "geometric_left": {
+          "volume_mm3": 166.0,
+          "surface_area_mm2": 226.09,
+          "compactness": 0.6461,
+          "elongation": 5.3983,
+          "flatness": 2.8153,
+          "eigenvalues_mm": [
+            6.366,
+            3.32,
+            1.179
+          ],
+          "bbox_size_mm": [
+            9.0,
+            11.0,
+            6.0
+          ],
+          "bbox_origin_vox": [
+            63,
+            96,
+            132
+          ],
+          "bbox_fill_ratio": 0.2795,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 164.0,
+          "surface_area_mm2": 207.09,
+          "compactness": 0.6997,
+          "elongation": 5.6587,
+          "flatness": 2.8856,
+          "eigenvalues_mm": [
+            5.975,
+            3.047,
+            1.056
+          ],
+          "bbox_size_mm": [
+            9.0,
+            11.0,
+            5.0
+          ],
+          "bbox_origin_vox": [
+            112,
+            96,
+            132
+          ],
+          "bbox_fill_ratio": 0.3313,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "LGNpc",
+          "volume_mm3_left": 166.0,
+          "volume_mm3_right": 164.0,
+          "centroid_mm_left": [
+            66.92,
+            100.84,
+            134.11
+          ],
+          "centroid_mm_right": [
+            115.71,
+            101.37,
+            133.96
+          ],
+          "centroid_normalized_left": [
+            0.4105,
+            0.4423,
+            0.618
+          ],
+          "lr_volume_ratio": 1.0122,
+          "midline_distance_mm_left": 25.58,
+          "midline_distance_mm_right": 23.21,
+          "centroid_mirror_error_mm": 2.377,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 1.4499,
+          "T1_median": 1.4767,
+          "T1_std": 0.196,
+          "T1_IQR": 0.1722,
+          "T1_MAD": 0.0867,
+          "T1_outlier_ratio": 0.0843,
+          "T1_gradient_energy": 0.1976,
+          "T1_LoG_energy": 0.0731
+        },
+        "intensity_right": {
+          "T1_mean": 1.4676,
+          "T1_median": 1.4741,
+          "T1_std": 0.2017,
+          "T1_IQR": 0.1905,
+          "T1_MAD": 0.0971,
+          "T1_outlier_ratio": 0.0854,
+          "T1_gradient_energy": 0.1741,
+          "T1_LoG_energy": 0.0589
+        }
+      },
+      "LP": {
+        "geometric_left": {
+          "volume_mm3": 368.0,
+          "surface_area_mm2": 372.29,
+          "compactness": 0.6671,
+          "elongation": 5.163,
+          "flatness": 1.4331,
+          "eigenvalues_mm": [
+            12.297,
+            3.413,
+            2.382
+          ],
+          "bbox_size_mm": [
+            13.0,
+            10.0,
+            12.0
+          ],
+          "bbox_origin_vox": [
+            70,
+            90,
+            144
+          ],
+          "bbox_fill_ratio": 0.2359,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 535.0,
+          "surface_area_mm2": 489.49,
+          "compactness": 0.6511,
+          "elongation": 4.9716,
+          "flatness": 1.314,
+          "eigenvalues_mm": [
+            15.747,
+            4.162,
+            3.167
+          ],
+          "bbox_size_mm": [
+            13.0,
+            13.0,
+            15.0
+          ],
+          "bbox_origin_vox": [
+            100,
+            88,
+            143
+          ],
+          "bbox_fill_ratio": 0.211,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "LP",
+          "volume_mm3_left": 368.0,
+          "volume_mm3_right": 535.0,
+          "centroid_mm_left": [
+            76.08,
+            94.51,
+            150.06
+          ],
+          "centroid_mm_right": [
+            105.89,
+            94.16,
+            150.05
+          ],
+          "centroid_normalized_left": [
+            0.4667,
+            0.4145,
+            0.6915
+          ],
+          "lr_volume_ratio": 0.6879,
+          "midline_distance_mm_left": 16.42,
+          "midline_distance_mm_right": 13.39,
+          "centroid_mirror_error_mm": 3.036,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 1.2168,
+          "T1_median": 1.2448,
+          "T1_std": 0.1618,
+          "T1_IQR": 0.125,
+          "T1_MAD": 0.0592,
+          "T1_outlier_ratio": 0.0897,
+          "T1_gradient_energy": 0.1274,
+          "T1_LoG_energy": 0.0663,
+          "GLCM_contrast": 1.2341,
+          "GLCM_homogeneity": 0.9986,
+          "GLCM_entropy": 0.029,
+          "GLCM_correlation": 0.768
+        },
+        "intensity_right": {
+          "T1_mean": 1.1965,
+          "T1_median": 1.2492,
+          "T1_std": 0.2827,
+          "T1_IQR": 0.2687,
+          "T1_MAD": 0.1354,
+          "T1_outlier_ratio": 0.1084,
+          "T1_gradient_energy": 0.1957,
+          "T1_LoG_energy": 0.0744,
+          "GLCM_contrast": 1.2635,
+          "GLCM_homogeneity": 0.9985,
+          "GLCM_entropy": 0.0313,
+          "GLCM_correlation": 0.7863
+        }
+      },
+      "Li": {
+        "geometric_left": {
+          "volume_mm3": 38.0,
+          "surface_area_mm2": 78.64,
+          "compactness": 0.6951,
+          "elongation": 17.786,
+          "flatness": 2.0421,
+          "eigenvalues_mm": [
+            5.416,
+            0.622,
+            0.304
+          ],
+          "bbox_size_mm": [
+            6.0,
+            5.0,
+            7.0
+          ],
+          "bbox_origin_vox": [
+            81,
+            94,
+            136
+          ],
+          "bbox_fill_ratio": 0.181,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 47.0,
+          "surface_area_mm2": 90.88,
+          "compactness": 0.693,
+          "elongation": 16.4928,
+          "flatness": 1.9873,
+          "eigenvalues_mm": [
+            6.751,
+            0.813,
+            0.409
+          ],
+          "bbox_size_mm": [
+            7.0,
+            6.0,
+            7.0
+          ],
+          "bbox_origin_vox": [
+            96,
+            95,
+            136
+          ],
+          "bbox_fill_ratio": 0.1599,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "Li",
+          "volume_mm3_left": 38.0,
+          "volume_mm3_right": 47.0,
+          "centroid_mm_left": [
+            83.68,
+            96.03,
+            138.53
+          ],
+          "centroid_mm_right": [
+            98.62,
+            96.77,
+            139.19
+          ],
+          "centroid_normalized_left": [
+            0.5134,
+            0.4212,
+            0.6384
+          ],
+          "lr_volume_ratio": 0.8085,
+          "midline_distance_mm_left": 8.82,
+          "midline_distance_mm_right": 6.12,
+          "centroid_mirror_error_mm": 2.699,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 0.7406,
+          "T1_median": 0.8406,
+          "T1_std": 0.6765,
+          "T1_IQR": 0.9622,
+          "T1_MAD": 0.4675,
+          "T1_outlier_ratio": 0.0789,
+          "T1_gradient_energy": 0.6312,
+          "T1_LoG_energy": 0.116
+        },
+        "intensity_right": {
+          "T1_mean": 0.7596,
+          "T1_median": 0.9501,
+          "T1_std": 0.7761,
+          "T1_IQR": 1.108,
+          "T1_MAD": 0.4885,
+          "T1_outlier_ratio": 0.0851,
+          "T1_gradient_energy": 0.6019,
+          "T1_LoG_energy": 0.1518
+        }
+      },
+      "MAX_VOLUME": {
+        "geometric_left": {
+          "volume_mm3": 7713.0,
+          "surface_area_mm2": 2981.4,
+          "compactness": 0.6332,
+          "elongation": 5.0415,
+          "flatness": 1.2672,
+          "eigenvalues_mm": [
+            93.331,
+            23.459,
+            18.513
+          ],
+          "bbox_size_mm": [
+            29.0,
+            34.0,
+            29.0
+          ],
+          "bbox_origin_vox": [
+            63,
+            87,
+            131
+          ],
+          "bbox_fill_ratio": 0.2697,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 7596.0,
+          "surface_area_mm2": 2934.11,
+          "compactness": 0.6369,
+          "elongation": 5.478,
+          "flatness": 1.491,
+          "eigenvalues_mm": [
+            93.425,
+            25.428,
+            17.055
+          ],
+          "bbox_size_mm": [
+            30.0,
+            35.0,
+            29.0
+          ],
+          "bbox_origin_vox": [
+            91,
+            87,
+            131
+          ],
+          "bbox_fill_ratio": 0.2495,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "MAX_VOLUME",
+          "volume_mm3_left": 7713.0,
+          "volume_mm3_right": 7596.0,
+          "centroid_mm_left": [
+            80.07,
+            101.74,
+            146.09
+          ],
+          "centroid_mm_right": [
+            102.45,
+            101.66,
+            145.72
+          ],
+          "centroid_normalized_left": [
+            0.4912,
+            0.4462,
+            0.6732
+          ],
+          "lr_volume_ratio": 1.0154,
+          "midline_distance_mm_left": 12.43,
+          "midline_distance_mm_right": 9.95,
+          "centroid_mirror_error_mm": 2.478,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 1.1758,
+          "T1_median": 1.2991,
+          "T1_std": 0.4378,
+          "T1_IQR": 0.3209,
+          "T1_MAD": 0.1505,
+          "T1_outlier_ratio": 0.1317,
+          "T1_gradient_energy": 0.2089,
+          "T1_LoG_energy": 0.062,
+          "GLCM_contrast": 3.1412,
+          "GLCM_homogeneity": 0.995,
+          "GLCM_entropy": 0.1169,
+          "GLCM_correlation": 0.8593
+        },
+        "intensity_right": {
+          "T1_mean": 1.1685,
+          "T1_median": 1.2865,
+          "T1_std": 0.4469,
+          "T1_IQR": 0.3077,
+          "T1_MAD": 0.1471,
+          "T1_outlier_ratio": 0.1382,
+          "T1_gradient_energy": 0.2155,
+          "T1_LoG_energy": 0.0641,
+          "GLCM_contrast": 2.9836,
+          "GLCM_homogeneity": 0.9949,
+          "GLCM_entropy": 0.1178,
+          "GLCM_correlation": 0.8665
+        }
+      },
+      "MDmc": {
+        "geometric_left": {
+          "volume_mm3": 123.0,
+          "surface_area_mm2": 178.3,
+          "compactness": 0.6708,
+          "elongation": 21.6929,
+          "flatness": 8.51,
+          "eigenvalues_mm": [
+            7.54,
+            2.958,
+            0.348
+          ],
+          "bbox_size_mm": [
+            3.0,
+            10.0,
+            10.0
+          ],
+          "bbox_origin_vox": [
+            89,
+            103,
+            142
+          ],
+          "bbox_fill_ratio": 0.41,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 121.0,
+          "surface_area_mm2": 192.0,
+          "compactness": 0.6162,
+          "elongation": 23.4874,
+          "flatness": 7.9898,
+          "eigenvalues_mm": [
+            8.623,
+            2.933,
+            0.367
+          ],
+          "bbox_size_mm": [
+            4.0,
+            11.0,
+            10.0
+          ],
+          "bbox_origin_vox": [
+            91,
+            103,
+            142
+          ],
+          "bbox_fill_ratio": 0.275,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "MDmc",
+          "volume_mm3_left": 123.0,
+          "volume_mm3_right": 121.0,
+          "centroid_mm_left": [
+            89.8,
+            107.37,
+            147.49
+          ],
+          "centroid_mm_right": [
+            92.69,
+            107.39,
+            147.36
+          ],
+          "centroid_normalized_left": [
+            0.5509,
+            0.4709,
+            0.6797
+          ],
+          "lr_volume_ratio": 1.0165,
+          "midline_distance_mm_left": 2.7,
+          "midline_distance_mm_right": 0.19,
+          "centroid_mirror_error_mm": 2.517,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 0.4218,
+          "T1_median": 0.4049,
+          "T1_std": 0.5891,
+          "T1_IQR": 0.8565,
+          "T1_MAD": 0.4311,
+          "T1_outlier_ratio": 0.0,
+          "T1_gradient_energy": 0.7043,
+          "T1_LoG_energy": 0.1085
+        },
+        "intensity_right": {
+          "T1_mean": 0.675,
+          "T1_median": 0.7783,
+          "T1_std": 0.5179,
+          "T1_IQR": 0.678,
+          "T1_MAD": 0.3567,
+          "T1_outlier_ratio": 0.0579,
+          "T1_gradient_energy": 0.6473,
+          "T1_LoG_energy": 0.0983
+        }
+      },
+      "MDpc": {
+        "geometric_left": {
+          "volume_mm3": 670.0,
+          "surface_area_mm2": 557.24,
+          "compactness": 0.6645,
+          "elongation": 6.6429,
+          "flatness": 2.9628,
+          "eigenvalues_mm": [
+            16.252,
+            7.249,
+            2.447
+          ],
+          "bbox_size_mm": [
+            9.0,
+            18.0,
+            13.0
+          ],
+          "bbox_origin_vox": [
+            83,
+            98,
+            142
+          ],
+          "bbox_fill_ratio": 0.3181,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 723.0,
+          "surface_area_mm2": 572.22,
+          "compactness": 0.6808,
+          "elongation": 6.897,
+          "flatness": 2.9473,
+          "eigenvalues_mm": [
+            17.317,
+            7.4,
+            2.511
+          ],
+          "bbox_size_mm": [
+            8.0,
+            19.0,
+            14.0
+          ],
+          "bbox_origin_vox": [
+            92,
+            98,
+            142
+          ],
+          "bbox_fill_ratio": 0.3398,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "MDpc",
+          "volume_mm3_left": 670.0,
+          "volume_mm3_right": 723.0,
+          "centroid_mm_left": [
+            87.03,
+            104.9,
+            148.74
+          ],
+          "centroid_mm_right": [
+            95.48,
+            104.97,
+            148.91
+          ],
+          "centroid_normalized_left": [
+            0.5339,
+            0.4601,
+            0.6854
+          ],
+          "lr_volume_ratio": 0.9267,
+          "midline_distance_mm_left": 5.47,
+          "midline_distance_mm_right": 2.98,
+          "centroid_mirror_error_mm": 2.492,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 1.0321,
+          "T1_median": 1.1461,
+          "T1_std": 0.3968,
+          "T1_IQR": 0.297,
+          "T1_MAD": 0.141,
+          "T1_outlier_ratio": 0.1373,
+          "T1_gradient_energy": 0.2793,
+          "T1_LoG_energy": 0.0973,
+          "GLCM_contrast": 1.8424,
+          "GLCM_homogeneity": 0.9983,
+          "GLCM_entropy": 0.037,
+          "GLCM_correlation": 0.7877
+        },
+        "intensity_right": {
+          "T1_mean": 1.065,
+          "T1_median": 1.1368,
+          "T1_std": 0.3046,
+          "T1_IQR": 0.2373,
+          "T1_MAD": 0.1157,
+          "T1_outlier_ratio": 0.1148,
+          "T1_gradient_energy": 0.2205,
+          "T1_LoG_energy": 0.0967,
+          "GLCM_contrast": 1.925,
+          "GLCM_homogeneity": 0.9982,
+          "GLCM_entropy": 0.0386,
+          "GLCM_correlation": 0.7903
+        }
+      },
+      "MGN": {
+        "geometric_left": {
+          "volume_mm3": 166.0,
+          "surface_area_mm2": 205.04,
+          "compactness": 0.7124,
+          "elongation": 5.0752,
+          "flatness": 4.2416,
+          "eigenvalues_mm": [
+            4.75,
+            3.97,
+            0.936
+          ],
+          "bbox_size_mm": [
+            8.0,
+            7.0,
+            10.0
+          ],
+          "bbox_origin_vox": [
+            72,
+            94,
+            131
+          ],
+          "bbox_fill_ratio": 0.2964,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 174.0,
+          "surface_area_mm2": 214.96,
+          "compactness": 0.7012,
+          "elongation": 4.4332,
+          "flatness": 3.8641,
+          "eigenvalues_mm": [
+            4.602,
+            4.011,
+            1.038
+          ],
+          "bbox_size_mm": [
+            8.0,
+            9.0,
+            9.0
+          ],
+          "bbox_origin_vox": [
+            104,
+            94,
+            131
+          ],
+          "bbox_fill_ratio": 0.2685,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "MGN",
+          "volume_mm3_left": 166.0,
+          "volume_mm3_right": 174.0,
+          "centroid_mm_left": [
+            75.39,
+            97.54,
+            134.82
+          ],
+          "centroid_mm_right": [
+            107.55,
+            98.03,
+            134.6
+          ],
+          "centroid_normalized_left": [
+            0.4625,
+            0.4278,
+            0.6213
+          ],
+          "lr_volume_ratio": 0.954,
+          "midline_distance_mm_left": 17.11,
+          "midline_distance_mm_right": 15.05,
+          "centroid_mirror_error_mm": 2.062,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 1.0072,
+          "T1_median": 1.3025,
+          "T1_std": 0.6777,
+          "T1_IQR": 0.764,
+          "T1_MAD": 0.1817,
+          "T1_outlier_ratio": 0.2651,
+          "T1_gradient_energy": 0.3997,
+          "T1_LoG_energy": 0.1077
+        },
+        "intensity_right": {
+          "T1_mean": 0.9061,
+          "T1_median": 1.325,
+          "T1_std": 0.7558,
+          "T1_IQR": 1.3549,
+          "T1_MAD": 0.2722,
+          "T1_outlier_ratio": 0.2989,
+          "T1_gradient_energy": 0.4025,
+          "T1_LoG_energy": 0.1211
+        }
+      },
+      "MV": {
+        "geometric_left": {
+          "volume_mm3": 10.0,
+          "surface_area_mm2": 29.5,
+          "compactness": 0.7608,
+          "elongation": 29.3565,
+          "flatness": 2.922,
+          "eigenvalues_mm": [
+            3.186,
+            0.317,
+            0.109
+          ],
+          "bbox_size_mm": [
+            3.0,
+            5.0,
+            3.0
+          ],
+          "bbox_origin_vox": [
+            88,
+            112,
+            144
+          ],
+          "bbox_fill_ratio": 0.2222,
+          "connected_components": 4,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 5.0,
+          "surface_area_mm2": 12.59,
+          "compactness": 1.1236,
+          "elongation": 44092822881.6892,
+          "flatness": 907177118.3108,
+          "eigenvalues_mm": [
+            4.409,
+            0.091,
+            0.0
+          ],
+          "bbox_size_mm": [
+            1.0,
+            6.0,
+            3.0
+          ],
+          "bbox_origin_vox": [
+            94,
+            112,
+            144
+          ],
+          "bbox_fill_ratio": 0.2778,
+          "connected_components": 3,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "MV",
+          "volume_mm3_left": 10.0,
+          "volume_mm3_right": 5.0,
+          "centroid_mm_left": [
+            89.1,
+            114.0,
+            144.8
+          ],
+          "centroid_mm_right": [
+            94.0,
+            114.2,
+            144.6
+          ],
+          "centroid_normalized_left": [
+            0.5466,
+            0.5,
+            0.6673
+          ],
+          "lr_volume_ratio": 2.0,
+          "midline_distance_mm_left": 3.4,
+          "midline_distance_mm_right": 1.5,
+          "centroid_mirror_error_mm": 1.9,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": -0.4267,
+          "T1_median": -0.5415,
+          "T1_std": 0.6825,
+          "T1_IQR": 0.724,
+          "T1_MAD": 0.4582,
+          "T1_outlier_ratio": 0.1,
+          "T1_gradient_energy": 0.774,
+          "T1_LoG_energy": 0.2031
+        },
+        "intensity_right": {
+          "T1_mean": 0.368,
+          "T1_median": 0.3761,
+          "T1_std": 0.1588,
+          "T1_IQR": 0.1741,
+          "T1_MAD": 0.0981,
+          "T1_outlier_ratio": 0.0,
+          "T1_gradient_energy": 0.9552,
+          "T1_LoG_energy": 0.0258
+        }
+      },
+      "Pf": {
+        "geometric_left": {
+          "volume_mm3": 142.0,
+          "surface_area_mm2": 212.1,
+          "compactness": 0.6206,
+          "elongation": 17.8916,
+          "flatness": 3.7744,
+          "eigenvalues_mm": [
+            10.457,
+            2.206,
+            0.584
+          ],
+          "bbox_size_mm": [
+            7.0,
+            13.0,
+            6.0
+          ],
+          "bbox_origin_vox": [
+            83,
+            98,
+            138
+          ],
+          "bbox_fill_ratio": 0.2601,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 144.0,
+          "surface_area_mm2": 205.6,
+          "compactness": 0.6462,
+          "elongation": 16.2202,
+          "flatness": 3.7413,
+          "eigenvalues_mm": [
+            9.855,
+            2.273,
+            0.608
+          ],
+          "bbox_size_mm": [
+            8.0,
+            12.0,
+            6.0
+          ],
+          "bbox_origin_vox": [
+            93,
+            99,
+            138
+          ],
+          "bbox_fill_ratio": 0.25,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "Pf",
+          "volume_mm3_left": 142.0,
+          "volume_mm3_right": 144.0,
+          "centroid_mm_left": [
+            86.37,
+            103.99,
+            140.72
+          ],
+          "centroid_mm_right": [
+            96.13,
+            104.19,
+            140.59
+          ],
+          "centroid_normalized_left": [
+            0.5299,
+            0.4561,
+            0.6485
+          ],
+          "lr_volume_ratio": 0.9861,
+          "midline_distance_mm_left": 6.13,
+          "midline_distance_mm_right": 3.63,
+          "centroid_mirror_error_mm": 2.495,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 0.971,
+          "T1_median": 1.2281,
+          "T1_std": 0.6043,
+          "T1_IQR": 0.732,
+          "T1_MAD": 0.2453,
+          "T1_outlier_ratio": 0.169,
+          "T1_gradient_energy": 0.454,
+          "T1_LoG_energy": 0.1017
+        },
+        "intensity_right": {
+          "T1_mean": 1.0592,
+          "T1_median": 1.3036,
+          "T1_std": 0.5747,
+          "T1_IQR": 0.4893,
+          "T1_MAD": 0.1923,
+          "T1_outlier_ratio": 0.2292,
+          "T1_gradient_energy": 0.4365,
+          "T1_LoG_energy": 0.1048
+        }
+      },
+      "Po": {
+        "geometric_left": {
+          "volume_mm3": 53.0,
+          "surface_area_mm2": 95.03,
+          "compactness": 0.718,
+          "elongation": 2.2655,
+          "flatness": 1.1984,
+          "eigenvalues_mm": [
+            2.322,
+            1.228,
+            1.025
+          ],
+          "bbox_size_mm": [
+            7.0,
+            5.0,
+            5.0
+          ],
+          "bbox_origin_vox": [
+            76,
+            95,
+            136
+          ],
+          "bbox_fill_ratio": 0.3029,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 48.0,
+          "surface_area_mm2": 81.75,
+          "compactness": 0.7813,
+          "elongation": 3.6159,
+          "flatness": 1.2673,
+          "eigenvalues_mm": [
+            2.601,
+            0.912,
+            0.719
+          ],
+          "bbox_size_mm": [
+            6.0,
+            5.0,
+            4.0
+          ],
+          "bbox_origin_vox": [
+            101,
+            95,
+            136
+          ],
+          "bbox_fill_ratio": 0.4,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "Po",
+          "volume_mm3_left": 53.0,
+          "volume_mm3_right": 48.0,
+          "centroid_mm_left": [
+            78.79,
+            96.6,
+            137.91
+          ],
+          "centroid_mm_right": [
+            104.08,
+            96.85,
+            137.62
+          ],
+          "centroid_normalized_left": [
+            0.4834,
+            0.4237,
+            0.6355
+          ],
+          "lr_volume_ratio": 1.1042,
+          "midline_distance_mm_left": 13.71,
+          "midline_distance_mm_right": 11.58,
+          "centroid_mirror_error_mm": 2.124,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 1.2134,
+          "T1_median": 1.1984,
+          "T1_std": 0.0989,
+          "T1_IQR": 0.1625,
+          "T1_MAD": 0.0786,
+          "T1_outlier_ratio": 0.0189,
+          "T1_gradient_energy": 0.1115,
+          "T1_LoG_energy": 0.027
+        },
+        "intensity_right": {
+          "T1_mean": 1.3133,
+          "T1_median": 1.2927,
+          "T1_std": 0.1344,
+          "T1_IQR": 0.1611,
+          "T1_MAD": 0.082,
+          "T1_outlier_ratio": 0.1042,
+          "T1_gradient_energy": 0.1151,
+          "T1_LoG_energy": 0.07
+        }
+      },
+      "PuA": {
+        "geometric_left": {
+          "volume_mm3": 153.0,
+          "surface_area_mm2": 198.92,
+          "compactness": 0.6954,
+          "elongation": 5.8373,
+          "flatness": 1.5692,
+          "eigenvalues_mm": [
+            7.321,
+            1.968,
+            1.254
+          ],
+          "bbox_size_mm": [
+            7.0,
+            6.0,
+            11.0
+          ],
+          "bbox_origin_vox": [
+            77,
+            95,
+            139
+          ],
+          "bbox_fill_ratio": 0.3312,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 156.0,
+          "surface_area_mm2": 199.82,
+          "compactness": 0.7013,
+          "elongation": 5.6404,
+          "flatness": 1.9647,
+          "eigenvalues_mm": [
+            6.644,
+            2.314,
+            1.178
+          ],
+          "bbox_size_mm": [
+            7.0,
+            6.0,
+            10.0
+          ],
+          "bbox_origin_vox": [
+            100,
+            95,
+            139
+          ],
+          "bbox_fill_ratio": 0.3714,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "PuA",
+          "volume_mm3_left": 153.0,
+          "volume_mm3_right": 156.0,
+          "centroid_mm_left": [
+            79.8,
+            97.33,
+            143.61
+          ],
+          "centroid_mm_right": [
+            103.04,
+            97.4,
+            143.29
+          ],
+          "centroid_normalized_left": [
+            0.4896,
+            0.4269,
+            0.6618
+          ],
+          "lr_volume_ratio": 0.9808,
+          "midline_distance_mm_left": 12.7,
+          "midline_distance_mm_right": 10.54,
+          "centroid_mirror_error_mm": 2.158,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 1.1959,
+          "T1_median": 1.1909,
+          "T1_std": 0.0877,
+          "T1_IQR": 0.1296,
+          "T1_MAD": 0.0633,
+          "T1_outlier_ratio": 0.0261,
+          "T1_gradient_energy": 0.0773,
+          "T1_LoG_energy": 0.0141
+        },
+        "intensity_right": {
+          "T1_mean": 1.2353,
+          "T1_median": 1.2494,
+          "T1_std": 0.0814,
+          "T1_IQR": 0.1293,
+          "T1_MAD": 0.0594,
+          "T1_outlier_ratio": 0.0256,
+          "T1_gradient_energy": 0.0727,
+          "T1_LoG_energy": 0.0132
+        }
+      },
+      "PuI": {
+        "geometric_left": {
+          "volume_mm3": 60.0,
+          "surface_area_mm2": 101.04,
+          "compactness": 0.7336,
+          "elongation": 4.0433,
+          "flatness": 2.3399,
+          "eigenvalues_mm": [
+            2.911,
+            1.685,
+            0.72
+          ],
+          "bbox_size_mm": [
+            7.0,
+            7.0,
+            4.0
+          ],
+          "bbox_origin_vox": [
+            67,
+            92,
+            133
+          ],
+          "bbox_fill_ratio": 0.3061,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 66.0,
+          "surface_area_mm2": 101.58,
+          "compactness": 0.7775,
+          "elongation": 3.9949,
+          "flatness": 1.6173,
+          "eigenvalues_mm": [
+            3.193,
+            1.292,
+            0.799
+          ],
+          "bbox_size_mm": [
+            8.0,
+            6.0,
+            5.0
+          ],
+          "bbox_origin_vox": [
+            110,
+            93,
+            132
+          ],
+          "bbox_fill_ratio": 0.275,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "PuI",
+          "volume_mm3_left": 60.0,
+          "volume_mm3_right": 66.0,
+          "centroid_mm_left": [
+            69.55,
+            95.12,
+            134.08
+          ],
+          "centroid_mm_right": [
+            113.52,
+            96.0,
+            133.65
+          ],
+          "centroid_normalized_left": [
+            0.4267,
+            0.4172,
+            0.6179
+          ],
+          "lr_volume_ratio": 0.9091,
+          "midline_distance_mm_left": 22.95,
+          "midline_distance_mm_right": 21.02,
+          "centroid_mirror_error_mm": 1.935,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 1.472,
+          "T1_median": 1.4685,
+          "T1_std": 0.1199,
+          "T1_IQR": 0.1956,
+          "T1_MAD": 0.0992,
+          "T1_outlier_ratio": 0.0167,
+          "T1_gradient_energy": 0.1056,
+          "T1_LoG_energy": 0.0935
+        },
+        "intensity_right": {
+          "T1_mean": 1.5497,
+          "T1_median": 1.5122,
+          "T1_std": 0.1423,
+          "T1_IQR": 0.222,
+          "T1_MAD": 0.0962,
+          "T1_outlier_ratio": 0.0303,
+          "T1_gradient_energy": 0.1919,
+          "T1_LoG_energy": 0.0632
+        }
+      },
+      "PuL": {
+        "geometric_left": {
+          "volume_mm3": 404.0,
+          "surface_area_mm2": 341.7,
+          "compactness": 0.7734,
+          "elongation": 5.2575,
+          "flatness": 2.062,
+          "eigenvalues_mm": [
+            10.453,
+            4.1,
+            1.988
+          ],
+          "bbox_size_mm": [
+            8.0,
+            9.0,
+            14.0
+          ],
+          "bbox_origin_vox": [
+            66,
+            89,
+            134
+          ],
+          "bbox_fill_ratio": 0.4008,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 410.0,
+          "surface_area_mm2": 370.32,
+          "compactness": 0.7207,
+          "elongation": 6.3237,
+          "flatness": 3.1446,
+          "eigenvalues_mm": [
+            10.585,
+            5.263,
+            1.674
+          ],
+          "bbox_size_mm": [
+            10.0,
+            9.0,
+            13.0
+          ],
+          "bbox_origin_vox": [
+            109,
+            89,
+            134
+          ],
+          "bbox_fill_ratio": 0.3504,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "PuL",
+          "volume_mm3_left": 404.0,
+          "volume_mm3_right": 410.0,
+          "centroid_mm_left": [
+            69.66,
+            92.51,
+            140.21
+          ],
+          "centroid_mm_right": [
+            113.19,
+            92.75,
+            139.68
+          ],
+          "centroid_normalized_left": [
+            0.4274,
+            0.4057,
+            0.6461
+          ],
+          "lr_volume_ratio": 0.9854,
+          "midline_distance_mm_left": 22.84,
+          "midline_distance_mm_right": 20.69,
+          "centroid_mirror_error_mm": 2.151,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 1.461,
+          "T1_median": 1.4594,
+          "T1_std": 0.0893,
+          "T1_IQR": 0.1277,
+          "T1_MAD": 0.0643,
+          "T1_outlier_ratio": 0.0248,
+          "T1_gradient_energy": 0.0659,
+          "T1_LoG_energy": 0.0279
+        },
+        "intensity_right": {
+          "T1_mean": 1.5302,
+          "T1_median": 1.5472,
+          "T1_std": 0.1901,
+          "T1_IQR": 0.1617,
+          "T1_MAD": 0.0836,
+          "T1_outlier_ratio": 0.0659,
+          "T1_gradient_energy": 0.1369,
+          "T1_LoG_energy": 0.0488
+        }
+      },
+      "PuM": {
+        "geometric_left": {
+          "volume_mm3": 1409.0,
+          "surface_area_mm2": 896.49,
+          "compactness": 0.678,
+          "elongation": 4.1632,
+          "flatness": 2.1423,
+          "eigenvalues_mm": [
+            21.547,
+            11.087,
+            5.176
+          ],
+          "bbox_size_mm": [
+            19.0,
+            11.0,
+            20.0
+          ],
+          "bbox_origin_vox": [
+            69,
+            87,
+            133
+          ],
+          "bbox_fill_ratio": 0.3371,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 1355.0,
+          "surface_area_mm2": 880.96,
+          "compactness": 0.6722,
+          "elongation": 3.9369,
+          "flatness": 1.8537,
+          "eigenvalues_mm": [
+            21.052,
+            9.913,
+            5.347
+          ],
+          "bbox_size_mm": [
+            19.0,
+            11.0,
+            20.0
+          ],
+          "bbox_origin_vox": [
+            96,
+            87,
+            133
+          ],
+          "bbox_fill_ratio": 0.3242,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "PuM",
+          "volume_mm3_left": 1409.0,
+          "volume_mm3_right": 1355.0,
+          "centroid_mm_left": [
+            78.02,
+            91.78,
+            141.47
+          ],
+          "centroid_mm_right": [
+            104.91,
+            91.79,
+            141.22
+          ],
+          "centroid_normalized_left": [
+            0.4787,
+            0.4025,
+            0.652
+          ],
+          "lr_volume_ratio": 1.0399,
+          "midline_distance_mm_left": 14.48,
+          "midline_distance_mm_right": 12.41,
+          "centroid_mirror_error_mm": 2.065,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 1.0154,
+          "T1_median": 1.1316,
+          "T1_std": 0.4757,
+          "T1_IQR": 0.3566,
+          "T1_MAD": 0.1783,
+          "T1_outlier_ratio": 0.115,
+          "T1_gradient_energy": 0.221,
+          "T1_LoG_energy": 0.0692,
+          "GLCM_contrast": 1.8572,
+          "GLCM_homogeneity": 0.998,
+          "GLCM_entropy": 0.0467,
+          "GLCM_correlation": 0.8393
+        },
+        "intensity_right": {
+          "T1_mean": 0.9695,
+          "T1_median": 1.1873,
+          "T1_std": 0.6209,
+          "T1_IQR": 0.5391,
+          "T1_MAD": 0.2124,
+          "T1_outlier_ratio": 0.1948,
+          "T1_gradient_energy": 0.3231,
+          "T1_LoG_energy": 0.0933,
+          "GLCM_contrast": 1.6201,
+          "GLCM_homogeneity": 0.9979,
+          "GLCM_entropy": 0.0477,
+          "GLCM_correlation": 0.8432
+        }
+      },
+      "Pv": {
+        "geometric_left": {
+          "volume_mm3": 5.0,
+          "surface_area_mm2": 11.85,
+          "compactness": 1.193,
+          "elongation": 38.474,
+          "flatness": 2.6316,
+          "eigenvalues_mm": [
+            2.193,
+            0.15,
+            0.057
+          ],
+          "bbox_size_mm": [
+            2.0,
+            4.0,
+            3.0
+          ],
+          "bbox_origin_vox": [
+            90,
+            111,
+            148
+          ],
+          "bbox_fill_ratio": 0.2083,
+          "connected_components": 2,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 6.0,
+          "surface_area_mm2": 14.95,
+          "compactness": 1.0681,
+          "elongation": 14279040273.6308,
+          "flatness": 2054293059.7026,
+          "eigenvalues_mm": [
+            1.428,
+            0.205,
+            0.0
+          ],
+          "bbox_size_mm": [
+            1.0,
+            4.0,
+            2.0
+          ],
+          "bbox_origin_vox": [
+            92,
+            111,
+            149
+          ],
+          "bbox_fill_ratio": 0.75,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "Pv",
+          "volume_mm3_left": 5.0,
+          "volume_mm3_right": 6.0,
+          "centroid_mm_left": [
+            90.2,
+            112.8,
+            149.0
+          ],
+          "centroid_mm_right": [
+            92.0,
+            112.17,
+            149.67
+          ],
+          "centroid_normalized_left": [
+            0.5534,
+            0.4947,
+            0.6866
+          ],
+          "lr_volume_ratio": 0.8333,
+          "midline_distance_mm_left": 2.3,
+          "midline_distance_mm_right": 0.5,
+          "centroid_mirror_error_mm": 2.8,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 0.1125,
+          "T1_median": 0.2822,
+          "T1_std": 0.3521,
+          "T1_IQR": 0.4769,
+          "T1_MAD": 0.188,
+          "T1_outlier_ratio": 0.2,
+          "T1_gradient_energy": 0.6607,
+          "T1_LoG_energy": 0.1371
+        },
+        "intensity_right": {
+          "T1_mean": 0.7566,
+          "T1_median": 0.7919,
+          "T1_std": 0.1653,
+          "T1_IQR": 0.206,
+          "T1_MAD": 0.1264,
+          "T1_outlier_ratio": 0.0,
+          "T1_gradient_energy": 0.5519,
+          "T1_LoG_energy": 0.0376
+        }
+      },
+      "RN": {
+        "geometric_left": {
+          "volume_mm3": 355.0,
+          "surface_area_mm2": 294.99,
+          "compactness": 0.8219,
+          "elongation": 3.135,
+          "flatness": 1.8261,
+          "eigenvalues_mm": [
+            6.977,
+            4.064,
+            2.226
+          ],
+          "bbox_size_mm": [
+            7.0,
+            12.0,
+            10.0
+          ],
+          "bbox_origin_vox": [
+            82,
+            101,
+            129
+          ],
+          "bbox_fill_ratio": 0.4226,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 367.0,
+          "surface_area_mm2": 305.02,
+          "compactness": 0.8127,
+          "elongation": 2.3741,
+          "flatness": 1.6336,
+          "eigenvalues_mm": [
+            6.203,
+            4.269,
+            2.613
+          ],
+          "bbox_size_mm": [
+            8.0,
+            11.0,
+            10.0
+          ],
+          "bbox_origin_vox": [
+            94,
+            102,
+            129
+          ],
+          "bbox_fill_ratio": 0.417,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "RN",
+          "volume_mm3_left": 355.0,
+          "volume_mm3_right": 367.0,
+          "centroid_mm_left": [
+            85.22,
+            106.5,
+            133.44
+          ],
+          "centroid_mm_right": [
+            97.47,
+            106.98,
+            133.41
+          ],
+          "centroid_normalized_left": [
+            0.5228,
+            0.4671,
+            0.6149
+          ],
+          "lr_volume_ratio": 0.9673,
+          "midline_distance_mm_left": 7.28,
+          "midline_distance_mm_right": 4.97,
+          "centroid_mirror_error_mm": 2.309,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 1.7074,
+          "T1_median": 1.7118,
+          "T1_std": 0.0799,
+          "T1_IQR": 0.1052,
+          "T1_MAD": 0.0524,
+          "T1_outlier_ratio": 0.0479,
+          "T1_gradient_energy": 0.083,
+          "T1_LoG_energy": 0.0471,
+          "GLCM_contrast": 0.8319,
+          "GLCM_homogeneity": 0.9985,
+          "GLCM_entropy": 0.0293,
+          "GLCM_correlation": 0.7648
+        },
+        "intensity_right": {
+          "T1_mean": 1.6265,
+          "T1_median": 1.6327,
+          "T1_std": 0.0675,
+          "T1_IQR": 0.0912,
+          "T1_MAD": 0.0447,
+          "T1_outlier_ratio": 0.049,
+          "T1_gradient_energy": 0.0729,
+          "T1_LoG_energy": 0.0393,
+          "GLCM_contrast": 0.8337,
+          "GLCM_homogeneity": 0.9985,
+          "GLCM_entropy": 0.029,
+          "GLCM_correlation": 0.7817
+        }
+      },
+      "SG": {
+        "geometric_left": {
+          "volume_mm3": 39.0,
+          "surface_area_mm2": 63.81,
+          "compactness": 0.8716,
+          "elongation": 1.566,
+          "flatness": 1.1593,
+          "eigenvalues_mm": [
+            1.302,
+            0.964,
+            0.831
+          ],
+          "bbox_size_mm": [
+            4.0,
+            5.0,
+            4.0
+          ],
+          "bbox_origin_vox": [
+            78,
+            94,
+            134
+          ],
+          "bbox_fill_ratio": 0.4875,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 41.0,
+          "surface_area_mm2": 70.73,
+          "compactness": 0.813,
+          "elongation": 2.9268,
+          "flatness": 1.6625,
+          "eigenvalues_mm": [
+            1.843,
+            1.047,
+            0.63
+          ],
+          "bbox_size_mm": [
+            5.0,
+            6.0,
+            4.0
+          ],
+          "bbox_origin_vox": [
+            102,
+            94,
+            134
+          ],
+          "bbox_fill_ratio": 0.3417,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "SG",
+          "volume_mm3_left": 39.0,
+          "volume_mm3_right": 41.0,
+          "centroid_mm_left": [
+            79.56,
+            95.79,
+            135.82
+          ],
+          "centroid_mm_right": [
+            103.59,
+            96.41,
+            135.68
+          ],
+          "centroid_normalized_left": [
+            0.4881,
+            0.4202,
+            0.6259
+          ],
+          "lr_volume_ratio": 0.9512,
+          "midline_distance_mm_left": 12.94,
+          "midline_distance_mm_right": 11.09,
+          "centroid_mirror_error_mm": 1.851,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 1.21,
+          "T1_median": 1.2531,
+          "T1_std": 0.3257,
+          "T1_IQR": 0.2927,
+          "T1_MAD": 0.1498,
+          "T1_outlier_ratio": 0.0769,
+          "T1_gradient_energy": 0.3376,
+          "T1_LoG_energy": 0.0948
+        },
+        "intensity_right": {
+          "T1_mean": 1.0879,
+          "T1_median": 1.2383,
+          "T1_std": 0.4638,
+          "T1_IQR": 0.4338,
+          "T1_MAD": 0.27,
+          "T1_outlier_ratio": 0.122,
+          "T1_gradient_energy": 0.5085,
+          "T1_LoG_energy": 0.0969
+        }
+      },
+      "STh": {
+        "geometric_left": {
+          "volume_mm3": 253.0,
+          "surface_area_mm2": 267.32,
+          "compactness": 0.7236,
+          "elongation": 10.0738,
+          "flatness": 3.1064,
+          "eigenvalues_mm": [
+            10.252,
+            3.161,
+            1.018
+          ],
+          "bbox_size_mm": [
+            9.0,
+            13.0,
+            8.0
+          ],
+          "bbox_origin_vox": [
+            76,
+            106,
+            134
+          ],
+          "bbox_fill_ratio": 0.2703,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 234.0,
+          "surface_area_mm2": 264.22,
+          "compactness": 0.695,
+          "elongation": 11.0099,
+          "flatness": 3.4702,
+          "eigenvalues_mm": [
+            10.086,
+            3.179,
+            0.916
+          ],
+          "bbox_size_mm": [
+            9.0,
+            13.0,
+            8.0
+          ],
+          "bbox_origin_vox": [
+            98,
+            106,
+            134
+          ],
+          "bbox_fill_ratio": 0.25,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "STh",
+          "volume_mm3_left": 253.0,
+          "volume_mm3_right": 234.0,
+          "centroid_mm_left": [
+            80.06,
+            112.42,
+            137.27
+          ],
+          "centroid_mm_right": [
+            102.41,
+            112.38,
+            137.5
+          ],
+          "centroid_normalized_left": [
+            0.4911,
+            0.4931,
+            0.6326
+          ],
+          "lr_volume_ratio": 1.0812,
+          "midline_distance_mm_left": 12.44,
+          "midline_distance_mm_right": 9.91,
+          "centroid_mirror_error_mm": 2.53,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 1.6642,
+          "T1_median": 1.6726,
+          "T1_std": 0.1083,
+          "T1_IQR": 0.1412,
+          "T1_MAD": 0.0708,
+          "T1_outlier_ratio": 0.0593,
+          "T1_gradient_energy": 0.1087,
+          "T1_LoG_energy": 0.0258,
+          "GLCM_contrast": 0.8281,
+          "GLCM_homogeneity": 0.9985,
+          "GLCM_entropy": 0.0295,
+          "GLCM_correlation": 0.7803
+        },
+        "intensity_right": {
+          "T1_mean": 1.5411,
+          "T1_median": 1.564,
+          "T1_std": 0.1268,
+          "T1_IQR": 0.1298,
+          "T1_MAD": 0.0644,
+          "T1_outlier_ratio": 0.094,
+          "T1_gradient_energy": 0.1179,
+          "T1_LoG_energy": 0.0249
+        }
+      },
+      "VAmc": {
+        "geometric_left": {
+          "volume_mm3": 67.0,
+          "surface_area_mm2": 125.51,
+          "compactness": 0.6356,
+          "elongation": 11.3272,
+          "flatness": 2.3314,
+          "eigenvalues_mm": [
+            7.412,
+            1.526,
+            0.654
+          ],
+          "bbox_size_mm": [
+            4.0,
+            7.0,
+            9.0
+          ],
+          "bbox_origin_vox": [
+            84,
+            113,
+            144
+          ],
+          "bbox_fill_ratio": 0.2659,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 50.0,
+          "surface_area_mm2": 112.21,
+          "compactness": 0.5849,
+          "elongation": 13.9187,
+          "flatness": 3.5157,
+          "eigenvalues_mm": [
+            7.531,
+            1.902,
+            0.541
+          ],
+          "bbox_size_mm": [
+            4.0,
+            7.0,
+            10.0
+          ],
+          "bbox_origin_vox": [
+            95,
+            113,
+            144
+          ],
+          "bbox_fill_ratio": 0.1786,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "VAmc",
+          "volume_mm3_left": 67.0,
+          "volume_mm3_right": 50.0,
+          "centroid_mm_left": [
+            85.51,
+            115.78,
+            147.46
+          ],
+          "centroid_mm_right": [
+            96.56,
+            116.54,
+            148.6
+          ],
+          "centroid_normalized_left": [
+            0.5246,
+            0.5078,
+            0.6796
+          ],
+          "lr_volume_ratio": 1.34,
+          "midline_distance_mm_left": 6.99,
+          "midline_distance_mm_right": 4.06,
+          "centroid_mirror_error_mm": 2.933,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 1.3701,
+          "T1_median": 1.3889,
+          "T1_std": 0.1695,
+          "T1_IQR": 0.1904,
+          "T1_MAD": 0.092,
+          "T1_outlier_ratio": 0.0746,
+          "T1_gradient_energy": 0.1848,
+          "T1_LoG_energy": 0.0939
+        },
+        "intensity_right": {
+          "T1_mean": 1.3592,
+          "T1_median": 1.4102,
+          "T1_std": 0.1453,
+          "T1_IQR": 0.1635,
+          "T1_MAD": 0.0867,
+          "T1_outlier_ratio": 0.1,
+          "T1_gradient_energy": 0.155,
+          "T1_LoG_energy": 0.1034
+        }
+      },
+      "VApc": {
+        "geometric_left": {
+          "volume_mm3": 488.0,
+          "surface_area_mm2": 464.41,
+          "compactness": 0.6454,
+          "elongation": 6.6942,
+          "flatness": 2.6035,
+          "eigenvalues_mm": [
+            13.836,
+            5.381,
+            2.067
+          ],
+          "bbox_size_mm": [
+            11.0,
+            11.0,
+            15.0
+          ],
+          "bbox_origin_vox": [
+            77,
+            110,
+            144
+          ],
+          "bbox_fill_ratio": 0.2689,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 403.0,
+          "surface_area_mm2": 402.61,
+          "compactness": 0.6553,
+          "elongation": 6.7406,
+          "flatness": 3.0159,
+          "eigenvalues_mm": [
+            11.781,
+            5.271,
+            1.748
+          ],
+          "bbox_size_mm": [
+            10.0,
+            10.0,
+            14.0
+          ],
+          "bbox_origin_vox": [
+            95,
+            112,
+            144
+          ],
+          "bbox_fill_ratio": 0.2879,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "VApc",
+          "volume_mm3_left": 488.0,
+          "volume_mm3_right": 403.0,
+          "centroid_mm_left": [
+            82.31,
+            115.56,
+            151.18
+          ],
+          "centroid_mm_right": [
+            99.48,
+            116.02,
+            150.95
+          ],
+          "centroid_normalized_left": [
+            0.505,
+            0.5068,
+            0.6967
+          ],
+          "lr_volume_ratio": 1.2109,
+          "midline_distance_mm_left": 10.19,
+          "midline_distance_mm_right": 6.98,
+          "centroid_mirror_error_mm": 3.205,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 1.4809,
+          "T1_median": 1.4956,
+          "T1_std": 0.1982,
+          "T1_IQR": 0.1349,
+          "T1_MAD": 0.0677,
+          "T1_outlier_ratio": 0.1352,
+          "T1_gradient_energy": 0.1901,
+          "T1_LoG_energy": 0.0838
+        },
+        "intensity_right": {
+          "T1_mean": 1.4119,
+          "T1_median": 1.4011,
+          "T1_std": 0.126,
+          "T1_IQR": 0.1529,
+          "T1_MAD": 0.0749,
+          "T1_outlier_ratio": 0.0546,
+          "T1_gradient_energy": 0.1117,
+          "T1_LoG_energy": 0.0699
+        }
+      },
+      "VLa": {
+        "geometric_left": {
+          "volume_mm3": 362.0,
+          "surface_area_mm2": 376.7,
+          "compactness": 0.6521,
+          "elongation": 6.308,
+          "flatness": 3.2503,
+          "eigenvalues_mm": [
+            9.839,
+            5.07,
+            1.56
+          ],
+          "bbox_size_mm": [
+            10.0,
+            8.0,
+            14.0
+          ],
+          "bbox_origin_vox": [
+            75,
+            106,
+            142
+          ],
+          "bbox_fill_ratio": 0.3232,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 319.0,
+          "surface_area_mm2": 329.47,
+          "compactness": 0.6853,
+          "elongation": 7.8158,
+          "flatness": 4.3291,
+          "eigenvalues_mm": [
+            9.465,
+            5.242,
+            1.211
+          ],
+          "bbox_size_mm": [
+            10.0,
+            8.0,
+            13.0
+          ],
+          "bbox_origin_vox": [
+            98,
+            107,
+            142
+          ],
+          "bbox_fill_ratio": 0.3067,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "VLa",
+          "volume_mm3_left": 362.0,
+          "volume_mm3_right": 319.0,
+          "centroid_mm_left": [
+            79.24,
+            109.81,
+            148.37
+          ],
+          "centroid_mm_right": [
+            102.62,
+            110.4,
+            148.4
+          ],
+          "centroid_normalized_left": [
+            0.4862,
+            0.4816,
+            0.6837
+          ],
+          "lr_volume_ratio": 1.1348,
+          "midline_distance_mm_left": 13.26,
+          "midline_distance_mm_right": 10.12,
+          "centroid_mirror_error_mm": 3.133,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 1.4974,
+          "T1_median": 1.4907,
+          "T1_std": 0.0773,
+          "T1_IQR": 0.0997,
+          "T1_MAD": 0.0498,
+          "T1_outlier_ratio": 0.0442,
+          "T1_gradient_energy": 0.0599,
+          "T1_LoG_energy": 0.0101
+        },
+        "intensity_right": {
+          "T1_mean": 1.399,
+          "T1_median": 1.3946,
+          "T1_std": 0.0793,
+          "T1_IQR": 0.1251,
+          "T1_MAD": 0.059,
+          "T1_outlier_ratio": 0.0157,
+          "T1_gradient_energy": 0.0597,
+          "T1_LoG_energy": 0.0084
+        }
+      },
+      "VLpd": {
+        "geometric_left": {
+          "volume_mm3": 656.0,
+          "surface_area_mm2": 538.02,
+          "compactness": 0.6786,
+          "elongation": 5.7672,
+          "flatness": 1.5167,
+          "eigenvalues_mm": [
+            18.015,
+            4.737,
+            3.124
+          ],
+          "bbox_size_mm": [
+            14.0,
+            17.0,
+            10.0
+          ],
+          "bbox_origin_vox": [
+            74,
+            98,
+            150
+          ],
+          "bbox_fill_ratio": 0.2756,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 603.0,
+          "surface_area_mm2": 501.81,
+          "compactness": 0.6878,
+          "elongation": 6.887,
+          "flatness": 1.489,
+          "eigenvalues_mm": [
+            19.28,
+            4.168,
+            2.8
+          ],
+          "bbox_size_mm": [
+            12.0,
+            18.0,
+            10.0
+          ],
+          "bbox_origin_vox": [
+            96,
+            98,
+            150
+          ],
+          "bbox_fill_ratio": 0.2792,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "VLpd",
+          "volume_mm3_left": 656.0,
+          "volume_mm3_right": 603.0,
+          "centroid_mm_left": [
+            80.17,
+            105.99,
+            155.24
+          ],
+          "centroid_mm_right": [
+            101.91,
+            105.96,
+            154.99
+          ],
+          "centroid_normalized_left": [
+            0.4918,
+            0.4649,
+            0.7154
+          ],
+          "lr_volume_ratio": 1.0879,
+          "midline_distance_mm_left": 12.33,
+          "midline_distance_mm_right": 9.41,
+          "centroid_mirror_error_mm": 2.919,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 1.2736,
+          "T1_median": 1.2908,
+          "T1_std": 0.1806,
+          "T1_IQR": 0.1548,
+          "T1_MAD": 0.076,
+          "T1_outlier_ratio": 0.0823,
+          "T1_gradient_energy": 0.1478,
+          "T1_LoG_energy": 0.0798,
+          "GLCM_contrast": 1.0575,
+          "GLCM_homogeneity": 0.9975,
+          "GLCM_entropy": 0.0526,
+          "GLCM_correlation": 0.7752
+        },
+        "intensity_right": {
+          "T1_mean": 1.217,
+          "T1_median": 1.2279,
+          "T1_std": 0.1071,
+          "T1_IQR": 0.1221,
+          "T1_MAD": 0.0617,
+          "T1_outlier_ratio": 0.0564,
+          "T1_gradient_energy": 0.1048,
+          "T1_LoG_energy": 0.0568,
+          "GLCM_contrast": 1.2692,
+          "GLCM_homogeneity": 0.9976,
+          "GLCM_entropy": 0.0492,
+          "GLCM_correlation": 0.7773
+        }
+      },
+      "VLpv": {
+        "geometric_left": {
+          "volume_mm3": 751.0,
+          "surface_area_mm2": 675.97,
+          "compactness": 0.5911,
+          "elongation": 8.0198,
+          "flatness": 3.4648,
+          "eigenvalues_mm": [
+            21.21,
+            9.163,
+            2.645
+          ],
+          "bbox_size_mm": [
+            14.0,
+            16.0,
+            16.0
+          ],
+          "bbox_origin_vox": [
+            74,
+            101,
+            139
+          ],
+          "bbox_fill_ratio": 0.2095,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 734.0,
+          "surface_area_mm2": 642.6,
+          "compactness": 0.6124,
+          "elongation": 9.1382,
+          "flatness": 3.5408,
+          "eigenvalues_mm": [
+            22.198,
+            8.601,
+            2.429
+          ],
+          "bbox_size_mm": [
+            13.0,
+            16.0,
+            16.0
+          ],
+          "bbox_origin_vox": [
+            96,
+            101,
+            139
+          ],
+          "bbox_fill_ratio": 0.2206,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "VLpv",
+          "volume_mm3_left": 751.0,
+          "volume_mm3_right": 734.0,
+          "centroid_mm_left": [
+            80.2,
+            106.55,
+            147.52
+          ],
+          "centroid_mm_right": [
+            102.15,
+            106.96,
+            147.48
+          ],
+          "centroid_normalized_left": [
+            0.492,
+            0.4673,
+            0.6798
+          ],
+          "lr_volume_ratio": 1.0232,
+          "midline_distance_mm_left": 12.3,
+          "midline_distance_mm_right": 9.65,
+          "centroid_mirror_error_mm": 2.653,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 1.425,
+          "T1_median": 1.4278,
+          "T1_std": 0.0954,
+          "T1_IQR": 0.1319,
+          "T1_MAD": 0.0654,
+          "T1_outlier_ratio": 0.0346,
+          "T1_gradient_energy": 0.0755,
+          "T1_LoG_energy": 0.0185,
+          "GLCM_contrast": 1.1891,
+          "GLCM_homogeneity": 0.9983,
+          "GLCM_entropy": 0.0328,
+          "GLCM_correlation": 0.6691
+        },
+        "intensity_right": {
+          "T1_mean": 1.3947,
+          "T1_median": 1.3948,
+          "T1_std": 0.0926,
+          "T1_IQR": 0.1301,
+          "T1_MAD": 0.0658,
+          "T1_outlier_ratio": 0.0286,
+          "T1_gradient_energy": 0.0708,
+          "T1_LoG_energy": 0.0182,
+          "GLCM_contrast": 1.1409,
+          "GLCM_homogeneity": 0.9984,
+          "GLCM_entropy": 0.032,
+          "GLCM_correlation": 0.7367
+        }
+      },
+      "VM": {
+        "geometric_left": {
+          "volume_mm3": 147.0,
+          "surface_area_mm2": 206.38,
+          "compactness": 0.6527,
+          "elongation": 11.0266,
+          "flatness": 3.3113,
+          "eigenvalues_mm": [
+            8.729,
+            2.621,
+            0.792
+          ],
+          "bbox_size_mm": [
+            10.0,
+            12.0,
+            7.0
+          ],
+          "bbox_origin_vox": [
+            78,
+            104,
+            140
+          ],
+          "bbox_fill_ratio": 0.175,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 149.0,
+          "surface_area_mm2": 207.21,
+          "compactness": 0.656,
+          "elongation": 10.8505,
+          "flatness": 3.275,
+          "eigenvalues_mm": [
+            8.583,
+            2.591,
+            0.791
+          ],
+          "bbox_size_mm": [
+            9.0,
+            11.0,
+            7.0
+          ],
+          "bbox_origin_vox": [
+            96,
+            105,
+            140
+          ],
+          "bbox_fill_ratio": 0.215,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "VM",
+          "volume_mm3_left": 147.0,
+          "volume_mm3_right": 149.0,
+          "centroid_mm_left": [
+            83.09,
+            109.78,
+            142.96
+          ],
+          "centroid_mm_right": [
+            99.17,
+            110.19,
+            143.13
+          ],
+          "centroid_normalized_left": [
+            0.5097,
+            0.4815,
+            0.6588
+          ],
+          "lr_volume_ratio": 0.9866,
+          "midline_distance_mm_left": 9.41,
+          "midline_distance_mm_right": 6.67,
+          "centroid_mirror_error_mm": 2.737,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 1.4863,
+          "T1_median": 1.4952,
+          "T1_std": 0.117,
+          "T1_IQR": 0.1354,
+          "T1_MAD": 0.0666,
+          "T1_outlier_ratio": 0.0884,
+          "T1_gradient_energy": 0.1049,
+          "T1_LoG_energy": 0.0313
+        },
+        "intensity_right": {
+          "T1_mean": 1.4262,
+          "T1_median": 1.4454,
+          "T1_std": 0.1137,
+          "T1_IQR": 0.1372,
+          "T1_MAD": 0.0668,
+          "T1_outlier_ratio": 0.1007,
+          "T1_gradient_energy": 0.101,
+          "T1_LoG_energy": 0.0284
+        }
+      },
+      "VPI": {
+        "geometric_left": {
+          "volume_mm3": 70.0,
+          "surface_area_mm2": 117.67,
+          "compactness": 0.698,
+          "elongation": 2.4722,
+          "flatness": 1.61,
+          "eigenvalues_mm": [
+            2.577,
+            1.678,
+            1.042
+          ],
+          "bbox_size_mm": [
+            7.0,
+            5.0,
+            6.0
+          ],
+          "bbox_origin_vox": [
+            74,
+            98,
+            136
+          ],
+          "bbox_fill_ratio": 0.3333,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 70.0,
+          "surface_area_mm2": 101.61,
+          "compactness": 0.8083,
+          "elongation": 2.2811,
+          "flatness": 1.4089,
+          "eigenvalues_mm": [
+            2.338,
+            1.444,
+            1.025
+          ],
+          "bbox_size_mm": [
+            7.0,
+            6.0,
+            5.0
+          ],
+          "bbox_origin_vox": [
+            103,
+            98,
+            136
+          ],
+          "bbox_fill_ratio": 0.3333,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "VPI",
+          "volume_mm3_left": 70.0,
+          "volume_mm3_right": 70.0,
+          "centroid_mm_left": [
+            76.7,
+            99.81,
+            138.29
+          ],
+          "centroid_mm_right": [
+            106.01,
+            100.3,
+            138.03
+          ],
+          "centroid_normalized_left": [
+            0.4706,
+            0.4378,
+            0.6373
+          ],
+          "lr_volume_ratio": 1.0,
+          "midline_distance_mm_left": 15.8,
+          "midline_distance_mm_right": 13.51,
+          "centroid_mirror_error_mm": 2.286,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 1.4078,
+          "T1_median": 1.4236,
+          "T1_std": 0.0764,
+          "T1_IQR": 0.1111,
+          "T1_MAD": 0.0559,
+          "T1_outlier_ratio": 0.0429,
+          "T1_gradient_energy": 0.0643,
+          "T1_LoG_energy": 0.0111
+        },
+        "intensity_right": {
+          "T1_mean": 1.4213,
+          "T1_median": 1.4304,
+          "T1_std": 0.0682,
+          "T1_IQR": 0.1002,
+          "T1_MAD": 0.046,
+          "T1_outlier_ratio": 0.0143,
+          "T1_gradient_energy": 0.0777,
+          "T1_LoG_energy": 0.0163
+        }
+      },
+      "VPLa": {
+        "geometric_left": {
+          "volume_mm3": 119.0,
+          "surface_area_mm2": 180.65,
+          "compactness": 0.6477,
+          "elongation": 11.3348,
+          "flatness": 3.8633,
+          "eigenvalues_mm": [
+            7.007,
+            2.388,
+            0.618
+          ],
+          "bbox_size_mm": [
+            7.0,
+            5.0,
+            11.0
+          ],
+          "bbox_origin_vox": [
+            73,
+            99,
+            140
+          ],
+          "bbox_fill_ratio": 0.3091,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 111.0,
+          "surface_area_mm2": 173.2,
+          "compactness": 0.6449,
+          "elongation": 12.2603,
+          "flatness": 3.8185,
+          "eigenvalues_mm": [
+            7.237,
+            2.254,
+            0.59
+          ],
+          "bbox_size_mm": [
+            6.0,
+            6.0,
+            11.0
+          ],
+          "bbox_origin_vox": [
+            104,
+            99,
+            140
+          ],
+          "bbox_fill_ratio": 0.2803,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "VPLa",
+          "volume_mm3_left": 119.0,
+          "volume_mm3_right": 111.0,
+          "centroid_mm_left": [
+            76.11,
+            101.07,
+            145.81
+          ],
+          "centroid_mm_right": [
+            106.63,
+            101.33,
+            145.18
+          ],
+          "centroid_normalized_left": [
+            0.4669,
+            0.4433,
+            0.6719
+          ],
+          "lr_volume_ratio": 1.0721,
+          "midline_distance_mm_left": 16.39,
+          "midline_distance_mm_right": 14.13,
+          "centroid_mirror_error_mm": 2.26,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 1.4041,
+          "T1_median": 1.399,
+          "T1_std": 0.0451,
+          "T1_IQR": 0.0569,
+          "T1_MAD": 0.0276,
+          "T1_outlier_ratio": 0.0588,
+          "T1_gradient_energy": 0.0492,
+          "T1_LoG_energy": 0.0098
+        },
+        "intensity_right": {
+          "T1_mean": 1.3999,
+          "T1_median": 1.4049,
+          "T1_std": 0.066,
+          "T1_IQR": 0.0839,
+          "T1_MAD": 0.0407,
+          "T1_outlier_ratio": 0.045,
+          "T1_gradient_energy": 0.0618,
+          "T1_LoG_energy": 0.0101
+        }
+      },
+      "VPLp": {
+        "geometric_left": {
+          "volume_mm3": 542.0,
+          "surface_area_mm2": 540.3,
+          "compactness": 0.595,
+          "elongation": 12.5737,
+          "flatness": 3.996,
+          "eigenvalues_mm": [
+            20.498,
+            6.514,
+            1.63
+          ],
+          "bbox_size_mm": [
+            13.0,
+            9.0,
+            19.0
+          ],
+          "bbox_origin_vox": [
+            71,
+            95,
+            139
+          ],
+          "bbox_fill_ratio": 0.2438,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 535.0,
+          "surface_area_mm2": 541.61,
+          "compactness": 0.5884,
+          "elongation": 13.0846,
+          "flatness": 4.0533,
+          "eigenvalues_mm": [
+            20.606,
+            6.383,
+            1.575
+          ],
+          "bbox_size_mm": [
+            12.0,
+            10.0,
+            19.0
+          ],
+          "bbox_origin_vox": [
+            100,
+            95,
+            139
+          ],
+          "bbox_fill_ratio": 0.2346,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "VPLp",
+          "volume_mm3_left": 542.0,
+          "volume_mm3_right": 535.0,
+          "centroid_mm_left": [
+            76.87,
+            98.89,
+            147.31
+          ],
+          "centroid_mm_right": [
+            105.44,
+            99.06,
+            146.86
+          ],
+          "centroid_normalized_left": [
+            0.4716,
+            0.4337,
+            0.6788
+          ],
+          "lr_volume_ratio": 1.0131,
+          "midline_distance_mm_left": 15.63,
+          "midline_distance_mm_right": 12.94,
+          "centroid_mirror_error_mm": 2.688,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 1.3224,
+          "T1_median": 1.3283,
+          "T1_std": 0.0721,
+          "T1_IQR": 0.0958,
+          "T1_MAD": 0.0483,
+          "T1_outlier_ratio": 0.0498,
+          "T1_gradient_energy": 0.0673,
+          "T1_LoG_energy": 0.0215,
+          "GLCM_contrast": 0.7977,
+          "GLCM_homogeneity": 0.9986,
+          "GLCM_entropy": 0.0277,
+          "GLCM_correlation": 0.7268
+        },
+        "intensity_right": {
+          "T1_mean": 1.3187,
+          "T1_median": 1.3225,
+          "T1_std": 0.099,
+          "T1_IQR": 0.1274,
+          "T1_MAD": 0.0639,
+          "T1_outlier_ratio": 0.0411,
+          "T1_gradient_energy": 0.0716,
+          "T1_LoG_energy": 0.0178
+        }
+      },
+      "VPM": {
+        "geometric_left": {
+          "volume_mm3": 187.0,
+          "surface_area_mm2": 251.14,
+          "compactness": 0.6297,
+          "elongation": 6.1527,
+          "flatness": 5.265,
+          "eigenvalues_mm": [
+            6.445,
+            5.515,
+            1.048
+          ],
+          "bbox_size_mm": [
+            8.0,
+            12.0,
+            11.0
+          ],
+          "bbox_origin_vox": [
+            78,
+            98,
+            136
+          ],
+          "bbox_fill_ratio": 0.1771,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 192.0,
+          "surface_area_mm2": 255.96,
+          "compactness": 0.6288,
+          "elongation": 7.2301,
+          "flatness": 5.4503,
+          "eigenvalues_mm": [
+            7.179,
+            5.412,
+            0.993
+          ],
+          "bbox_size_mm": [
+            9.0,
+            11.0,
+            11.0
+          ],
+          "bbox_origin_vox": [
+            97,
+            99,
+            136
+          ],
+          "bbox_fill_ratio": 0.1763,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "VPM",
+          "volume_mm3_left": 187.0,
+          "volume_mm3_right": 192.0,
+          "centroid_mm_left": [
+            80.55,
+            102.41,
+            140.93
+          ],
+          "centroid_mm_right": [
+            102.02,
+            102.93,
+            140.92
+          ],
+          "centroid_normalized_left": [
+            0.4941,
+            0.4492,
+            0.6494
+          ],
+          "lr_volume_ratio": 0.974,
+          "midline_distance_mm_left": 11.95,
+          "midline_distance_mm_right": 9.52,
+          "centroid_mirror_error_mm": 2.439,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 1.4352,
+          "T1_median": 1.4383,
+          "T1_std": 0.0851,
+          "T1_IQR": 0.1179,
+          "T1_MAD": 0.0588,
+          "T1_outlier_ratio": 0.0374,
+          "T1_gradient_energy": 0.0795,
+          "T1_LoG_energy": 0.015
+        },
+        "intensity_right": {
+          "T1_mean": 1.4352,
+          "T1_median": 1.4421,
+          "T1_std": 0.0801,
+          "T1_IQR": 0.107,
+          "T1_MAD": 0.0552,
+          "T1_outlier_ratio": 0.0469,
+          "T1_gradient_energy": 0.0797,
+          "T1_LoG_energy": 0.0172
+        }
+      },
+      "global": {
+        "geometric_left": {
+          "volume_mm3": 7713.0,
+          "surface_area_mm2": 2981.4,
+          "compactness": 0.6332,
+          "elongation": 5.0415,
+          "flatness": 1.2672,
+          "eigenvalues_mm": [
+            93.331,
+            23.459,
+            18.513
+          ],
+          "bbox_size_mm": [
+            29.0,
+            34.0,
+            29.0
+          ],
+          "bbox_origin_vox": [
+            63,
+            87,
+            131
+          ],
+          "bbox_fill_ratio": 0.2697,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 7592.0,
+          "surface_area_mm2": 2929.71,
+          "compactness": 0.6376,
+          "elongation": 5.4804,
+          "flatness": 1.4914,
+          "eigenvalues_mm": [
+            93.394,
+            25.415,
+            17.042
+          ],
+          "bbox_size_mm": [
+            30.0,
+            35.0,
+            29.0
+          ],
+          "bbox_origin_vox": [
+            91,
+            87,
+            131
+          ],
+          "bbox_fill_ratio": 0.2493,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "global",
+          "volume_mm3_left": 7713.0,
+          "volume_mm3_right": 7592.0,
+          "centroid_mm_left": [
+            80.07,
+            101.74,
+            146.09
+          ],
+          "centroid_mm_right": [
+            102.45,
+            101.66,
+            145.73
+          ],
+          "centroid_normalized_left": [
+            0.4912,
+            0.4462,
+            0.6732
+          ],
+          "lr_volume_ratio": 1.0159,
+          "midline_distance_mm_left": 12.43,
+          "midline_distance_mm_right": 9.95,
+          "centroid_mirror_error_mm": 2.482,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 1.1758,
+          "T1_median": 1.2991,
+          "T1_std": 0.4378,
+          "T1_IQR": 0.3209,
+          "T1_MAD": 0.1505,
+          "T1_outlier_ratio": 0.1317,
+          "T1_gradient_energy": 0.2089,
+          "T1_LoG_energy": 0.062,
+          "GLCM_contrast": 3.1412,
+          "GLCM_homogeneity": 0.995,
+          "GLCM_entropy": 0.1169,
+          "GLCM_correlation": 0.8593
+        },
+        "intensity_right": {
+          "T1_mean": 1.1687,
+          "T1_median": 1.2865,
+          "T1_std": 0.4467,
+          "T1_IQR": 0.3072,
+          "T1_MAD": 0.1469,
+          "T1_outlier_ratio": 0.1382,
+          "T1_gradient_energy": 0.2154,
+          "T1_LoG_energy": 0.0641,
+          "GLCM_contrast": 2.9836,
+          "GLCM_homogeneity": 0.9949,
+          "GLCM_entropy": 0.1178,
+          "GLCM_correlation": 0.8665
+        }
+      },
+      "mtt": {
+        "geometric_left": {
+          "volume_mm3": 47.0,
+          "surface_area_mm2": 120.71,
+          "compactness": 0.5218,
+          "elongation": 133.6469,
+          "flatness": 6.7341,
+          "eigenvalues_mm": [
+            33.641,
+            1.695,
+            0.252
+          ],
+          "bbox_size_mm": [
+            3.0,
+            6.0,
+            19.0
+          ],
+          "bbox_origin_vox": [
+            86,
+            113,
+            135
+          ],
+          "bbox_fill_ratio": 0.1374,
+          "connected_components": 3,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 56.0,
+          "surface_area_mm2": 115.51,
+          "compactness": 0.6128,
+          "elongation": 93.8234,
+          "flatness": 4.2067,
+          "eigenvalues_mm": [
+            27.608,
+            1.238,
+            0.294
+          ],
+          "bbox_size_mm": [
+            3.0,
+            6.0,
+            18.0
+          ],
+          "bbox_origin_vox": [
+            95,
+            113,
+            136
+          ],
+          "bbox_fill_ratio": 0.1728,
+          "connected_components": 2,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "mtt",
+          "volume_mm3_left": 47.0,
+          "volume_mm3_right": 56.0,
+          "centroid_mm_left": [
+            86.74,
+            115.13,
+            143.36
+          ],
+          "centroid_mm_right": [
+            95.89,
+            115.11,
+            142.5
+          ],
+          "centroid_normalized_left": [
+            0.5322,
+            0.5049,
+            0.6607
+          ],
+          "lr_volume_ratio": 0.8393,
+          "midline_distance_mm_left": 5.76,
+          "midline_distance_mm_right": 3.39,
+          "centroid_mirror_error_mm": 2.362,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 1.4501,
+          "T1_median": 1.4435,
+          "T1_std": 0.1511,
+          "T1_IQR": 0.2575,
+          "T1_MAD": 0.1317,
+          "T1_outlier_ratio": 0.0,
+          "T1_gradient_energy": 0.1754,
+          "T1_LoG_energy": 0.1662
+        },
+        "intensity_right": {
+          "T1_mean": 1.4455,
+          "T1_median": 1.48,
+          "T1_std": 0.1674,
+          "T1_IQR": 0.2246,
+          "T1_MAD": 0.1232,
+          "T1_outlier_ratio": 0.0357,
+          "T1_gradient_energy": 0.1838,
+          "T1_LoG_energy": 0.1551
+        }
+      },
+      "sPf": {
+        "geometric_left": {
+          "volume_mm3": 13.0,
+          "surface_area_mm2": 31.02,
+          "compactness": 0.8618,
+          "elongation": 39.3721,
+          "flatness": 1.9592,
+          "eigenvalues_mm": [
+            7.345,
+            0.366,
+            0.187
+          ],
+          "bbox_size_mm": [
+            4.0,
+            7.0,
+            4.0
+          ],
+          "bbox_origin_vox": [
+            84,
+            104,
+            139
+          ],
+          "bbox_fill_ratio": 0.1161,
+          "connected_components": 2,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 10.0,
+          "surface_area_mm2": 26.76,
+          "compactness": 0.8388,
+          "elongation": 51.6063,
+          "flatness": 1.6021,
+          "eigenvalues_mm": [
+            8.356,
+            0.259,
+            0.162
+          ],
+          "bbox_size_mm": [
+            4.0,
+            7.0,
+            5.0
+          ],
+          "bbox_origin_vox": [
+            96,
+            104,
+            138
+          ],
+          "bbox_fill_ratio": 0.0714,
+          "connected_components": 3,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "sPf",
+          "volume_mm3_left": 13.0,
+          "volume_mm3_right": 10.0,
+          "centroid_mm_left": [
+            85.69,
+            106.85,
+            140.23
+          ],
+          "centroid_mm_right": [
+            97.0,
+            106.7,
+            139.9
+          ],
+          "centroid_normalized_left": [
+            0.5257,
+            0.4686,
+            0.6462
+          ],
+          "lr_volume_ratio": 1.3,
+          "midline_distance_mm_left": 6.81,
+          "midline_distance_mm_right": 4.5,
+          "centroid_mirror_error_mm": 2.308,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 1.3966,
+          "T1_median": 1.4545,
+          "T1_std": 0.1655,
+          "T1_IQR": 0.3207,
+          "T1_MAD": 0.1169,
+          "T1_outlier_ratio": 0.0,
+          "T1_gradient_energy": 0.1846,
+          "T1_LoG_energy": 0.0885
+        },
+        "intensity_right": {
+          "T1_mean": 1.4559,
+          "T1_median": 1.5621,
+          "T1_std": 0.1476,
+          "T1_IQR": 0.2783,
+          "T1_MAD": 0.0242,
+          "T1_outlier_ratio": 0.4,
+          "T1_gradient_energy": 0.1231,
+          "T1_LoG_energy": 0.0942
+        }
+      },
+      "thalamus_body": {
+        "geometric_left": {
+          "volume_mm3": 176.0,
+          "surface_area_mm2": 214.67,
+          "compactness": 0.7075,
+          "elongation": 5.016,
+          "flatness": 3.9577,
+          "eigenvalues_mm": [
+            5.092,
+            4.017,
+            1.015
+          ],
+          "bbox_size_mm": [
+            9.0,
+            7.0,
+            10.0
+          ],
+          "bbox_origin_vox": [
+            72,
+            94,
+            131
+          ],
+          "bbox_fill_ratio": 0.2794,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "geometric_right": {
+          "volume_mm3": 184.0,
+          "surface_area_mm2": 220.93,
+          "compactness": 0.7081,
+          "elongation": 3.9684,
+          "flatness": 3.2513,
+          "eigenvalues_mm": [
+            4.694,
+            3.846,
+            1.183
+          ],
+          "bbox_size_mm": [
+            8.0,
+            8.0,
+            9.0
+          ],
+          "bbox_origin_vox": [
+            104,
+            95,
+            131
+          ],
+          "bbox_fill_ratio": 0.3194,
+          "connected_components": 1,
+          "skeleton_length_mm": 0.0,
+          "skeleton_max_radius_mm": 0.0
+        },
+        "positional": {
+          "label_name": "thalamus_body",
+          "volume_mm3_left": 176.0,
+          "volume_mm3_right": 184.0,
+          "centroid_mm_left": [
+            75.42,
+            97.45,
+            134.88
+          ],
+          "centroid_mm_right": [
+            107.6,
+            98.09,
+            134.61
+          ],
+          "centroid_normalized_left": [
+            0.4627,
+            0.4274,
+            0.6215
+          ],
+          "lr_volume_ratio": 0.9565,
+          "midline_distance_mm_left": 17.08,
+          "midline_distance_mm_right": 15.1,
+          "centroid_mirror_error_mm": 1.976,
+          "adjacency": {}
+        },
+        "intensity_left": {
+          "T1_mean": 1.0128,
+          "T1_median": 1.3102,
+          "T1_std": 0.6767,
+          "T1_IQR": 0.7517,
+          "T1_MAD": 0.1724,
+          "T1_outlier_ratio": 0.2614,
+          "T1_gradient_energy": 0.395,
+          "T1_LoG_energy": 0.1068
+        },
+        "intensity_right": {
+          "T1_mean": 0.9163,
+          "T1_median": 1.3264,
+          "T1_std": 0.7557,
+          "T1_IQR": 1.3513,
+          "T1_MAD": 0.2481,
+          "T1_outlier_ratio": 0.2935,
+          "T1_gradient_energy": 0.383,
+          "T1_LoG_energy": 0.1241
+        }
+      }
+    }
+  },
+  "qc_flags": {},
+  "warnings": [],
+  "errors": [],
+  "output_files": {
+    "label_quality_report": "C:\\Users\\ahmet\\Desktop\\BrainSeg-20260327T093216Z-1-001\\outputs\\IXI012-HH-1211\\propagate\\W2\\label_quality_report.json",
+    "left_labels_dir": "C:\\Users\\ahmet\\Desktop\\BrainSeg-20260327T093216Z-1-001\\outputs\\IXI012-HH-1211\\propagate\\W2\\left_labels",
+    "right_labels_dir": "C:\\Users\\ahmet\\Desktop\\BrainSeg-20260327T093216Z-1-001\\outputs\\IXI012-HH-1211\\propagate\\W2\\right_labels",
+    "QC_label_overlay": "C:\\Users\\ahmet\\Desktop\\BrainSeg-20260327T093216Z-1-001\\outputs\\IXI012-HH-1211\\propagate\\W2\\overlay_T1_labels_axial.png"
+  }
+}

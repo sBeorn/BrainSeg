@@ -1,0 +1,55 @@
+# ─── NIfTI / büyük veri dosyaları ───────────────────────────────────────────
+*.nii
+*.nii.gz
+*.mgz
+*.mgh
+
+# ─── ANTs transform dosyaları ────────────────────────────────────────────────
+*.mat
+*.h5
+
+# ─── QC görselleri (outputs altında üretilen) ────────────────────────────────
+outputs/**/*.png
+
+# ─── Ham hasta verisi ─────────────────────────────────────────────────────────
+BrainSeg/Data/Patient/
+BrainSeg/Data/Atlas/*.nii.gz
+
+# ─── FreeSurfer recon-all çıktıları (çok büyük) ──────────────────────────────
+outputs/*/freesurfer/
+outputs/*/freesurfer_gt/thalamic_seg_fs.nii.gz
+
+# ─── Python cache ────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+
+# ─── Ortam / IDE ─────────────────────────────────────────────────────────────
+.env
+.venv/
+venv/
+*.rar
+*.zip
+
+# ─── Claude Code ayarları ────────────────────────────────────────────────────
+.claude/
+
+# ─── İç içe git repo (SAMSEG — ayrı proje) ──────────────────────────────────
+BrainSeg/ArGe/02-SAMSEG - Hakan/samseg/
+
+# ─── NRRD (nöroimaging veri formatı) ─────────────────────────────────────────
+*.nrrd
+
+# ─── Office dosyaları ────────────────────────────────────────────────────────
+*.docx
+*.xlsx
+*.pptx
+
+# ─── Takip edilecekler (outputs altında) ────────────────────────────────────
+# HTML raporlar, CSV, JSON → GİT'E GİDER (bu satırlar bilgi amaçlı)
+# outputs/**/*.html  → takip edilir
+# outputs/**/*.csv   → takip edilir
+# outputs/**/*.json  → takip edilir

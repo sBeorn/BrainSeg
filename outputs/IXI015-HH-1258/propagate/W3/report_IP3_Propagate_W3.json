@@ -1,0 +1,17 @@
+{
+  "subject_id": "IXI015-HH-1258",
+  "step": "IP3_Propagate_W3",
+  "timestamp": "2026-04-08T22:14:05",
+  "status": "FAILED",
+  "duration_sec": 2.2,
+  "metrics": {
+    "fwd_transforms_found": 2,
+    "n_labels": 41
+  },
+  "qc_flags": {},
+  "warnings": [],
+  "errors": [
+    "RuntimeError: D:\\a\\ANTsPy\\ANTsPy\\itksource\\Modules\\Core\\Common\\include\\itkImportImageContainer.hxx:179:\nFailed to allocate memory for image."
+  ],
+  "output_files": {}
+}

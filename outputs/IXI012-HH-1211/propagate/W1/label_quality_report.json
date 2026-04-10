@@ -1,0 +1,1633 @@
+{
+  "subject_id": "IXI012-HH-1211",
+  "candidate": "W1",
+  "problem_labels": [
+    "MV_right",
+    "MV_LR_asymmetry",
+    "Pv_left",
+    "LP_LR_asymmetry",
+    "mtt_right",
+    "Pv_LR_asymmetry",
+    "AM_LR_asymmetry",
+    "sPf_right",
+    "MV_left",
+    "mtt_left",
+    "AD_LR_asymmetry",
+    "sPf_left",
+    "LGNmc_left",
+    "AD_right"
+  ],
+  "fragmented": [
+    "AD_right",
+    "LGNmc_left",
+    "MV_left",
+    "MV_right",
+    "Pv_left",
+    "mtt_left",
+    "mtt_right",
+    "sPf_left",
+    "sPf_right"
+  ],
+  "hemisphere_violations": [],
+  "labels": {
+    "AD": {
+      "left": {
+        "label_name": "AD",
+        "side": "left",
+        "volume_mm3": 8.0,
+        "centroid_mm": [
+          89.75,
+          110.0,
+          154.38
+        ],
+        "centroid_normalized": [
+          0.4831,
+          0.4605,
+          0.693
+        ],
+        "connected_components": 1,
+        "compactness": 0.924,
+        "midline_distance_mm": 0.25,
+        "LR_volume_ratio": 1.3333
+      },
+      "right": {
+        "label_name": "AD",
+        "side": "right",
+        "volume_mm3": 6.0,
+        "centroid_mm": [
+          94.17,
+          109.33,
+          155.33
+        ],
+        "centroid_normalized": [
+          0.5102,
+          0.4576,
+          0.6974
+        ],
+        "connected_components": 2,
+        "compactness": 0.969,
+        "midline_distance_mm": 4.17
+      }
+    },
+    "AM": {
+      "left": {
+        "label_name": "AM",
+        "side": "left",
+        "volume_mm3": 49.0,
+        "centroid_mm": [
+          88.06,
+          117.88,
+          151.18
+        ],
+        "centroid_normalized": [
+          0.4728,
+          0.4951,
+          0.6783
+        ],
+        "connected_components": 1,
+        "compactness": 0.8072,
+        "midline_distance_mm": 1.94,
+        "LR_volume_ratio": 1.3243
+      },
+      "right": {
+        "label_name": "AM",
+        "side": "right",
+        "volume_mm3": 37.0,
+        "centroid_mm": [
+          94.97,
+          118.27,
+          151.65
+        ],
+        "centroid_normalized": [
+          0.5152,
+          0.4968,
+          0.6804
+        ],
+        "connected_components": 1,
+        "compactness": 0.788,
+        "midline_distance_mm": 4.97
+      }
+    },
+    "AV": {
+      "left": {
+        "label_name": "AV",
+        "side": "left",
+        "volume_mm3": 262.0,
+        "centroid_mm": [
+          86.62,
+          113.38,
+          155.17
+        ],
+        "centroid_normalized": [
+          0.4639,
+          0.4754,
+          0.6966
+        ],
+        "connected_components": 1,
+        "compactness": 0.7128,
+        "midline_distance_mm": 3.38,
+        "LR_volume_ratio": 1.1542
+      },
+      "right": {
+        "label_name": "AV",
+        "side": "right",
+        "volume_mm3": 227.0,
+        "centroid_mm": [
+          96.49,
+          113.4,
+          155.33
+        ],
+        "centroid_normalized": [
+          0.5245,
+          0.4754,
+          0.6974
+        ],
+        "connected_components": 1,
+        "compactness": 0.7114,
+        "midline_distance_mm": 6.49
+      }
+    },
+    "CL": {
+      "left": {
+        "label_name": "CL",
+        "side": "left",
+        "volume_mm3": 703.0,
+        "centroid_mm": [
+          84.01,
+          101.98,
+          148.92
+        ],
+        "centroid_normalized": [
+          0.4479,
+          0.4253,
+          0.6678
+        ],
+        "connected_components": 1,
+        "compactness": 0.3961,
+        "midline_distance_mm": 5.99,
+        "LR_volume_ratio": 1.013
+      },
+      "right": {
+        "label_name": "CL",
+        "side": "right",
+        "volume_mm3": 694.0,
+        "centroid_mm": [
+          98.69,
+          101.93,
+          149.06
+        ],
+        "centroid_normalized": [
+          0.538,
+          0.4251,
+          0.6685
+        ],
+        "connected_components": 1,
+        "compactness": 0.3964,
+        "midline_distance_mm": 8.69
+      }
+    },
+    "CM": {
+      "left": {
+        "label_name": "CM",
+        "side": "left",
+        "volume_mm3": 258.0,
+        "centroid_mm": [
+          81.9,
+          102.36,
+          142.02
+        ],
+        "centroid_normalized": [
+          0.4349,
+          0.427,
+          0.6361
+        ],
+        "connected_components": 1,
+        "compactness": 0.7853,
+        "midline_distance_mm": 8.1,
+        "LR_volume_ratio": 1.0932
+      },
+      "right": {
+        "label_name": "CM",
+        "side": "right",
+        "volume_mm3": 236.0,
+        "centroid_mm": [
+          100.92,
+          102.54,
+          142.24
+        ],
+        "centroid_normalized": [
+          0.5516,
+          0.4278,
+          0.6371
+        ],
+        "connected_components": 1,
+        "compactness": 0.801,
+        "midline_distance_mm": 10.92
+      }
+    },
+    "CeM": {
+      "left": {
+        "label_name": "CeM",
+        "side": "left",
+        "volume_mm3": 125.0,
+        "centroid_mm": [
+          87.12,
+          113.22,
+          145.97
+        ],
+        "centroid_normalized": [
+          0.467,
+          0.4746,
+          0.6542
+        ],
+        "connected_components": 1,
+        "compactness": 0.6232,
+        "midline_distance_mm": 2.88,
+        "LR_volume_ratio": 0.8562
+      },
+      "right": {
+        "label_name": "CeM",
+        "side": "right",
+        "volume_mm3": 146.0,
+        "centroid_mm": [
+          95.48,
+          113.47,
+          146.05
+        ],
+        "centroid_normalized": [
+          0.5183,
+          0.4757,
+          0.6546
+        ],
+        "connected_components": 1,
+        "compactness": 0.6355,
+        "midline_distance_mm": 5.48
+      }
+    },
+    "Hb": {
+      "left": {
+        "label_name": "Hb",
+        "side": "left",
+        "volume_mm3": 47.0,
+        "centroid_mm": [
+          87.26,
+          99.85,
+          141.32
+        ],
+        "centroid_normalized": [
+          0.4678,
+          0.416,
+          0.6328
+        ],
+        "connected_components": 1,
+        "compactness": 0.8013,
+        "midline_distance_mm": 2.74,
+        "LR_volume_ratio": 0.9038
+      },
+      "right": {
+        "label_name": "Hb",
+        "side": "right",
+        "volume_mm3": 52.0,
+        "centroid_mm": [
+          95.4,
+          99.65,
+          141.31
+        ],
+        "centroid_normalized": [
+          0.5178,
+          0.4151,
+          0.6328
+        ],
+        "connected_components": 1,
+        "compactness": 0.7721,
+        "midline_distance_mm": 5.4
+      }
+    },
+    "LD": {
+      "left": {
+        "label_name": "LD",
+        "side": "left",
+        "volume_mm3": 126.0,
+        "centroid_mm": [
+          83.1,
+          99.0,
+          154.02
+        ],
+        "centroid_normalized": [
+          0.4423,
+          0.4123,
+          0.6913
+        ],
+        "connected_components": 1,
+        "compactness": 0.533,
+        "midline_distance_mm": 6.9,
+        "LR_volume_ratio": 0.9065
+      },
+      "right": {
+        "label_name": "LD",
+        "side": "right",
+        "volume_mm3": 139.0,
+        "centroid_mm": [
+          99.6,
+          99.35,
+          154.25
+        ],
+        "centroid_normalized": [
+          0.5436,
+          0.4138,
+          0.6924
+        ],
+        "connected_components": 1,
+        "compactness": 0.6058,
+        "midline_distance_mm": 9.6
+      }
+    },
+    "LGNmc": {
+      "left": {
+        "label_name": "LGNmc",
+        "side": "left",
+        "volume_mm3": 67.0,
+        "centroid_mm": [
+          66.16,
+          101.57,
+          133.04
+        ],
+        "centroid_normalized": [
+          0.3384,
+          0.4235,
+          0.5947
+        ],
+        "connected_components": 2,
+        "compactness": 0.5347,
+        "midline_distance_mm": 23.84,
+        "LR_volume_ratio": 1.0
+      },
+      "right": {
+        "label_name": "LGNmc",
+        "side": "right",
+        "volume_mm3": 67.0,
+        "centroid_mm": [
+          116.91,
+          102.09,
+          132.75
+        ],
+        "centroid_normalized": [
+          0.6498,
+          0.4258,
+          0.5933
+        ],
+        "connected_components": 1,
+        "compactness": 0.501,
+        "midline_distance_mm": 26.91
+      }
+    },
+    "LGNpc": {
+      "left": {
+        "label_name": "LGNpc",
+        "side": "left",
+        "volume_mm3": 161.0,
+        "centroid_mm": [
+          66.41,
+          100.7,
+          134.56
+        ],
+        "centroid_normalized": [
+          0.3399,
+          0.4197,
+          0.6017
+        ],
+        "connected_components": 1,
+        "compactness": 0.7052,
+        "midline_distance_mm": 23.59,
+        "LR_volume_ratio": 0.9817
+      },
+      "right": {
+        "label_name": "LGNpc",
+        "side": "right",
+        "volume_mm3": 164.0,
+        "centroid_mm": [
+          116.61,
+          101.46,
+          134.21
+        ],
+        "centroid_normalized": [
+          0.6479,
+          0.4231,
+          0.6001
+        ],
+        "connected_components": 1,
+        "compactness": 0.6807,
+        "midline_distance_mm": 26.61
+      }
+    },
+    "LP": {
+      "left": {
+        "label_name": "LP",
+        "side": "left",
+        "volume_mm3": 361.0,
+        "centroid_mm": [
+          75.15,
+          94.68,
+          149.85
+        ],
+        "centroid_normalized": [
+          0.3936,
+          0.3934,
+          0.6721
+        ],
+        "connected_components": 1,
+        "compactness": 0.6802,
+        "midline_distance_mm": 14.85,
+        "LR_volume_ratio": 0.6661
+      },
+      "right": {
+        "label_name": "LP",
+        "side": "right",
+        "volume_mm3": 542.0,
+        "centroid_mm": [
+          106.89,
+          94.7,
+          149.7
+        ],
+        "centroid_normalized": [
+          0.5883,
+          0.3934,
+          0.6714
+        ],
+        "connected_components": 1,
+        "compactness": 0.6562,
+        "midline_distance_mm": 16.89
+      }
+    },
+    "Li": {
+      "left": {
+        "label_name": "Li",
+        "side": "left",
+        "volume_mm3": 60.0,
+        "centroid_mm": [
+          82.63,
+          97.6,
+          138.78
+        ],
+        "centroid_normalized": [
+          0.4395,
+          0.4061,
+          0.6211
+        ],
+        "connected_components": 1,
+        "compactness": 0.7135,
+        "midline_distance_mm": 7.37,
+        "LR_volume_ratio": 0.9231
+      },
+      "right": {
+        "label_name": "Li",
+        "side": "right",
+        "volume_mm3": 65.0,
+        "centroid_mm": [
+          99.97,
+          97.54,
+          139.06
+        ],
+        "centroid_normalized": [
+          0.5458,
+          0.4059,
+          0.6224
+        ],
+        "connected_components": 1,
+        "compactness": 0.7271,
+        "midline_distance_mm": 9.97
+      }
+    },
+    "MAX_VOLUME": {
+      "left": {
+        "label_name": "MAX_VOLUME",
+        "side": "left",
+        "volume_mm3": 7937.0,
+        "centroid_mm": [
+          79.23,
+          102.09,
+          146.03
+        ],
+        "centroid_normalized": [
+          0.4186,
+          0.4259,
+          0.6545
+        ],
+        "connected_components": 1,
+        "compactness": 0.6538,
+        "midline_distance_mm": 10.77,
+        "LR_volume_ratio": 1.0061
+      },
+      "right": {
+        "label_name": "MAX_VOLUME",
+        "side": "right",
+        "volume_mm3": 7889.0,
+        "centroid_mm": [
+          103.48,
+          102.0,
+          145.71
+        ],
+        "centroid_normalized": [
+          0.5674,
+          0.4254,
+          0.6531
+        ],
+        "connected_components": 1,
+        "compactness": 0.6485,
+        "midline_distance_mm": 13.48
+      }
+    },
+    "MDmc": {
+      "left": {
+        "label_name": "MDmc",
+        "side": "left",
+        "volume_mm3": 155.0,
+        "centroid_mm": [
+          89.06,
+          107.83,
+          147.26
+        ],
+        "centroid_normalized": [
+          0.4789,
+          0.451,
+          0.6602
+        ],
+        "connected_components": 1,
+        "compactness": 0.7083,
+        "midline_distance_mm": 0.94,
+        "LR_volume_ratio": 0.8757
+      },
+      "right": {
+        "label_name": "MDmc",
+        "side": "right",
+        "volume_mm3": 177.0,
+        "centroid_mm": [
+          93.84,
+          107.86,
+          147.31
+        ],
+        "centroid_normalized": [
+          0.5082,
+          0.4511,
+          0.6604
+        ],
+        "connected_components": 1,
+        "compactness": 0.7247,
+        "midline_distance_mm": 3.84
+      }
+    },
+    "MDpc": {
+      "left": {
+        "label_name": "MDpc",
+        "side": "left",
+        "volume_mm3": 780.0,
+        "centroid_mm": [
+          85.85,
+          105.42,
+          148.42
+        ],
+        "centroid_normalized": [
+          0.4592,
+          0.4404,
+          0.6655
+        ],
+        "connected_components": 1,
+        "compactness": 0.7067,
+        "midline_distance_mm": 4.15,
+        "LR_volume_ratio": 0.9618
+      },
+      "right": {
+        "label_name": "MDpc",
+        "side": "right",
+        "volume_mm3": 811.0,
+        "centroid_mm": [
+          96.89,
+          105.55,
+          148.52
+        ],
+        "centroid_normalized": [
+          0.5269,
+          0.441,
+          0.666
+        ],
+        "connected_components": 1,
+        "compactness": 0.6793,
+        "midline_distance_mm": 6.89
+      }
+    },
+    "MGN": {
+      "left": {
+        "label_name": "MGN",
+        "side": "left",
+        "volume_mm3": 181.0,
+        "centroid_mm": [
+          74.01,
+          98.16,
+          135.05
+        ],
+        "centroid_normalized": [
+          0.3865,
+          0.4086,
+          0.6039
+        ],
+        "connected_components": 1,
+        "compactness": 0.7779,
+        "midline_distance_mm": 15.99,
+        "LR_volume_ratio": 1.0
+      },
+      "right": {
+        "label_name": "MGN",
+        "side": "right",
+        "volume_mm3": 181.0,
+        "centroid_mm": [
+          108.87,
+          98.65,
+          134.62
+        ],
+        "centroid_normalized": [
+          0.6004,
+          0.4108,
+          0.6019
+        ],
+        "connected_components": 1,
+        "compactness": 0.7565,
+        "midline_distance_mm": 18.87
+      }
+    },
+    "MV": {
+      "left": {
+        "label_name": "MV",
+        "side": "left",
+        "volume_mm3": 16.0,
+        "centroid_mm": [
+          88.44,
+          114.62,
+          144.81
+        ],
+        "centroid_normalized": [
+          0.4751,
+          0.4808,
+          0.6489
+        ],
+        "connected_components": 2,
+        "compactness": 0.7805,
+        "midline_distance_mm": 1.56,
+        "LR_volume_ratio": 1.4545
+      },
+      "right": {
+        "label_name": "MV",
+        "side": "right",
+        "volume_mm3": 11.0,
+        "centroid_mm": [
+          94.27,
+          115.0,
+          145.09
+        ],
+        "centroid_normalized": [
+          0.5109,
+          0.4825,
+          0.6502
+        ],
+        "connected_components": 2,
+        "compactness": 0.8433,
+        "midline_distance_mm": 4.27
+      }
+    },
+    "Pf": {
+      "left": {
+        "label_name": "Pf",
+        "side": "left",
+        "volume_mm3": 126.0,
+        "centroid_mm": [
+          85.17,
+          104.83,
+          140.36
+        ],
+        "centroid_normalized": [
+          0.4551,
+          0.4379,
+          0.6284
+        ],
+        "connected_components": 1,
+        "compactness": 0.6316,
+        "midline_distance_mm": 4.83,
+        "LR_volume_ratio": 0.8344
+      },
+      "right": {
+        "label_name": "Pf",
+        "side": "right",
+        "volume_mm3": 151.0,
+        "centroid_mm": [
+          97.22,
+          105.27,
+          140.77
+        ],
+        "centroid_normalized": [
+          0.5289,
+          0.4398,
+          0.6303
+        ],
+        "connected_components": 1,
+        "compactness": 0.6849,
+        "midline_distance_mm": 7.22
+      }
+    },
+    "Po": {
+      "left": {
+        "label_name": "Po",
+        "side": "left",
+        "volume_mm3": 56.0,
+        "centroid_mm": [
+          77.21,
+          98.16,
+          138.07
+        ],
+        "centroid_normalized": [
+          0.4062,
+          0.4086,
+          0.6178
+        ],
+        "connected_components": 1,
+        "compactness": 0.6816,
+        "midline_distance_mm": 12.79,
+        "LR_volume_ratio": 0.918
+      },
+      "right": {
+        "label_name": "Po",
+        "side": "right",
+        "volume_mm3": 61.0,
+        "centroid_mm": [
+          105.41,
+          98.39,
+          138.1
+        ],
+        "centroid_normalized": [
+          0.5792,
+          0.4096,
+          0.618
+        ],
+        "connected_components": 1,
+        "compactness": 0.6832,
+        "midline_distance_mm": 15.41
+      }
+    },
+    "PuA": {
+      "left": {
+        "label_name": "PuA",
+        "side": "left",
+        "volume_mm3": 148.0,
+        "centroid_mm": [
+          77.68,
+          98.34,
+          143.45
+        ],
+        "centroid_normalized": [
+          0.4091,
+          0.4094,
+          0.6426
+        ],
+        "connected_components": 1,
+        "compactness": 0.6639,
+        "midline_distance_mm": 12.32,
+        "LR_volume_ratio": 0.9308
+      },
+      "right": {
+        "label_name": "PuA",
+        "side": "right",
+        "volume_mm3": 159.0,
+        "centroid_mm": [
+          104.9,
+          98.55,
+          143.45
+        ],
+        "centroid_normalized": [
+          0.5761,
+          0.4103,
+          0.6426
+        ],
+        "connected_components": 1,
+        "compactness": 0.6915,
+        "midline_distance_mm": 14.9
+      }
+    },
+    "PuI": {
+      "left": {
+        "label_name": "PuI",
+        "side": "left",
+        "volume_mm3": 50.0,
+        "centroid_mm": [
+          67.92,
+          95.56,
+          134.14
+        ],
+        "centroid_normalized": [
+          0.3492,
+          0.3972,
+          0.5997
+        ],
+        "connected_components": 1,
+        "compactness": 0.8057,
+        "midline_distance_mm": 22.08,
+        "LR_volume_ratio": 0.8475
+      },
+      "right": {
+        "label_name": "PuI",
+        "side": "right",
+        "volume_mm3": 59.0,
+        "centroid_mm": [
+          114.61,
+          96.19,
+          133.76
+        ],
+        "centroid_normalized": [
+          0.6356,
+          0.3999,
+          0.598
+        ],
+        "connected_components": 1,
+        "compactness": 0.7654,
+        "midline_distance_mm": 24.61
+      }
+    },
+    "PuL": {
+      "left": {
+        "label_name": "PuL",
+        "side": "left",
+        "volume_mm3": 334.0,
+        "centroid_mm": [
+          68.3,
+          92.85,
+          140.28
+        ],
+        "centroid_normalized": [
+          0.3515,
+          0.3853,
+          0.628
+        ],
+        "connected_components": 1,
+        "compactness": 0.7561,
+        "midline_distance_mm": 21.7,
+        "LR_volume_ratio": 0.9408
+      },
+      "right": {
+        "label_name": "PuL",
+        "side": "right",
+        "volume_mm3": 355.0,
+        "centroid_mm": [
+          114.4,
+          93.3,
+          139.61
+        ],
+        "centroid_normalized": [
+          0.6344,
+          0.3873,
+          0.6249
+        ],
+        "connected_components": 1,
+        "compactness": 0.731,
+        "midline_distance_mm": 24.4
+      }
+    },
+    "PuM": {
+      "left": {
+        "label_name": "PuM",
+        "side": "left",
+        "volume_mm3": 1515.0,
+        "centroid_mm": [
+          76.99,
+          92.33,
+          141.27
+        ],
+        "centroid_normalized": [
+          0.4049,
+          0.383,
+          0.6326
+        ],
+        "connected_components": 1,
+        "compactness": 0.7014,
+        "midline_distance_mm": 13.01,
+        "LR_volume_ratio": 0.9644
+      },
+      "right": {
+        "label_name": "PuM",
+        "side": "right",
+        "volume_mm3": 1571.0,
+        "centroid_mm": [
+          105.67,
+          92.37,
+          141.14
+        ],
+        "centroid_normalized": [
+          0.5808,
+          0.3832,
+          0.632
+        ],
+        "connected_components": 1,
+        "compactness": 0.6976,
+        "midline_distance_mm": 15.67
+      }
+    },
+    "Pv": {
+      "left": {
+        "label_name": "Pv",
+        "side": "left",
+        "volume_mm3": 3.0,
+        "centroid_mm": [
+          89.67,
+          114.33,
+          148.33
+        ],
+        "centroid_normalized": [
+          0.4826,
+          0.4795,
+          0.6651
+        ],
+        "connected_components": 2,
+        "compactness": 0.0,
+        "midline_distance_mm": 0.33,
+        "LR_volume_ratio": 0.6
+      },
+      "right": {
+        "label_name": "Pv",
+        "side": "right",
+        "volume_mm3": 5.0,
+        "centroid_mm": [
+          93.0,
+          112.8,
+          149.6
+        ],
+        "centroid_normalized": [
+          0.5031,
+          0.4728,
+          0.671
+        ],
+        "connected_components": 1,
+        "compactness": 1.1666,
+        "midline_distance_mm": 3.0
+      }
+    },
+    "RN": {
+      "left": {
+        "label_name": "RN",
+        "side": "left",
+        "volume_mm3": 344.0,
+        "centroid_mm": [
+          84.55,
+          107.47,
+          133.33
+        ],
+        "centroid_normalized": [
+          0.4512,
+          0.4494,
+          0.596
+        ],
+        "connected_components": 1,
+        "compactness": 0.8585,
+        "midline_distance_mm": 5.45,
+        "LR_volume_ratio": 1.0818
+      },
+      "right": {
+        "label_name": "RN",
+        "side": "right",
+        "volume_mm3": 318.0,
+        "centroid_mm": [
+          98.5,
+          107.67,
+          133.8
+        ],
+        "centroid_normalized": [
+          0.5368,
+          0.4503,
+          0.5982
+        ],
+        "connected_components": 1,
+        "compactness": 0.8636,
+        "midline_distance_mm": 8.5
+      }
+    },
+    "SG": {
+      "left": {
+        "label_name": "SG",
+        "side": "left",
+        "volume_mm3": 42.0,
+        "centroid_mm": [
+          77.81,
+          97.33,
+          135.9
+        ],
+        "centroid_normalized": [
+          0.4099,
+          0.405,
+          0.6079
+        ],
+        "connected_components": 1,
+        "compactness": 0.8322,
+        "midline_distance_mm": 12.19,
+        "LR_volume_ratio": 0.9333
+      },
+      "right": {
+        "label_name": "SG",
+        "side": "right",
+        "volume_mm3": 45.0,
+        "centroid_mm": [
+          105.0,
+          97.42,
+          135.93
+        ],
+        "centroid_normalized": [
+          0.5767,
+          0.4054,
+          0.608
+        ],
+        "connected_components": 1,
+        "compactness": 0.7863,
+        "midline_distance_mm": 15.0
+      }
+    },
+    "STh": {
+      "left": {
+        "label_name": "STh",
+        "side": "left",
+        "volume_mm3": 202.0,
+        "centroid_mm": [
+          78.85,
+          112.12,
+          138.22
+        ],
+        "centroid_normalized": [
+          0.4163,
+          0.4698,
+          0.6185
+        ],
+        "connected_components": 1,
+        "compactness": 0.6959,
+        "midline_distance_mm": 11.15,
+        "LR_volume_ratio": 1.0151
+      },
+      "right": {
+        "label_name": "STh",
+        "side": "right",
+        "volume_mm3": 199.0,
+        "centroid_mm": [
+          103.98,
+          112.19,
+          138.41
+        ],
+        "centroid_normalized": [
+          0.5705,
+          0.4701,
+          0.6194
+        ],
+        "connected_components": 1,
+        "compactness": 0.6983,
+        "midline_distance_mm": 13.98
+      }
+    },
+    "VAmc": {
+      "left": {
+        "label_name": "VAmc",
+        "side": "left",
+        "volume_mm3": 67.0,
+        "centroid_mm": [
+          84.1,
+          115.93,
+          148.49
+        ],
+        "centroid_normalized": [
+          0.4485,
+          0.4865,
+          0.6659
+        ],
+        "connected_components": 1,
+        "compactness": 0.5769,
+        "midline_distance_mm": 5.9,
+        "LR_volume_ratio": 1.0469
+      },
+      "right": {
+        "label_name": "VAmc",
+        "side": "right",
+        "volume_mm3": 64.0,
+        "centroid_mm": [
+          98.58,
+          116.22,
+          148.45
+        ],
+        "centroid_normalized": [
+          0.5373,
+          0.4878,
+          0.6657
+        ],
+        "connected_components": 1,
+        "compactness": 0.5845,
+        "midline_distance_mm": 8.58
+      }
+    },
+    "VApc": {
+      "left": {
+        "label_name": "VApc",
+        "side": "left",
+        "volume_mm3": 503.0,
+        "centroid_mm": [
+          81.03,
+          115.19,
+          151.15
+        ],
+        "centroid_normalized": [
+          0.4296,
+          0.4833,
+          0.6781
+        ],
+        "connected_components": 1,
+        "compactness": 0.6248,
+        "midline_distance_mm": 8.97,
+        "LR_volume_ratio": 1.1671
+      },
+      "right": {
+        "label_name": "VApc",
+        "side": "right",
+        "volume_mm3": 431.0,
+        "centroid_mm": [
+          101.15,
+          115.94,
+          151.01
+        ],
+        "centroid_normalized": [
+          0.5531,
+          0.4866,
+          0.6775
+        ],
+        "connected_components": 1,
+        "compactness": 0.6318,
+        "midline_distance_mm": 11.15
+      }
+    },
+    "VLa": {
+      "left": {
+        "label_name": "VLa",
+        "side": "left",
+        "volume_mm3": 309.0,
+        "centroid_mm": [
+          77.65,
+          110.07,
+          148.78
+        ],
+        "centroid_normalized": [
+          0.4089,
+          0.4608,
+          0.6672
+        ],
+        "connected_components": 1,
+        "compactness": 0.6592,
+        "midline_distance_mm": 12.35,
+        "LR_volume_ratio": 1.0475
+      },
+      "right": {
+        "label_name": "VLa",
+        "side": "right",
+        "volume_mm3": 295.0,
+        "centroid_mm": [
+          104.68,
+          110.55,
+          148.75
+        ],
+        "centroid_normalized": [
+          0.5747,
+          0.4629,
+          0.6671
+        ],
+        "connected_components": 1,
+        "compactness": 0.6739,
+        "midline_distance_mm": 14.68
+      }
+    },
+    "VLpd": {
+      "left": {
+        "label_name": "VLpd",
+        "side": "left",
+        "volume_mm3": 645.0,
+        "centroid_mm": [
+          79.29,
+          105.53,
+          155.05
+        ],
+        "centroid_normalized": [
+          0.419,
+          0.4409,
+          0.6961
+        ],
+        "connected_components": 1,
+        "compactness": 0.6926,
+        "midline_distance_mm": 10.71,
+        "LR_volume_ratio": 1.0644
+      },
+      "right": {
+        "label_name": "VLpd",
+        "side": "right",
+        "volume_mm3": 606.0,
+        "centroid_mm": [
+          103.54,
+          105.85,
+          154.73
+        ],
+        "centroid_normalized": [
+          0.5677,
+          0.4423,
+          0.6946
+        ],
+        "connected_components": 1,
+        "compactness": 0.6918,
+        "midline_distance_mm": 13.54
+      }
+    },
+    "VLpv": {
+      "left": {
+        "label_name": "VLpv",
+        "side": "left",
+        "volume_mm3": 673.0,
+        "centroid_mm": [
+          78.48,
+          106.97,
+          147.73
+        ],
+        "centroid_normalized": [
+          0.414,
+          0.4472,
+          0.6623
+        ],
+        "connected_components": 1,
+        "compactness": 0.592,
+        "midline_distance_mm": 11.52,
+        "LR_volume_ratio": 1.0532
+      },
+      "right": {
+        "label_name": "VLpv",
+        "side": "right",
+        "volume_mm3": 639.0,
+        "centroid_mm": [
+          104.25,
+          107.32,
+          147.53
+        ],
+        "centroid_normalized": [
+          0.5721,
+          0.4488,
+          0.6614
+        ],
+        "connected_components": 1,
+        "compactness": 0.6157,
+        "midline_distance_mm": 14.25
+      }
+    },
+    "VM": {
+      "left": {
+        "label_name": "VM",
+        "side": "left",
+        "volume_mm3": 136.0,
+        "centroid_mm": [
+          81.57,
+          110.12,
+          143.04
+        ],
+        "centroid_normalized": [
+          0.433,
+          0.461,
+          0.6408
+        ],
+        "connected_components": 1,
+        "compactness": 0.6594,
+        "midline_distance_mm": 8.43,
+        "LR_volume_ratio": 1.124
+      },
+      "right": {
+        "label_name": "VM",
+        "side": "right",
+        "volume_mm3": 121.0,
+        "centroid_mm": [
+          101.05,
+          110.54,
+          143.21
+        ],
+        "centroid_normalized": [
+          0.5525,
+          0.4629,
+          0.6415
+        ],
+        "connected_components": 1,
+        "compactness": 0.6711,
+        "midline_distance_mm": 11.05
+      }
+    },
+    "VPI": {
+      "left": {
+        "label_name": "VPI",
+        "side": "left",
+        "volume_mm3": 67.0,
+        "centroid_mm": [
+          74.75,
+          100.66,
+          138.9
+        ],
+        "centroid_normalized": [
+          0.3911,
+          0.4195,
+          0.6216
+        ],
+        "connected_components": 1,
+        "compactness": 0.7739,
+        "midline_distance_mm": 15.25,
+        "LR_volume_ratio": 1.0984
+      },
+      "right": {
+        "label_name": "VPI",
+        "side": "right",
+        "volume_mm3": 61.0,
+        "centroid_mm": [
+          107.66,
+          101.18,
+          138.64
+        ],
+        "centroid_normalized": [
+          0.593,
+          0.4218,
+          0.6205
+        ],
+        "connected_components": 1,
+        "compactness": 0.7317,
+        "midline_distance_mm": 17.66
+      }
+    },
+    "VPLa": {
+      "left": {
+        "label_name": "VPLa",
+        "side": "left",
+        "volume_mm3": 110.0,
+        "centroid_mm": [
+          74.05,
+          101.48,
+          145.85
+        ],
+        "centroid_normalized": [
+          0.3868,
+          0.4232,
+          0.6537
+        ],
+        "connected_components": 1,
+        "compactness": 0.6662,
+        "midline_distance_mm": 15.95,
+        "LR_volume_ratio": 1.1111
+      },
+      "right": {
+        "label_name": "VPLa",
+        "side": "right",
+        "volume_mm3": 99.0,
+        "centroid_mm": [
+          108.63,
+          101.95,
+          145.51
+        ],
+        "centroid_normalized": [
+          0.5989,
+          0.4252,
+          0.6521
+        ],
+        "connected_components": 1,
+        "compactness": 0.6185,
+        "midline_distance_mm": 18.63
+      }
+    },
+    "VPLp": {
+      "left": {
+        "label_name": "VPLp",
+        "side": "left",
+        "volume_mm3": 493.0,
+        "centroid_mm": [
+          75.12,
+          99.33,
+          147.32
+        ],
+        "centroid_normalized": [
+          0.3934,
+          0.4137,
+          0.6604
+        ],
+        "connected_components": 1,
+        "compactness": 0.5969,
+        "midline_distance_mm": 14.88,
+        "LR_volume_ratio": 1.0102
+      },
+      "right": {
+        "label_name": "VPLp",
+        "side": "right",
+        "volume_mm3": 488.0,
+        "centroid_mm": [
+          107.41,
+          99.72,
+          146.87
+        ],
+        "centroid_normalized": [
+          0.5915,
+          0.4154,
+          0.6584
+        ],
+        "connected_components": 1,
+        "compactness": 0.6047,
+        "midline_distance_mm": 17.41
+      }
+    },
+    "VPM": {
+      "left": {
+        "label_name": "VPM",
+        "side": "left",
+        "volume_mm3": 159.0,
+        "centroid_mm": [
+          78.8,
+          103.6,
+          141.06
+        ],
+        "centroid_normalized": [
+          0.4159,
+          0.4325,
+          0.6316
+        ],
+        "connected_components": 1,
+        "compactness": 0.6111,
+        "midline_distance_mm": 11.2,
+        "LR_volume_ratio": 1.0
+      },
+      "right": {
+        "label_name": "VPM",
+        "side": "right",
+        "volume_mm3": 159.0,
+        "centroid_mm": [
+          103.8,
+          103.89,
+          141.11
+        ],
+        "centroid_normalized": [
+          0.5693,
+          0.4337,
+          0.6318
+        ],
+        "connected_components": 1,
+        "compactness": 0.6868,
+        "midline_distance_mm": 13.8
+      }
+    },
+    "global": {
+      "left": {
+        "label_name": "global",
+        "side": "left",
+        "volume_mm3": 7937.0,
+        "centroid_mm": [
+          79.23,
+          102.09,
+          146.03
+        ],
+        "centroid_normalized": [
+          0.4186,
+          0.4259,
+          0.6545
+        ],
+        "connected_components": 1,
+        "compactness": 0.6538,
+        "midline_distance_mm": 10.77,
+        "LR_volume_ratio": 1.0063
+      },
+      "right": {
+        "label_name": "global",
+        "side": "right",
+        "volume_mm3": 7887.0,
+        "centroid_mm": [
+          103.48,
+          102.0,
+          145.72
+        ],
+        "centroid_normalized": [
+          0.5674,
+          0.4254,
+          0.6531
+        ],
+        "connected_components": 1,
+        "compactness": 0.6496,
+        "midline_distance_mm": 13.48
+      }
+    },
+    "mtt": {
+      "left": {
+        "label_name": "mtt",
+        "side": "left",
+        "volume_mm3": 56.0,
+        "centroid_mm": [
+          85.32,
+          114.93,
+          142.95
+        ],
+        "centroid_normalized": [
+          0.456,
+          0.4821,
+          0.6403
+        ],
+        "connected_components": 2,
+        "compactness": 0.5608,
+        "midline_distance_mm": 4.68,
+        "LR_volume_ratio": 0.9492
+      },
+      "right": {
+        "label_name": "mtt",
+        "side": "right",
+        "volume_mm3": 59.0,
+        "centroid_mm": [
+          97.46,
+          115.02,
+          143.0
+        ],
+        "centroid_normalized": [
+          0.5304,
+          0.4825,
+          0.6406
+        ],
+        "connected_components": 2,
+        "compactness": 0.6366,
+        "midline_distance_mm": 7.46
+      }
+    },
+    "sPf": {
+      "left": {
+        "label_name": "sPf",
+        "side": "left",
+        "volume_mm3": 10.0,
+        "centroid_mm": [
+          84.3,
+          107.0,
+          139.6
+        ],
+        "centroid_normalized": [
+          0.4497,
+          0.4474,
+          0.6249
+        ],
+        "connected_components": 3,
+        "compactness": 0.8678,
+        "midline_distance_mm": 5.7,
+        "LR_volume_ratio": 0.9091
+      },
+      "right": {
+        "label_name": "sPf",
+        "side": "right",
+        "volume_mm3": 11.0,
+        "centroid_mm": [
+          98.82,
+          107.09,
+          139.73
+        ],
+        "centroid_normalized": [
+          0.5388,
+          0.4478,
+          0.6255
+        ],
+        "connected_components": 3,
+        "compactness": 0.8388,
+        "midline_distance_mm": 8.82
+      }
+    },
+    "thalamus_body": {
+      "left": {
+        "label_name": "thalamus_body",
+        "side": "left",
+        "volume_mm3": 193.0,
+        "centroid_mm": [
+          74.04,
+          98.13,
+          135.14
+        ],
+        "centroid_normalized": [
+          0.3868,
+          0.4085,
+          0.6043
+        ],
+        "connected_components": 1,
+        "compactness": 0.7639,
+        "midline_distance_mm": 15.96,
+        "LR_volume_ratio": 0.9948
+      },
+      "right": {
+        "label_name": "thalamus_body",
+        "side": "right",
+        "volume_mm3": 194.0,
+        "centroid_mm": [
+          108.79,
+          98.61,
+          134.69
+        ],
+        "centroid_normalized": [
+          0.6,
+          0.4106,
+          0.6022
+        ],
+        "connected_components": 1,
+        "compactness": 0.7429,
+        "midline_distance_mm": 18.79
+      }
+    }
+  }
+}

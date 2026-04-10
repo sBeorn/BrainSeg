@@ -1,0 +1,42 @@
+id,label,atlas_mm3,left_mm3,right_mm3,retention_%,left_fragmented,right_fragmented,lr_volume_ratio,t1_mean_left,t1_mean_right,mirror_err_mm,compactness_l,compactness_r,t1_outlier_l,t1_outlier_r,gradient_l,gradient_r,bbox_fill_l,bbox_fill_r,glcm_homo_l,glcm_homo_r,consist_score,loo_dsc,quality_score,morph_flags,tier,tier_note
+1,AD,9.0,6.0,4.0,55.6,True,False,1.5,0.232,0.507,2.2,0.969,1.0,0.0,0.0,0.594,0.696,0.25,1.0,—,—,0.359,0.187,0.367,Hastalar arasi tutarsiz (CV skoru=0.36); Tek hemisfer parcali,TIER-3,Guvenilmez — kucuk veya kotu propagate
+2,AM,50.0,38.0,25.0,63.0,False,False,1.52,0.688,0.904,2.2,0.772,0.673,0.053,0.12,0.624,0.596,0.317,0.208,—,—,0.718,0.479,0.649,T1 outlier orta (0.12),TIER-1,Guvenilir — uzman dogrulamasi onerilir
+3,AV,292.0,230.0,187.0,71.4,False,False,1.23,0.743,0.958,2.3,0.683,0.665,0.122,0.144,0.486,0.316,0.319,0.216,—,—,0.736,0.657,0.841,T1 outlier orta (0.14),TIER-1,Guvenilir — uzman dogrulamasi onerilir
+4,CL,884.0,607.0,637.0,70.4,False,False,0.95,0.943,0.914,2.4,0.373,0.375,0.193,0.206,0.288,0.297,0.176,0.157,0.998,0.998,0.8,0.528,0.798,T1 outlier yuksek (0.21),TIER-1,Guvenilir — uzman dogrulamasi onerilir
+5,CM,308.0,248.0,258.0,82.1,False,False,0.96,1.247,1.268,2.3,0.762,0.762,0.032,0.035,0.118,0.114,0.369,0.341,0.999,0.999,0.852,0.623,0.865,—,TIER-1,Guvenilir — uzman dogrulamasi onerilir
+6,CeM,154.0,108.0,116.0,72.7,False,False,0.93,0.651,0.833,2.6,0.585,0.606,0.111,0.207,0.655,0.544,0.164,0.188,—,—,0.696,0.467,0.724,T1 outlier yuksek (0.21),TIER-1,Guvenilir — uzman dogrulamasi onerilir
+7,Hb,51.0,31.0,41.0,70.6,False,False,0.76,0.198,0.192,2.5,0.79,0.784,0.0,0.0,0.886,0.938,0.413,0.293,—,—,0.622,0.45,0.648,—,TIER-1,Guvenilir — uzman dogrulamasi onerilir
+8,LD,164.0,100.0,99.0,60.7,False,False,1.01,0.794,0.87,2.3,0.57,0.517,0.04,0.091,0.425,0.413,0.132,0.105,—,—,0.606,0.445,0.731,—,TIER-1,Guvenilir — uzman dogrulamasi onerilir
+9,LGNmc,77.0,65.0,61.0,81.8,True,False,1.07,1.194,1.108,2.9,0.48,0.493,0.108,0.131,0.484,0.443,0.181,0.169,—,—,0.826,0.378,0.564,T1 outlier orta (0.13); Tek hemisfer parcali,TIER-2,Belirsiz  — dikkatli inceleme gerekli
+10,LGNpc,185.0,166.0,164.0,89.2,False,False,1.01,1.45,1.468,2.4,0.646,0.7,0.084,0.085,0.198,0.174,0.28,0.331,—,—,0.852,0.612,0.848,—,TIER-1,Guvenilir — uzman dogrulamasi onerilir
+11,LP,448.0,368.0,535.0,100.8,False,False,0.69,1.217,1.196,3.0,0.667,0.651,0.09,0.108,0.127,0.196,0.236,0.211,0.999,0.999,0.872,0.666,0.865,T1 outlier orta (0.11),TIER-1,Guvenilir — uzman dogrulamasi onerilir
+12,Li,81.0,38.0,47.0,52.5,False,False,0.81,0.741,0.76,2.7,0.695,0.693,0.079,0.085,0.631,0.602,0.181,0.16,—,—,0.635,0.536,0.668,—,TIER-1,Guvenilir — uzman dogrulamasi onerilir
+13,MAX_VOLUME,10020.0,7713.0,7596.0,76.4,False,False,1.02,1.176,1.169,2.5,0.633,0.637,0.132,0.138,0.209,0.215,0.27,0.249,0.995,0.995,0.873,0.86,0.923,T1 outlier orta (0.14),TIER-1,Guvenilir — uzman dogrulamasi onerilir
+14,MDmc,207.0,123.0,121.0,58.9,False,False,1.02,0.422,0.675,2.5,0.671,0.616,0.0,0.058,0.704,0.647,0.41,0.275,—,—,0.546,0.543,0.779,—,TIER-1,Guvenilir — uzman dogrulamasi onerilir
+15,MDpc,1035.0,670.0,723.0,67.3,False,False,0.93,1.032,1.065,2.5,0.664,0.681,0.137,0.115,0.279,0.221,0.318,0.34,0.998,0.998,0.79,0.705,0.864,T1 outlier orta (0.14),TIER-1,Guvenilir — uzman dogrulamasi onerilir
+16,MGN,213.0,166.0,174.0,79.8,False,False,0.95,1.007,0.906,2.1,0.712,0.701,0.265,0.299,0.4,0.403,0.296,0.269,—,—,0.777,0.649,0.831,T1 outlier yuksek (0.30),TIER-1,Guvenilir — uzman dogrulamasi onerilir
+17,MV,16.0,10.0,5.0,46.9,True,True,2.0,-0.427,0.368,1.9,0.761,1.0,0.1,0.0,0.774,0.955,0.222,0.278,—,—,0.566,0.245,0.209,Sol T1 yogunluk dusuk (-0.43); Her iki hemisfer parcali,TIER-3,Guvenilmez — kucuk veya kotu propagate
+18,Pf,187.0,142.0,144.0,76.5,False,False,0.99,0.971,1.059,2.5,0.621,0.646,0.169,0.229,0.454,0.436,0.26,0.25,—,—,0.847,0.577,0.809,T1 outlier yuksek (0.23),TIER-1,Guvenilir — uzman dogrulamasi onerilir
+19,Po,65.0,53.0,48.0,77.7,False,False,1.1,1.213,1.313,2.1,0.718,0.781,0.019,0.104,0.112,0.115,0.303,0.4,—,—,0.87,0.489,0.693,T1 outlier orta (0.10),TIER-1,Guvenilir — uzman dogrulamasi onerilir
+20,PuA,167.0,153.0,156.0,92.5,False,False,0.98,1.196,1.235,2.2,0.695,0.701,0.026,0.026,0.077,0.073,0.331,0.371,—,—,0.876,0.491,0.8,—,TIER-1,Guvenilir — uzman dogrulamasi onerilir
+21,PuI,59.0,60.0,66.0,106.8,False,False,0.91,1.472,1.55,1.9,0.734,0.777,0.017,0.03,0.106,0.192,0.306,0.275,—,—,0.799,0.561,0.715,—,TIER-1,Guvenilir — uzman dogrulamasi onerilir
+22,PuL,388.0,404.0,410.0,104.9,False,False,0.99,1.461,1.53,2.2,0.773,0.721,0.025,0.066,0.066,0.137,0.401,0.35,—,—,0.894,0.733,0.904,—,TIER-1,Guvenilir — uzman dogrulamasi onerilir
+23,PuM,1832.0,1409.0,1355.0,75.4,False,False,1.04,1.015,0.97,2.1,0.678,0.672,0.115,0.195,0.221,0.323,0.337,0.324,0.998,0.998,0.83,0.801,0.885,T1 outlier yuksek (0.19),TIER-1,Guvenilir — uzman dogrulamasi onerilir
+24,Pv,7.0,5.0,6.0,78.6,True,False,0.83,0.113,0.757,2.8,1.0,1.0,0.2,0.0,0.661,0.552,0.208,0.75,—,—,0.266,0.233,0.361,T1 outlier yuksek (0.20); Hastalar arasi tutarsiz (CV skoru=0.27); Tek hemisfer parcali,TIER-3,Guvenilmez — kucuk veya kotu propagate
+25,RN,382.0,355.0,367.0,94.5,False,False,0.97,1.707,1.627,2.3,0.822,0.813,0.048,0.049,0.083,0.073,0.423,0.417,0.999,0.999,0.87,0.756,0.907,—,TIER-1,Guvenilir — uzman dogrulamasi onerilir
+26,SG,59.0,39.0,41.0,67.8,False,False,0.95,1.21,1.088,1.9,0.872,0.813,0.077,0.122,0.338,0.508,0.487,0.342,—,—,0.824,0.518,0.69,T1 outlier orta (0.12),TIER-1,Guvenilir — uzman dogrulamasi onerilir
+27,STh,239.0,253.0,234.0,101.9,False,False,1.08,1.664,1.541,2.5,0.724,0.695,0.059,0.094,0.109,0.118,0.27,0.25,0.999,—,0.908,0.654,0.882,—,TIER-1,Guvenilir — uzman dogrulamasi onerilir
+28,VAmc,74.0,67.0,50.0,79.1,False,False,1.34,1.37,1.359,2.9,0.636,0.585,0.075,0.1,0.185,0.155,0.266,0.179,—,—,0.868,0.368,0.68,—,TIER-1,Guvenilir — uzman dogrulamasi onerilir
+29,VApc,565.0,488.0,403.0,78.8,False,False,1.21,1.481,1.412,3.2,0.645,0.655,0.135,0.055,0.19,0.112,0.269,0.288,—,—,0.894,0.624,0.855,T1 outlier orta (0.14),TIER-1,Guvenilir — uzman dogrulamasi onerilir
+30,VLa,319.0,362.0,319.0,106.7,False,False,1.13,1.497,1.399,3.1,0.652,0.685,0.044,0.016,0.06,0.06,0.323,0.307,—,—,0.87,0.469,0.821,—,TIER-1,Guvenilir — uzman dogrulamasi onerilir
+31,VLpd,760.0,656.0,603.0,82.8,False,False,1.09,1.274,1.217,2.9,0.679,0.688,0.082,0.056,0.148,0.105,0.276,0.279,0.998,0.998,0.873,0.667,0.881,—,TIER-1,Guvenilir — uzman dogrulamasi onerilir
+32,VLpv,743.0,751.0,734.0,99.9,False,False,1.02,1.425,1.395,2.7,0.591,0.612,0.035,0.029,0.075,0.071,0.209,0.221,0.998,0.998,0.883,0.568,0.853,—,TIER-1,Guvenilir — uzman dogrulamasi onerilir
+33,VM,156.0,147.0,149.0,94.9,False,False,0.99,1.486,1.426,2.7,0.653,0.656,0.088,0.101,0.105,0.101,0.175,0.215,—,—,0.876,0.463,0.766,T1 outlier orta (0.10),TIER-1,Guvenilir — uzman dogrulamasi onerilir
+34,VPI,69.0,70.0,70.0,101.4,False,False,1.0,1.408,1.421,2.3,0.698,0.808,0.043,0.014,0.064,0.078,0.333,0.333,—,—,0.881,0.499,0.717,—,TIER-1,Guvenilir — uzman dogrulamasi onerilir
+35,VPLa,117.0,119.0,111.0,98.3,False,False,1.07,1.404,1.4,2.3,0.648,0.645,0.059,0.045,0.049,0.062,0.309,0.28,—,—,0.867,0.328,0.686,Sol sinir belirsiz (grad=0.049),TIER-1,Guvenilir — uzman dogrulamasi onerilir
+36,VPLp,553.0,542.0,535.0,97.4,False,False,1.01,1.322,1.319,2.7,0.595,0.588,0.05,0.041,0.067,0.072,0.244,0.235,0.999,—,0.901,0.579,0.859,—,TIER-1,Guvenilir — uzman dogrulamasi onerilir
+37,VPM,186.0,187.0,192.0,101.9,False,False,0.97,1.435,1.435,2.4,0.63,0.629,0.037,0.047,0.08,0.08,0.177,0.176,—,—,0.888,0.444,0.804,—,TIER-1,Guvenilir — uzman dogrulamasi onerilir
+38,global,10020.0,7713.0,7592.0,76.4,False,False,1.02,1.176,1.169,2.5,0.633,0.638,0.132,0.138,0.209,0.215,0.27,0.249,0.995,0.995,0.873,0.86,0.923,T1 outlier orta (0.14),TIER-1,Guvenilir — uzman dogrulamasi onerilir
+39,mtt,57.0,47.0,56.0,90.4,True,True,0.84,1.45,1.446,2.4,0.522,0.613,0.0,0.036,0.175,0.184,0.137,0.173,—,—,0.838,0.329,0.399,Her iki hemisfer parcali,TIER-3,Guvenilmez — kucuk veya kotu propagate
+40,sPf,14.0,13.0,10.0,82.1,True,True,1.3,1.397,1.456,2.3,0.862,0.839,0.0,0.4,0.185,0.123,0.116,0.071,—,—,0.807,0.219,0.294,T1 outlier yuksek (0.40); Her iki hemisfer parcali,TIER-3,Guvenilmez — kucuk veya kotu propagate
+41,thalamus_body,339.0,176.0,184.0,53.1,False,False,0.96,1.013,0.916,2.0,0.708,0.708,0.261,0.293,0.395,0.383,0.279,0.319,—,—,0.787,0.635,0.796,T1 outlier yuksek (0.29),TIER-1,Guvenilir — uzman dogrulamasi onerilir

@@ -1,0 +1,27 @@
+{
+  "subject_id": "IXI016-Guys-0697",
+  "step": "IP2_Warp_W3",
+  "timestamp": "2026-04-08T14:11:17",
+  "status": "SUCCESS",
+  "duration_sec": 2861.6,
+  "metrics": {
+    "warp_config_description": "Affine + SyN (güçlü reg.), CC — küçük yapı overfit'ini önler",
+    "registration_duration_sec": 2788.0,
+    "NMI_post_registration": 1.0881,
+    "jacobian_min": 0.1708,
+    "jacobian_max": 4.6561,
+    "jacobian_mean": 1.0,
+    "jacobian_negative_ratio": 0.0,
+    "inverse_consistency_nmi_loss": 0.0726
+  },
+  "qc_flags": {},
+  "warnings": [],
+  "errors": [],
+  "output_files": {
+    "warped_atlas_T1": "C:\\Users\\ahmet\\Desktop\\BrainSeg-20260327T093216Z-1-001\\outputs\\IXI016-Guys-0697\\warp\\W3\\warped_atlas_T1.nii.gz",
+    "jacobian_det": "C:\\Users\\ahmet\\Desktop\\BrainSeg-20260327T093216Z-1-001\\outputs\\IXI016-Guys-0697\\warp\\W3\\jacobian_det.nii.gz",
+    "fwd_transforms": "C:\\Users\\ahmet\\Desktop\\BrainSeg-20260327T093216Z-1-001\\outputs\\IXI016-Guys-0697\\warp\\W3",
+    "QC_overlay": "C:\\Users\\ahmet\\Desktop\\BrainSeg-20260327T093216Z-1-001\\outputs\\IXI016-Guys-0697\\warp\\W3\\QC_overlay.png",
+    "QC_jacobian": "C:\\Users\\ahmet\\Desktop\\BrainSeg-20260327T093216Z-1-001\\outputs\\IXI016-Guys-0697\\warp\\W3\\jacobian_map_axial.png"
+  }
+}

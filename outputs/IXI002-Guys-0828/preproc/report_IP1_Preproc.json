@@ -1,0 +1,49 @@
+{
+  "subject_id": "IXI002-Guys-0828",
+  "step": "IP1_Preproc",
+  "timestamp": "2026-04-08T12:34:19",
+  "status": "SUCCESS",
+  "duration_sec": 219.8,
+  "metrics": {
+    "T1_orientation_original": "PSR",
+    "T1_orientation_after": "RAS",
+    "T1_voxel_spacing_original_mm": [
+      1.2,
+      0.938,
+      0.938
+    ],
+    "T1_shape": [
+      180,
+      240,
+      240
+    ],
+    "T1_voxel_spacing_mm": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "N4_T1_iterations": [
+      50,
+      50,
+      25
+    ],
+    "brain_mask_volume_mm3": 1425624.0,
+    "T2_to_T1_NMI": 1.1346,
+    "MRA_to_T1_NMI": 1.0933
+  },
+  "qc_flags": {
+    "gross_misalignment": false,
+    "skull_strip_loss_warning": false
+  },
+  "warnings": [],
+  "errors": [],
+  "output_files": {
+    "T1_preproc": "C:\\Users\\ahmet\\Desktop\\BrainSeg-20260327T093216Z-1-001\\outputs\\IXI002-Guys-0828\\preproc\\T1_preproc.nii.gz",
+    "T2_to_T1_preproc": "C:\\Users\\ahmet\\Desktop\\BrainSeg-20260327T093216Z-1-001\\outputs\\IXI002-Guys-0828\\preproc\\T2_to_T1_preproc.nii.gz",
+    "MRA_to_T1_preproc": "C:\\Users\\ahmet\\Desktop\\BrainSeg-20260327T093216Z-1-001\\outputs\\IXI002-Guys-0828\\preproc\\MRA_to_T1_preproc.nii.gz",
+    "brain_mask": "C:\\Users\\ahmet\\Desktop\\BrainSeg-20260327T093216Z-1-001\\outputs\\IXI002-Guys-0828\\preproc\\brain_mask.nii.gz",
+    "QC_overlay_T1_T2": "C:\\Users\\ahmet\\Desktop\\BrainSeg-20260327T093216Z-1-001\\outputs\\IXI002-Guys-0828\\preproc\\QC\\overlay_T1_T2.png",
+    "QC_overlay_T1_MRA": "C:\\Users\\ahmet\\Desktop\\BrainSeg-20260327T093216Z-1-001\\outputs\\IXI002-Guys-0828\\preproc\\QC\\overlay_T1_MRA.png",
+    "QC_histogram": "C:\\Users\\ahmet\\Desktop\\BrainSeg-20260327T093216Z-1-001\\outputs\\IXI002-Guys-0828\\preproc\\QC\\histogram_report.png"
+  }
+}

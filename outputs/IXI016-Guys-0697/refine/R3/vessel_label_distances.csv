@@ -1,0 +1,3 @@
+label,side,min_dist_mm,mean_dist_mm,max_dist_mm,vessel_overlap_voxels
+AD,left,108.08,108.59,109.09,0
+AD,right,103.75,104.4,105.04,0

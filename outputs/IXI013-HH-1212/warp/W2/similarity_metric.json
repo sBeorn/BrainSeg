@@ -1,0 +1,10 @@
+{
+  "subject_id": "IXI013-HH-1212",
+  "candidate": "W2",
+  "NMI": 1.0868,
+  "jacobian_min": 0.2181,
+  "jacobian_max": 4.3518,
+  "jacobian_neg_ratio": 0.0,
+  "inverse_consistency_nmi_loss": 0.0598,
+  "jacobian_fail": false
+}
