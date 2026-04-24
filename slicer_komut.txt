@@ -1,19 +1,233 @@
-3D Slicer Python Interactor'a yapistir:
+================================================================
+  3D SLICER KOMUT KILAVUZU — BrainSeg Morphometrics
+  Thalamic Nuclei Görselleştirme ve SSM Analizi
+================================================================
 
-exec(open(r"C:/Users/ahmet/Desktop/BrainSeg-20260327T093216Z-1-001/scripts/slicer_load_scene.py").read())
+Bu dosyada 3D Slicer üzerinde kullanacağınız tüm komutlar
+ve adım adım talimatlar yer almaktadır.
 
-------------------------------------------------------------
-Farkli subject icin: slicer_load_scene.py dosyasini ac,
-SUBJECT satirini degistir:
+================================================================
+  ÖNKOŞULLAR — Slicer'ı açmadan önce bunlar yapılmış olmalı
+================================================================
 
-SUBJECT = "IXI002-Guys-0828"
-SUBJECT = "IXI012-HH-1211"
-SUBJECT = "IXI013-HH-1212"
-SUBJECT = "IXI015-HH-1258"
-SUBJECT = "IXI016-Guys-0697"
+Aşağıdaki Python scriptleri sırayla çalıştırılmış olmalıdır.
+(Proje klasöründe terminal açarak çalıştırın)
 
-------------------------------------------------------------
-Tek bir label gormek icin:
-outputs/shapes/<subject>/<label>_left.vtk
-dosyasini Slicer penceresine surukle-birak.
-------------------------------------------------------------
+  1) python scripts/compute_morphometrics.py
+       → Hacim, yüzey alanı, kompaktlık vb. hesaplar.
+       → Çıktı: outputs/morphometrics/morphometrics_all.csv
+                outputs/morphometrics/<birey>_surface.fcsv
+
+  2) python scripts/export_3d_shapes.py
+       → Her nucleus için VTK 3D mesh dosyalarını üretir.
+       → Çıktı: outputs/shapes/<birey>/<nucleus>_left.vtk
+                outputs/shapes/<birey>/<nucleus>_right.vtk
+
+  3) python scripts/compute_ssm.py
+       → Şekil varyasyonunu PCA ile modeller (SSM).
+       → Çıktı: outputs/ssm/<nucleus>_ssm.npz
+
+  4) python scripts/generate_report.py
+       → HTML raporu oluşturur.
+       → Çıktı: outputs/report.html
+
+================================================================
+  3D SLICER'I AÇMA VE PYTHON KONSOLU
+================================================================
+
+  1. 3D Slicer uygulamasını açın.
+  2. Üst menüden:  View → Python Interactor
+     (veya klavye kısayolu: Ctrl+3)
+  3. Alt kısımda açılan Python konsol penceresine
+     aşağıdaki komutları yapıştırın ve Enter'a basın.
+
+================================================================
+  KOMUT 1 — Tüm Sahneleri Yükle (Anatomik Görüntüleyici)
+================================================================
+
+Bir bireyin tüm thalamic nucleus meshlerini aynı anda 3D
+sahneye yükler. MRI görüntüsü olmadan sadece nukleuslar görünür.
+
+  KOMUT (Python konsoluna yapıştırın):
+  ─────────────────────────────────────────────────────────────
+  exec(open(r"C:/Users/ahmet/Desktop/BrainSeg-20260327T093216Z-1-001/scripts/slicer_load_scene.py").read())
+  ─────────────────────────────────────────────────────────────
+
+  Varsayılan birey: IXI002-Guys-0828
+
+  FARKLI BİREY YÜKLEMEK İÇİN:
+  scripts/slicer_load_scene.py dosyasını açın, üstteki
+  SUBJECT satırını değiştirin, sonra komutu tekrar çalıştırın.
+
+  Mevcut bireyler:
+    SUBJECT = "IXI002-Guys-0828"
+    SUBJECT = "IXI012-HH-1211"
+    SUBJECT = "IXI013-HH-1212"
+    SUBJECT = "IXI015-HH-1258"
+    SUBJECT = "IXI016-Guys-0697"
+
+  NE GÖRÜRSÜNÜZ?
+  → Sol, sağ taraf tüm nucleus meshler farklı renklerle görünür.
+  → 3D görünümde fare ile döndürebilir, yakınlaştırabilirsiniz.
+  → Sahne Hiyerarşisi panelinde her nucleus ayrı node olarak listelenir.
+
+================================================================
+  KOMUT 2 — İstatistiksel Şekil Modeli Görüntüleyici (SSM)
+================================================================
+
+P1–P4 slider'ları ile nucleus şekillerini interaktif olarak
+keşfetmenizi sağlayan tam arayüzü açar.
+
+  KOMUT (Python konsoluna yapıştırın):
+  ─────────────────────────────────────────────────────────────
+  exec(open(r"C:/Users/ahmet/Desktop/BrainSeg-20260327T093216Z-1-001/scripts/slicer_ssm_viewer.py").read())
+  ─────────────────────────────────────────────────────────────
+
+  EKRAN DÜZENİ — 4 bölge açılır:
+  ┌─────────────────────┬─────────────────────┐
+  │  GRİ  — Referans    │  MAVİ — SSM Modeli  │
+  │  (ortalamaya en     │  (slider ile         │
+  │  yakın birey)       │  şekil değişir)      │
+  ├─────────────────────┼─────────────────────┤
+  │  PCA Scatter Plot   │  SSM Skor Tablosu   │
+  │  (5 birey dağılımı) │  (birey skorları)   │
+  └─────────────────────┴─────────────────────┘
+
+  SOL PANEL — Kontroller:
+  ┌─────────────────────────────────────────────────────────┐
+  │ Yapı (Label): [açılır menü — nucleus seçin]             │
+  │ Referans Mesh: [açılır menü — birey seçin]              │
+  │                                                         │
+  │ Model Parametreleri (b, σ birimi):                      │
+  │  P1 [────────●────────]  +0.00σ   σ=x.xx (%YY.Y)       │
+  │  P2 [────────●────────]  +0.00σ   σ=x.xx (%YY.Y)       │
+  │  P3 [────────●────────]  +0.00σ   σ=x.xx (%YY.Y)       │
+  │  P4 [────────●────────]  +0.00σ   σ=x.xx (%YY.Y)       │
+  │                                                         │
+  │  [↺ Ortalamaya Dön]    [▶ Subject Göster]               │
+  └─────────────────────────────────────────────────────────┘
+
+  P1, P2, P3, P4 NE YAPAR?
+  ─────────────────────────────────────────────────────────
+  Her P (Principal Component / Ana Bileşen) bireyler arası
+  şekil farkının en büyük kaynağını sırayla temsil eder.
+
+  • P1: Şekil değişiminin en büyük kaynağı.
+        Slider sola/sağa çekilince mavi model bu yönde
+        küçülür/büyür veya uzar/kısalır.
+  • P2: İkinci büyük varyasyon yönü.
+  • P3, P4: Daha küçük, daha ince farklılıklar.
+
+  Slider değeri σ (sigma) cinsinden:
+    0.00σ  = ortalama şekil
+   +1.00σ  = ortalamadan 1 standart sapma ötede
+   -1.00σ  = ortalamadan 1 standart sapma geride
+   Aralık: −3σ ile +3σ arası
+
+  Yanındaki "%YY.Y" o P'nin toplam varyasyonun yüzde
+  kaçını açıkladığını gösterir. Yüksekse o P önemlidir.
+
+  DÜĞMELER:
+  • [↺ Ortalamaya Dön]   → Tüm slider'ları 0'a sıfırlar.
+  • [▶ Subject Göster]   → Seçili bireyin gerçek PCA konumunu
+                           mavi görünüme yükler.
+
+================================================================
+  KOMUT 3 — Tek Bir Nucleus Yükle (Sürükle-Bırak)
+================================================================
+
+Sadece tek bir yapıyı 3D Slicer'da görmek istiyorsanız:
+
+  1. Windows Gezgini'nde şu klasörü açın:
+     outputs\shapes\<birey>\
+
+  2. İstediğiniz dosyayı 3D Slicer penceresine sürükleyin:
+     Örnek:
+       outputs\shapes\IXI002-Guys-0828\AV_left.vtk   (sol AV)
+       outputs\shapes\IXI002-Guys-0828\AV_right.vtk  (sağ AV)
+       outputs\shapes\IXI002-Guys-0828\CL_left.vtk   (sol CL)
+
+  Dosya formatı: <nucleus_adı>_<taraf>.vtk
+  Taraf: left = sol hemisfer, right = sağ hemisfer
+
+================================================================
+  KOMUT 4 — Raporu Aç (Tarayıcıda)
+================================================================
+
+Tüm analiz sonuçlarını içeren HTML raporu açmak için:
+
+  Windows Gezgini'nde şu dosyaya çift tıklayın:
+    outputs\report.html
+
+  Veya Python konsolundan:
+  ─────────────────────────────────────────────────────────────
+  import subprocess, os
+  subprocess.Popen([r"outputs\report.html"], shell=True,
+      cwd=r"C:/Users/ahmet/Desktop/BrainSeg-20260327T093216Z-1-001")
+  ─────────────────────────────────────────────────────────────
+
+  Raporu güncellemek için terminalde:
+    python scripts/generate_report.py
+
+================================================================
+  MEVCUT NUCLEUS LİSTESİ (39 adet)
+================================================================
+
+  Sol/Sag her biri icin VTK dosyasi mevcut:
+
+  AD    AV    AM    CeM   CL    CM    Hb    LD
+  LGNmc LGNpc Li    LP    MDmc  MDpc  MGN   mtt
+  MV    Pf    Po    PuA   PuI   PuL   PuM   Pv
+  RN    SG    sPf   STh   VAmc  VApc  VLa   VLpd
+  VLpv  VM    VPI   VPLa  VPLp  VPM
+
+  En büyük (güvenilir): CL, AV, MDpc, PuM, VLpd, VPLa
+  En küçük (dikkatli):  AD, MV, Pv, sPf  (< 20 mm³)
+
+================================================================
+  SIK KARŞILAŞILAN SORUNLAR
+================================================================
+
+  SORUN: "SSM verisi bulunamadı" hatası
+  ÇÖZÜM: Önce terminalde çalıştırın:
+         python scripts/compute_ssm.py
+
+  SORUN: "mesh bulunamadı" uyarısı
+  ÇÖZÜM: Önce terminalde çalıştırın:
+         python scripts/export_3d_shapes.py
+
+  SORUN: Slicer'da sahnede hiçbir şey görünmüyor
+  ÇÖZÜM: 3D görünümde klavyeden 'R' tuşuna basın
+         (kamerayı sıfırlar / fit to scene)
+
+  SORUN: SSM viewer açılıyor ama model değişmiyor
+  ÇÖZÜM: Dropdown'dan farklı bir nucleus seçip
+         tekrar ilk nucleusa dönün.
+
+  SORUN: Konsola komut yapıştırılmıyor
+  ÇÖZÜM: Python Interactor altındaki metin kutusuna
+         tıkladıktan sonra Ctrl+V ile yapıştırın.
+
+================================================================
+  PROJE KLASÖR YAPISI
+================================================================
+
+  BrainSeg-20260327T093216Z-1-001\
+  ├── scripts\
+  │   ├── compute_morphometrics.py   ← morphometri hesapla
+  │   ├── export_3d_shapes.py        ← VTK mesh üret
+  │   ├── compute_ssm.py             ← SSM/PCA hesapla
+  │   ├── generate_report.py         ← HTML rapor üret
+  │   ├── compute_quality.py         ← VPI kalite hesapla
+  │   ├── slicer_load_scene.py       ← Slicer sahne yükle
+  │   └── slicer_ssm_viewer.py       ← Slicer SSM arayüzü
+  ├── outputs\
+  │   ├── report.html                ← Ana rapor (tarayıcıda aç)
+  │   ├── morphometrics\             ← CSV + FCSV dosyaları
+  │   ├── shapes\                    ← VTK mesh dosyaları
+  │   ├── ssm\                       ← SSM NPZ dosyaları
+  │   └── quality\                   ← VPI kalite raporu
+  ├── data\atlas\                    ← MNI152 + Hakan atlas
+  └── slicer_komut.txt               ← Bu dosya
+
+================================================================

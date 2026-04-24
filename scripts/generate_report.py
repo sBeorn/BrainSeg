@@ -93,10 +93,28 @@ tr:hover td { background: #f0f4ff !important; }
 .note { background: #fff8e1; border-left: 4px solid #ffc107;
         padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 10px 0;
         font-size: 12px; color: #5d4037; }
+.info { background: #e8f4fd; border-left: 4px solid #2196f3;
+        padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 10px 0;
+        font-size: 12px; color: #1a3a5c; }
 .bar-wrap { display: flex; align-items: center; gap: 6px; }
 .bar { height: 10px; border-radius: 3px; min-width: 2px; }
-.section-desc { color: #555; font-size: 12px; margin-bottom: 12px; line-height: 1.6; }
+.section-desc { color: #555; font-size: 12px; margin-bottom: 12px; line-height: 1.7; }
+.intro-box { background: linear-gradient(135deg,#e8eaf6,#f5f7fa); border-radius: 10px;
+             border: 1px solid #c5cae9; padding: 20px 24px; margin-bottom: 18px; }
+.intro-box h3 { color: #1a237e; margin-bottom: 8px; }
+.intro-box p  { font-size: 13px; color: #333; line-height: 1.8; margin-bottom: 10px; }
+.intro-box ul { padding-left: 22px; font-size: 13px; color: #333; line-height: 1.9; }
+.legend { display: flex; gap: 16px; flex-wrap: wrap; margin: 10px 0 14px; font-size: 12px; }
+.legend-item { display: flex; align-items: center; gap: 6px; }
+.legend-dot { width: 14px; height: 14px; border-radius: 3px; flex-shrink: 0; }
+.sozluk-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+               gap: 12px; }
+.sozluk-item { background: #f8f9ff; border-radius: 6px; padding: 12px 16px;
+               border-left: 3px solid #1a237e; }
+.sozluk-item dt { font-weight: bold; color: #1a237e; margin-bottom: 4px; }
+.sozluk-item dd { font-size: 12px; color: #444; line-height: 1.6; }
 footer { text-align: center; color: #aaa; font-size: 11px; margin-top: 32px; }
+th[title] { cursor: help; border-bottom: 2px dotted #fff; }
 """
 
 def pill(text, kind):
@@ -105,9 +123,54 @@ def pill(text, kind):
     return f'<span class="pill pill-{cls}">{text}</span>'
 
 
+def legend_html():
+    return """
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot" style="background:#d4edda"></div> İyi / Simetrik</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#fff3cd"></div> Orta / Dikkat</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#f8d7da"></div> Zayıf / Sorunlu</div>
+    </div>"""
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 # Bolumler
 # ─────────────────────────────────────────────────────────────────────────────
+
+def section_giris():
+    return """
+    <div class="intro-box">
+      <h3>Bu Rapor Ne Anlatiyor?</h3>
+      <p>
+        <b>Talamus</b>, beynin tam ortasinda yer alan ve duyu, hareket, dikkat gibi islevleri
+        duzenleyen kritik bir yapıdır. Talamus kendi icinde birbirinden farklı islevlere sahip
+        <b>39 alt cekirdekten (nucleus)</b> olusur — her biri beyinde farkli bir bolgeyle baglantili,
+        farklı bir gorevi olan kucuk alt bolumler.
+      </p>
+      <p>
+        Bu calismada IXI veri setinden alinan <b>5 saglikli bireyin</b> beyin MRI goruntuleri
+        kullanilarak su sorulara yanit aranmistir:
+      </p>
+      <ul>
+        <li>Her thalamic nucleus ne kadar buyuk, hangi sekilde, beynin neresinde?</li>
+        <li>Sol ve sag taraflar birbirine ne kadar simetrik?</li>
+        <li>Bireyler arasinda sekil/hacim farkliligi ne kadar?</li>
+        <li>Bu farkliliklari ozetleyen istatistiksel bir sekil modeli uretebilir miyiz?</li>
+      </ul>
+      <p style="margin-top:10px; font-size:12px; color:#555;">
+        <b>Nasil calisti?</b> &nbsp;
+        Hakan atlasindaki hazir etiket maskeleri, her bireyin beyin MRI goruntusuyle
+        <i>warp (eslesme/kayit)</i> teknigi kullanilarak hizalanmistir.
+        Ardindan her maskenin hacmi, yuzey alani, sekil ozellikleri ve uzaydaki konumu
+        otomatik olarak olculmustir. Son adimda tum bireylerin sekil verileri birlestirilip
+        istatistiksel bir sekil modeli (SSM) olusturulmustur.
+      </p>
+    </div>
+    <div class="info" style="margin-bottom:10px;">
+      <b>Renk kodlari bu raporun tamaminda gecerlidir:</b> &nbsp;
+      Yesil = iyi/beklenen aralik &nbsp;|&nbsp; Sari = dikkat/sinir deger &nbsp;|&nbsp; Kirmizi = sorunlu/beklenenden sapma
+    </div>
+    """
+
 
 def section_ozet(mrows, qrows):
     subjects = sorted(set(r["subject"] for r in mrows))
@@ -124,19 +187,24 @@ def section_ozet(mrows, qrows):
 
     html = '<div class="stats-grid">'
     for num, lbl in [
-        (len(subjects), "Subject"),
-        (len(labels),   "Thalamic Nucleus"),
-        (total,         "Toplam Olcum"),
-        (f"{pct_iyi:.0f}%", "VPI IYI (warp kalitesi)"),
+        (len(subjects), "Analiz Edilen Birey (Subject)"),
+        (len(labels),   "Thalamic Nucleus (Alt Cekirdek)"),
+        (total,         "Toplam Olcum Sayisi"),
+        (f"{pct_iyi:.0f}%", "Warp Kalitesi Iyi (VPI)"),
         (f"{pct_sim:.0f}%", "Sol/Sag Simetrik"),
-        (f"{avg_vol:.0f} mm³", "Ortalama Label Hacmi"),
+        (f"{avg_vol:.0f} mm³", "Ortalama Nucleus Hacmi"),
     ]:
         html += f'<div class="stat-box"><div class="stat-num">{num}</div><div class="stat-lbl">{lbl}</div></div>'
     html += "</div>"
 
-    html += "<h3>Subjectler</h3><p class='section-desc'>"
+    html += "<h3>Analiz Edilen Bireyler</h3><p class='section-desc'>"
     html += " &nbsp;|&nbsp; ".join(subjects)
     html += "</p>"
+    html += """<p class='section-desc'>
+      IXI veri seti saglikli yetiskin bireylere ait anonim MRI goruntuleri icermektedir.
+      Her birey icin sol ve sag thalamic nucleus ayri ayri olculmustur
+      (toplam: 5 birey &times; 39 nucleus &times; 2 taraf = 390 olcum noktasi).
+    </p>"""
 
     return html
 
@@ -150,13 +218,31 @@ def section_morphometrics(mrows):
     for r in mrows:
         by_label[r["label"]].append(r)
 
-    html = '<p class="section-desc">Her label icin 5 subject ve sol+sag hemisfer ortalamalari. '
-    html += 'Elongation/Flatness &lt; 30 voxel (&lt; ~20 mm³) olan labellar icin hesaplanamaz (—).</p>'
+    html = '<p class="section-desc">'
+    html += '<b>Her satirda bir thalamic nucleus (alt cekirdek) var.</b> '
+    html += 'Degerler 5 bireyin sol ve sag hemisfer olcumlerinin ortalamasidir. '
+    html += 'Sutun aciklamalari icin sutun basliklari uzerine farenizi getirin (tooltip). '
+    html += '<i>Elongation ve Flatness</i> degerleri cok kucuk yapilarda (hacmi &lt;20 mm³ olanlar) '
+    html += 'hesaplanamaz — bu satirlar sari renkle isaretlenmistir.</p>'
+    html += legend_html()
     html += '<div class="tbl-wrap"><table>'
-    html += ("<tr><th>Label</th><th>Hacim L (mm³)</th><th>Hacim R (mm³)</th>"
-             "<th>Yuzey (mm²)</th><th>Kompaktlik</th><th>Elongation</th>"
-             "<th>Flatness</th><th>BBox X</th><th>BBox Y</th><th>BBox Z</th>"
-             "<th>Doluluk</th><th>Bilesken</th><th>Iskelet (mm)</th></tr>")
+    html += (
+        '<tr>'
+        '<th title="Thalamic nucleus adi">Nucleus</th>'
+        '<th title="Sol hemisfer ortalama hacmi (milimetre kup). Beyin sol yarisindaki yapinin buyuklugu.">Hacim Sol (mm³)</th>'
+        '<th title="Sag hemisfer ortalama hacmi (milimetre kup). Beyin sag yarisindaki yapinin buyuklugu.">Hacim Sag (mm³)</th>'
+        '<th title="Yapiyi saran dis yuzey alani (milimetre kare). Yuzey ne kadar girintili/cikintiliysa o kadar yuksek.">Yuzey Alani (mm²)</th>'
+        '<th title="Sekil ne kadar kureye benziyor? 1.0 = mukemmel kure. Dusuk deger = uzun/yassik sekil.">Kompaktlik (0-1)</th>'
+        '<th title="Yapinin en uzun ekseninin en kisa eksenine orani. Yuksek deger = uzun/igne seklinde.">Uzama (Elongation)</th>'
+        '<th title="Yapinin ne kadar yassik oldugu. Yuksek deger = disk/pankek seklinde.">Yassiklik (Flatness)</th>'
+        '<th title="Yapinin X yonunde (sol-sag) kapligi mesafe (mm).">Genislik X (mm)</th>'
+        '<th title="Yapinin Y yonunde (on-arka) kapligi mesafe (mm).">Derinlik Y (mm)</th>'
+        '<th title="Yapinin Z yonunde (asagi-yukari) kapligi mesafe (mm).">Yukseklik Z (mm)</th>'
+        '<th title="Yapinin kapligi kutunun yuzde kaci dolu? 1.0 = tam dolu kutu, dusuk = seyrek/dagitik sekil.">Kutu Doluluk</th>'
+        '<th title="Kac ayri parcadan olusuyor? 1 = tek parcali (ideal). Yuksek = parcali/kopuk yapi.">Parca Sayisi</th>'
+        '<th title="Yapinin iskelet uzunlugu (mm). Cok kucuk yapilar icin 0 donebilir.">Iskelet (mm)</th>'
+        '</tr>'
+    )
 
     for label in labels:
         rows_l = [r for r in by_label[label] if r["side"] == "left"]
@@ -193,7 +279,9 @@ def section_morphometrics(mrows):
         html += "</tr>"
 
     html += "</table></div>"
-    html += '<p class="note">Sari satir: Hacim &lt; 20 mm³ — AD, MV, Pv, sPf. Elongation/Flatness hesaplanamadi.</p>'
+    html += '<p class="note"><b>Sari satirlar</b> hacmi 20 mm³\'ten kucuk nucleusları gosteriyor (AD, MV, Pv, sPf). '
+    html += 'Bu yapilar 1mm cozunurluklu goruntude cok az voxel icerdiginden '
+    html += 'Uzama ve Yassiklik metrikleri guvenilir sekilde hesaplanamaz.</p>'
     return html
 
 
@@ -204,15 +292,23 @@ def section_subject_detail(mrows):
     for r in mrows:
         by_subj_label[(r["subject"], r["label"], r["side"])] = r
 
-    html = '<p class="section-desc">Her subject icin sol/sag hacimler (mm³). '
-    html += 'Subjectler arasi tutarlilik icin karsilastirabilirsiniz.</p>'
+    html = '<p class="section-desc">'
+    html += 'Bu tablo her nucleus icin bireylerin (subject) hacimlerini yan yana gostermektedir. '
+    html += 'Boylece kimlerin buyuk kimlerin kucuk yapilara sahip oldugu karsilastirilabildigi gibi '
+    html += 'bireylerarasi tutarlilik da gorulur. '
+    html += '<b>CV (Varyasyon Katsayisi)</b> sutunu tutarliligi ozetler: '
+    html += 'CV &lt; 0.15 = bireyler birbirine cok benziyor (yesil), '
+    html += '0.15&ndash;0.25 = orta farklilik (sari), '
+    html += '&gt; 0.25 = buyuk bireysel farklilik (kirmizi).</p>'
+    html += legend_html()
     html += '<div class="tbl-wrap"><table>'
 
     # Header
-    html += "<tr><th>Label</th><th>Taraf</th>"
+    html += '<tr><th title="Nucleus adi">Nucleus</th><th title="Sol veya sag hemisfer">Taraf</th>'
     for s in subjects:
-        html += f"<th>{s.split('-')[0]}<br>{s.split('-')[1]}</th>"
-    html += "<th>Ort</th><th>CV</th></tr>"
+        html += f'<th title="{s}">{s.split("-")[0]}<br>{s.split("-")[1]}</th>'
+    html += '<th title="Tum bireylerin ortalamasi">Ortalama</th>'
+    html += '<th title="Varyasyon Katsayisi: standart sapma / ortalama. Dusuk = bireyler arasi tutarlilik iyi.">CV</th></tr>'
 
     import statistics
     for label in labels:
@@ -257,8 +353,18 @@ def section_kalite(qrows):
     sim   = sum(1 for r in qrows if r["symmetry_tier"] == "SIMETRIK")
     asim  = sum(1 for r in qrows if r["symmetry_tier"] == "ASIMETRIK")
 
-    html = '<p class="section-desc">Hacim Koruma Indeksi (VPI = warped hacim / atlas hacmi). '
-    html += '1.0 = atlas ile birebir eslesme. IYI: 0.70–1.30 | ORTA: 0.50–1.50 | ZAYIF: disarida.</p>'
+    html = '<p class="section-desc">'
+    html += '<b>Warp nedir?</b> Her bireyin beyni atlasla eslestirilirken maskelerin boyutu '
+    html += 'biraz degismis olabilir. Bu bolum o degisimin ne kadar buyuk oldugunu olcer.<br><br>'
+    html += '<b>VPI (Hacim Koruma Indeksi)</b> = warp sonrasi olculen hacim / atlastaki beklenen hacim. '
+    html += '1.0 = atlas ile birebir. '
+    html += '<span style="background:#d4edda;padding:1px 6px;border-radius:3px;">IYI: 0.70&ndash;1.30</span> &nbsp; '
+    html += '<span style="background:#fff3cd;padding:1px 6px;border-radius:3px;">ORTA: 0.50&ndash;1.50</span> &nbsp; '
+    html += '<span style="background:#f8d7da;padding:1px 6px;border-radius:3px;">ZAYIF: &lt;0.50 veya &gt;1.50</span><br><br>'
+    html += '<b>Sol/Sag Simetri</b>: Thalamus simetrik bir yapi oldugu icin sol ve sag taraflar benzer hacimde '
+    html += 'olmalidir. L/R orani 1.0\'a ne kadar yakinsa o kadar simetrik.'
+    html += '</p>'
+    html += legend_html()
 
     # Ozet kutular
     html += '<div class="stats-grid">'
@@ -274,12 +380,22 @@ def section_kalite(qrows):
     html += "</div>"
 
     # Label bazi kalite tablosu
-    html += "<h3>Label Bazinda Kalite</h3>"
+    html += "<h3>Her Nucleus Icin Warp Kalite Tablosu</h3>"
     html += '<div class="tbl-wrap"><table>'
-    html += ("<tr><th>Label</th><th>Atlas L (mm³)</th><th>Atlas R (mm³)</th>"
-             "<th>VPI Sol (ort)</th><th>VPI Sag (ort)</th><th>Tier</th>"
-             "<th>L/R Oran (ort)</th><th>Simetri</th>"
-             "<th>Cross-CV</th><th>Tutarlilik</th></tr>")
+    html += (
+        '<tr>'
+        '<th title="Thalamic nucleus adi">Nucleus</th>'
+        '<th title="Atlastaki beklenen sol hacim (referans deger)">Atlas Sol (mm³)</th>'
+        '<th title="Atlastaki beklenen sag hacim (referans deger)">Atlas Sag (mm³)</th>'
+        '<th title="Olculen sol hacim / atlas sol hacmi. 1.0 = ideal. 5 bireyin ortalamasi.">VPI Sol (ort)</th>'
+        '<th title="Olculen sag hacim / atlas sag hacmi. 1.0 = ideal. 5 bireyin ortalamasi.">VPI Sag (ort)</th>'
+        '<th title="Genel warp kalite sinifi">Kalite</th>'
+        '<th title="Sol hacim / sag hacim orani. 1.0 = tam simetrik. 5 bireyin ortalamasi.">Sol/Sag Oran</th>'
+        '<th title="Sol ve sag hacimler birbirine ne kadar yakin?">Simetri</th>'
+        '<th title="Varyasyon Katsayisi: 5 birey arasinda bu nucleusun ne kadar farkli olculdugunu gosterir. Dusuk = tutarli.">Bireyler Arasi CV</th>'
+        '<th title="CV degeri yorumu: Tutarli (&lt;0.15) / Orta (0.15-0.25) / Tutarsiz (&gt;0.25)">Tutarlilik</th>'
+        '</tr>'
+    )
 
     for label in labels:
         rows = by_lbl[label]
@@ -323,8 +439,11 @@ def section_kalite(qrows):
         html += "</tr>"
 
     html += "</table></div>"
-    html += '<p class="note">VPI = warped_hacim / atlas_hacmi. 1.0 ideal. Kucuk yapilarda (AD, Pv, MV, sPf) '
-    html += 'birkaç voxel farki bile buyuk VPI sapmasi uretir — istatistiksel sinirlilik.</p>'
+    html += '<p class="note"><b>Kucuk yapilarda VPI neden sapabilir?</b> &nbsp; '
+    html += 'AD, Pv, MV, sPf gibi cok kucuk nucleuslar (hacim &lt;20 mm³) 1mm cozunurluklu '
+    html += 'goruntude sadece birkaç voxelden olusur. Bu durumlarda 1-2 voxellik warp hatasi '
+    html += 'bile VPI\'yi buyuk olcude etkiler. Bu bir olcum sinirlamasi olup warp algoritmasi '
+    html += 'hatasini degil, gorunturun cozunurlugunun yetersizligini yansitir.</p>'
     return html
 
 
@@ -369,9 +488,20 @@ def section_ssm():
     worst_label = rows[pc1_vals.index(pc1_min)]["label"]
 
     html = '<p class="section-desc">'
-    html += 'Her label için yüzey landmark koordinatlarından (12 nokta × 3 boyut = 36 boyutlu şekil vektörü) '
-    html += 'PCA ile şekil modeli oluşturuldu. PC1–PC4 modları şeklin ana varyasyon eksenlerini temsil eder. '
-    html += '3D Slicer\'da <code>slicer_ssm_viewer.py</code> ile interaktif incelenebilir (slider → TPS deformasyonu).'
+    html += '<b>Istatistiksel Sekil Modeli (SSM) nedir?</b> &nbsp; '
+    html += 'Bes bireyin ayni nucleusuna bakinca sekillerin birbiriyle benzer ama farkli oldugu gorulur. '
+    html += 'SSM bu farkliliklari matematiksel olarak ozetler: "Bireyler arasinda sekil en cok hangi yonde degisiyor?" '
+    html += 'sorusuna yanit verir. Bunu yapmak icin her nucleus icin 12 yuzey noktasi (landmark) belirlenir '
+    html += 've bu 12 noktanin 3D koordinatlari (12 &times; 3 = 36 sayi) bir araya getirilerek '
+    html += '<b>PCA (Temel Bilesenler Analizi)</b> uygulanir.<br><br>'
+    html += '<b>P1, P2, P3, P4 nedir?</b> &nbsp; '
+    html += 'PCA\'nin buldugu ana varyasyon eksenleridir. '
+    html += 'P1 bireyler arasindaki sekil farkinin en buyuk kaynagini temsil eder (en fazla varyans), '
+    html += 'P2 ikinci buyuk kaynagi, vs. '
+    html += '3D Slicer\'da bu modlarin slider\'lari ile ortalama sekilten ne kadar sapilabilecegi '
+    html += 'interaktif olarak gorsellestirilir (<code>slicer_ssm_viewer.py</code>).<br><br>'
+    html += '<b>sigma (σ)</b>: Her modun "dogal" degisim buyuklugu. '
+    html += 'Slider +1σ konumundaysa o moda gore ortalamadan 1 standart sapma uzakta olan sekli gorursunuz.'
     html += '</p>'
 
     # Özet kutular
@@ -389,10 +519,19 @@ def section_ssm():
 
     # Label bazında SSM tablosu
     html += '<div class="tbl-wrap"><table>'
-    html += ('<tr><th>Label</th><th>N Subj</th><th>N Mod</th>'
-             '<th>PC1 Varyans</th><th>PC2 Varyans</th>'
-             '<th>PC3 Varyans</th><th>PC4 Varyans</th>'
-             '<th>σ₁ (mm)</th><th>Yorum</th></tr>')
+    html += (
+        '<tr>'
+        '<th title="Thalamic nucleus adi">Nucleus</th>'
+        '<th title="SSM hesaplamasina katilan birey sayisi">N Birey</th>'
+        '<th title="Kac PCA modu hesaplandi (max 4)">N Mod</th>'
+        '<th title="P1 modunun acikladi sekil varyansinin yuzdesi. Yuksek = sekil degisimi tek bir eksene yuklu.">P1 Varyansi</th>'
+        '<th title="P2 modunun acikladi sekil varyansinin yuzdesi.">P2 Varyansi</th>'
+        '<th title="P3 modunun acikladi sekil varyansinin yuzdesi.">P3 Varyansi</th>'
+        '<th title="P4 modunun acikladi sekil varyansinin yuzdesi.">P4 Varyansi</th>'
+        '<th title="P1 modunun standart sapmasi (mm). Bireyler arasindaki tipik sekil farkliligi buyuklugu.">σ₁ (mm)</th>'
+        '<th title="P1 varyansi yorumu">Yorum</th>'
+        '</tr>'
+    )
 
     for r in rows:
         pct  = r["pct"]
@@ -401,16 +540,15 @@ def section_ssm():
         pc3  = pct[2] if len(pct) > 2 else 0
         pc4  = pct[3] if len(pct) > 3 else 0
 
-        # PC1 renk: > 85% koyu yeşil, > 70% açık yeşil, altı sarı
         if pc1 >= 85:
             pc1_cls = "good"
-            yorum   = "Basit varyasyon"
+            yorum   = "Tek eksende degisim"
         elif pc1 >= 70:
             pc1_cls = ""
-            yorum   = "Normal"
+            yorum   = "Normal dagilim"
         else:
             pc1_cls = "warn"
-            yorum   = "Çok boyutlu şekil"
+            yorum   = "Cok boyutlu varyasyon"
 
         def bar(v):
             w = int(v * 1.2)
@@ -429,35 +567,101 @@ def section_ssm():
         html += '</tr>'
 
     html += '</table></div>'
-    html += '<p class="note">σ₁ = PC1\'in standart sapması (mm cinsinden landmark uzaklığı). '
-    html += 'Yüksek σ₁ → subject arası şekil farkı büyük. '
-    html += 'PC1 varyansı > %85 → şekil değişimi neredeyse tek bir eksen üzerinde.</p>'
+    html += '<p class="note">'
+    html += '<b>σ₁ yuksekse ne anlama gelir?</b> &nbsp; '
+    html += 'O nucleusun sekli bireyden bireye buyuk farklilik gosteriyor demektir. '
+    html += 'Dusuk σ₁ = bireyler o nucleusu cok benzer sekillerle tasir.<br>'
+    html += '<b>P1 varyansi &gt;%85 ise:</b> Tum sekil farkliligi neredeyse tek bir yonde — '
+    html += 'buyume/kucusme veya tek yonde uzama gibi basit bir degisim hakimdir. '
+    html += '<b>Dusuk P1 varyansi:</b> Sekil farkliligi karmasik, birden fazla boyutta dagitik.</p>'
     return html
 
 
 def section_limitasyonlar():
     items = [
-        ("Kucuk Label Sorunu",
-         "AD, Pv, MV, sPf labels < 20 mm³ — 1mm izotropik cozunurlukte yeterli voxel yok. "
-         "Elongation/Flatness hesaplanamadi. VPI degerleri guvenilmez."),
+        ("Kucuk Nucleus Sorunu",
+         "AD, Pv, MV, sPf gibi nucleuslar 20 mm³\'ten kucuktur — 1mm cozunurluklu goruntude "
+         "sadece birkaç voxele karsilik gelir. Bu yapilarda Uzama/Yassiklik hesaplanamaz, "
+         "VPI degerleri guvenilmez. Daha yuksek cozunurluklu MRI ile bu sinir ortadan kalkar."),
         ("Warp Hatasi Yayilimi",
-         "Morfometrik olcumler warp sonrasi maskelere gore hesaplandi. "
-         "Warp kaydi hataliysa metrikler de etkilenir. Kalite raporundaki VPI bu riski olcer."),
-        ("Az Subject",
-         "5 subject — istatistiksel guc sinirli. Ortalamalar ve CV degerleri referans niteligi tasir."),
+         "Tum metrikler warp sonrasi maskelere dayaniyor. Eger atlas-birey eslemesi "
+         "hataliysa tum metrikler de etkilenir. 'Warp Kalite' bolumundeki VPI bu riski olcer "
+         "ve zayif VPI goruldugunde o nucleusun olcumlerine dikkatli yaklasılmalidir."),
+        ("Az Birey Sayisi",
+         "Sadece 5 birey analiz edildi. Bu sayida istatistiksel guc sinirlidir; "
+         "ortalama ve CV degerleri kesin istatistik degil referans niceligi tasir. "
+         "Daha guclu sonuclar icin en az 20-30 birey onerilir."),
         ("Yuzey Alani Hassasiyeti",
-         "Marching cubes yontemi voxel cozunurluguyle sinirli. Kucuk yapilar icin yuzey alani "
-         "hafif asiri tahmin edilebilir."),
+         "Yuzey olusturmak icin kullanilan 'marching cubes' yontemi voxel boyutuna baglidir. "
+         "Kucuk yapilarda gercek yuzeyden biraz daha buyuk tahmin uretir."),
         ("Iskelet Metrikleri",
-         "skeleton_length_mm kucuk izole yapilar icin 0 donuyor. "
-         "Buyuk yapilar (CL, MDpc, PuM) icin guvenilir."),
-        ("Tek Atlas",
-         "Tek bir MNI152 atlasi kullanildi. Label fusion uygulanmadi."),
+         "Cok kucuk veya kopuk yapilar icin iskelet uzunlugu 0 olarak donmektedir. "
+         "Bu deger ancak CL, MDpc, PuM gibi buyuk ve tek parcali yapilarda guvenilirdir."),
+        ("Tek Atlas Kullanimi",
+         "Analiz tek bir MNI152 T1 atlasi kullanilarak yapildi. "
+         "Birden fazla atlas veya label fusion yontemlerinin kullanimi daha saglam sonuclar verir."),
     ]
-    html = '<ul style="padding-left:20px; line-height:2;">'
+    html = '<p class="section-desc">Her calismanin teknik sinirlari vardir. '
+    html += 'Asagidaki maddeler bu analizin sonuclarini yorumlarken dikkate alinmasi gereken '
+    html += 'kisitlamalari aciklamaktadir.</p>'
+    html += '<ul style="padding-left:20px; line-height:2.2;">'
     for title, desc in items:
         html += f"<li><b>{title}:</b> {desc}</li>"
     html += "</ul>"
+    return html
+
+
+def section_sozluk():
+    kavramlar = [
+        ("Talamus (Thalamus)",
+         "Beynin merkezinde yer alan ve duyu, hareket, dikkat sinyallerini ilgili korteks bolgelerine "
+         "ileten role yapisi. Kendi icinde 39+ alt cekirdege (nucleus) bolunur."),
+        ("Thalamic Nucleus (Alt Cekirdek)",
+         "Talamusun islevsel ve anatomik alt birimleri. Her birinin baglantili oldugu korteks bolgesi "
+         "ve islevi farklidir. Bu analizde Hakan atlasindaki 39 nucleus kullanilmistir."),
+        ("Atlas",
+         "Standart bir beyin sablonu uzerine isaretlenmis anatomik haritalar. Bu calismada "
+         "MNI152 uzayindaki Hakan talamus atlasi kullanilmistir."),
+        ("Warp / Kayit (Registration)",
+         "Bir bireyin MRI goruntusunu standart atlasla eslestirecek bicimde matematiksel olarak "
+         "deforme etme islemi. Boylece atlas maskeleri her bireye uyarlanir."),
+        ("Maske",
+         "Bir nucleus bolgesini belirten ikili (0/1) 3D goruntu. 1 olan voxellar o nucleusa aittir."),
+        ("VPI — Hacim Koruma Indeksi",
+         "Warp sonrasi olculen hacmin atlastaki beklenen hacme orani. 1.0 = mukemmel eslesme. "
+         "0.70-1.30 = kabul edilebilir. Bu sinirin disinda kalan olcumler warp hatasindan etkilenebilir."),
+        ("Kompaktlik",
+         "Seklin kureye ne kadar benzedigi. 1.0 = mukemmel kure. Dusuk deger = uzun veya gircik sekil."),
+        ("Elongation (Uzama)",
+         "En uzun eksenin en kisa eksenine orani. Yuksek = igne/sigara seklinde uzun yapi."),
+        ("Flatness (Yassiklik)",
+         "Yapinin ne kadar pankek/disk seklinde oldugu. Yuksek = yassik, ince yapi."),
+        ("Centroid",
+         "Yapinin agirlik merkezi koordinati. 3D Slicer\'da 'pin' olarak gosterilebilir."),
+        ("CV — Varyasyon Katsayisi",
+         "Standart sapma / ortalama. Bireyler arasi farklilik olcusu. "
+         "< 0.15 = tutarli, 0.15-0.25 = orta, > 0.25 = yuksek bireysel farklilik."),
+        ("SSM — Istatistiksel Sekil Modeli",
+         "Birden fazla bireyin sekil verilerinden PCA ile elde edilen model. "
+         "'Bu yapilar tipik olarak nasil gozukur ve bireyler arasinda nasil degisir?' sorusunu yanıtlar."),
+        ("PCA — Temel Bilesenler Analizi",
+         "Cok boyutlu verideki en buyuk varyasyon yonlerini bulan istatistiksel yontem. "
+         "P1 en fazla varyasi, P2 ikinci en fazla varyasi acıklar."),
+        ("P1, P2, P3, P4 (SSM Modlari)",
+         "PCA\'nin buldugu varyasyon eksenleri. 3D Slicer\'da slider ile her modu ±3σ araliginda "
+         "gezdirerek ortalama sekilten sapan bireysel varyasyonlar interaktif goruntulenebilir."),
+        ("TPS — Thin Plate Spline",
+         "Landmark noktalarini kullanarak 3D meshin elastik sekilde deforme edilmesi. "
+         "Slicer viewer\'da mavi modeli gunceller."),
+        ("sigma σ",
+         "Standart sapma. SSM\'de bir modun sigma degeri, bireyler arasindaki tipik sekil farkinin "
+         "o eksende ne buyuk oldugunu mm cinsinden gosterir."),
+    ]
+    html = '<p class="section-desc">Bu raporda gecen teknik terimlerin sade aciklamalari.</p>'
+    html += '<div class="sozluk-grid"><dl>'
+    for term, desc in kavramlar:
+        html += f'<div class="sozluk-item"><dt>{term}</dt><dd>{desc}</dd></div>'
+    html += '</dl></div>'
     return html
 
 
@@ -514,32 +718,42 @@ def main():
 
     body = f"""
     <div class="wrap">
-      <h1>Thalamic Nuclei Morphometrics — Rapor</h1>
-      <div class="subtitle">Olusturulma: {today} &nbsp;|&nbsp; Veri: Warped_Hakan (IXI dataset, 5 subject)
-        &nbsp;|&nbsp; Atlas: MNI152 T1 1mm</div>
+      <h1>Thalamic Nuclei Morphometrics — Analiz Raporu</h1>
+      <div class="subtitle">
+        Olusturulma: {today} &nbsp;|&nbsp; Veri: IXI Dataset — 5 Saglikli Birey
+        &nbsp;|&nbsp; Atlas: Hakan Talamus Atlasi (MNI152 T1 1mm)
+        &nbsp;|&nbsp; 39 Nucleus &nbsp;|&nbsp; Arastirma amaclidir
+      </div>
 
-      <h2>1. Proje Ozeti</h2>
+      <h2>Bu Calisma Hakkinda</h2>
+      <div class="card">{section_giris()}</div>
+
+      <h2>1. Ozet Bulgular</h2>
       <div class="card">{section_ozet(mrows, qrows)}</div>
 
-      <h2>2. Morphometri — Label Bazinda Ortalamalar</h2>
+      <h2>2. Her Nucleus Icin Sekil Olcumleri (Morfometri)</h2>
       <div class="card">{section_morphometrics(mrows)}</div>
 
-      <h2>3. Centroid Koordinatlari ve Subject Bazinda Hacimler</h2>
+      <h2>3. Nucleusların Beyndeki Konumu ve Birey Kiyaslamasi</h2>
       <div class="card">{section_centroid_table(mrows)}</div>
 
-      <h2>4. Subject Bazinda Detay — Hacimler (mm³)</h2>
+      <h2>4. Bireyler Arasi Hacim Karsilastirmasi</h2>
       <div class="card">{section_subject_detail(mrows)}</div>
 
-      <h2>5. Warp Kalite ve Dogruluk Analizi</h2>
+      <h2>5. Warp (Atlas Eslesme) Kalitesi</h2>
       <div class="card">{section_kalite(qrows)}</div>
 
-      <h2>6. İstatistiksel Şekil Modeli (SSM) — PCA Sonuçları</h2>
+      <h2>6. Istatistiksel Sekil Modeli (SSM) — Sekil Varyasyonu Analizi</h2>
       <div class="card">{section_ssm()}</div>
 
-      <h2>7. Sinirlamalar</h2>
+      <h2>7. Sinirlamalar ve Dikkat Edilmesi Gerekenler</h2>
       <div class="card">{section_limitasyonlar()}</div>
 
-      <footer>BrainSeg Morphometrics Pipeline &nbsp;·&nbsp; {today} &nbsp;·&nbsp; Araştırma amaçlıdır.</footer>
+      <h2>8. Terimler Sozlugu</h2>
+      <div class="card">{section_sozluk()}</div>
+
+      <footer>BrainSeg Morphometrics Pipeline &nbsp;·&nbsp; {today} &nbsp;·&nbsp;
+      IXI Dataset / Hakan Atlas &nbsp;·&nbsp; Arastirma amaclidir.</footer>
     </div>
     """
 
