@@ -52,12 +52,19 @@ def compute_geometric_morphometrics(
         compactness = 0.0
 
     # PCA eigenvalues → elongation & flatness
-    coords = np.array(np.where(mask)).T.astype(float)
-    coords *= np.array(voxel_spacing)   # mm'ye dönüştür
-    eigenvalues = _pca_eigenvalues(coords)
-    lam1, lam2, lam3 = (sorted(eigenvalues, reverse=True) + [1e-10, 1e-10, 1e-10])[:3]
-    elongation = float(lam1 / (lam3 + 1e-10))
-    flatness   = float(lam2 / (lam3 + 1e-10))
+    # < 30 voxel: PCA dejenere olur (lam3 -> 0), anlamsiz degerler uretir → None
+    MIN_PCA_VOXELS = 30
+    if n_voxels >= MIN_PCA_VOXELS:
+        coords = np.array(np.where(mask)).T.astype(float)
+        coords *= np.array(voxel_spacing)
+        eigenvalues = _pca_eigenvalues(coords)
+        lam1, lam2, lam3 = (sorted(eigenvalues, reverse=True) + [1e-10, 1e-10, 1e-10])[:3]
+        elongation = float(lam1 / (lam3 + 1e-10)) if lam3 > 1e-6 else None
+        flatness   = float(lam2 / (lam3 + 1e-10)) if lam3 > 1e-6 else None
+    else:
+        lam1, lam2, lam3 = None, None, None
+        elongation = None
+        flatness   = None
 
     # Bounding box
     bbox = _bounding_box_mm(mask, voxel_spacing)
@@ -76,9 +83,10 @@ def compute_geometric_morphometrics(
         "volume_mm3":             round(volume_mm3, 2),
         "surface_area_mm2":       round(surface_area_mm2, 2),
         "compactness":            round(float(compactness), 4),
-        "elongation":             round(elongation, 4),
-        "flatness":               round(flatness, 4),
-        "eigenvalues_mm":         [round(float(e), 3) for e in [lam1, lam2, lam3]],
+        "elongation":             round(elongation, 4) if elongation is not None else None,
+        "flatness":               round(flatness, 4)   if flatness   is not None else None,
+        "eigenvalues_mm":         [round(float(e), 3) for e in [lam1, lam2, lam3]]
+                                  if lam1 is not None else None,
         "bbox_size_mm":           bbox["size_mm"],
         "bbox_origin_vox":        bbox["origin_vox"],
         "bbox_fill_ratio":        round(fill_ratio, 4),

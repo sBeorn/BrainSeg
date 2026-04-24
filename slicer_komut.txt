@@ -1,0 +1,19 @@
+3D Slicer Python Interactor'a yapistir:
+
+exec(open(r"C:/Users/ahmet/Desktop/BrainSeg-20260327T093216Z-1-001/scripts/slicer_load_scene.py").read())
+
+------------------------------------------------------------
+Farkli subject icin: slicer_load_scene.py dosyasini ac,
+SUBJECT satirini degistir:
+
+SUBJECT = "IXI002-Guys-0828"
+SUBJECT = "IXI012-HH-1211"
+SUBJECT = "IXI013-HH-1212"
+SUBJECT = "IXI015-HH-1258"
+SUBJECT = "IXI016-Guys-0697"
+
+------------------------------------------------------------
+Tek bir label gormek icin:
+outputs/shapes/<subject>/<label>_left.vtk
+dosyasini Slicer penceresine surukle-birak.
+------------------------------------------------------------

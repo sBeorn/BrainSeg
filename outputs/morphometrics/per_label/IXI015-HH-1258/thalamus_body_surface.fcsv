@@ -1,0 +1,15 @@
+# Markups fiducial file version = 5.0
+# CoordinateSystem = RAS
+# columns = id,x,y,z,ow,ox,oy,oz,vis,sel,lock,label,desc,associatedNodeID
+vtkMRMLMarkupsFiducialNode_0,-1.624,14.389,33.770,0,0,0,1,1,1,0,thalamus_body_left_On,,
+vtkMRMLMarkupsFiducialNode_1,-13.693,-6.049,13.610,0,0,0,1,1,1,0,thalamus_body_left_Arka,,
+vtkMRMLMarkupsFiducialNode_2,-1.611,14.086,33.917,0,0,0,1,1,1,0,thalamus_body_left_Ust,,
+vtkMRMLMarkupsFiducialNode_3,-16.273,-1.955,11.146,0,0,0,1,1,1,0,thalamus_body_left_Alt,,
+vtkMRMLMarkupsFiducialNode_4,-1.531,14.076,33.813,0,0,0,1,1,1,0,thalamus_body_left_Lat,,
+vtkMRMLMarkupsFiducialNode_5,-18.903,-0.780,13.782,0,0,0,1,1,1,0,thalamus_body_left_Med,,
+vtkMRMLMarkupsFiducialNode_6,15.921,2.178,16.727,0,0,0,1,1,1,0,thalamus_body_right_On,,
+vtkMRMLMarkupsFiducialNode_7,12.656,-4.516,14.732,0,0,0,1,1,1,0,thalamus_body_right_Arka,,
+vtkMRMLMarkupsFiducialNode_8,17.212,-0.167,19.796,0,0,0,1,1,1,0,thalamus_body_right_Ust,,
+vtkMRMLMarkupsFiducialNode_9,16.089,-0.399,11.358,0,0,0,1,1,1,0,thalamus_body_right_Alt,,
+vtkMRMLMarkupsFiducialNode_10,18.519,0.902,13.151,0,0,0,1,1,1,0,thalamus_body_right_Lat,,
+vtkMRMLMarkupsFiducialNode_11,11.389,-3.040,14.518,0,0,0,1,1,1,0,thalamus_body_right_Med,,

@@ -1,0 +1,42 @@
+================================================================
+  THALAMIC NUCLEI WARP KALITE RAPORU
+================================================================
+  Subjects : 5
+  Labels   : 39
+  Toplam   : 195 olcum
+
+--Hacim Koruma Indeksi (VPI = warped/atlas) ─────────────
+  IYI   (0.70-1.30) :  156 olcum  (80.0%)
+  ORTA  (0.50-1.50) :   33 olcum  (16.9%)
+  ZAYIF (<0.50/>1.50):    6 olcum  (3.1%)
+
+--Sol/Sag Simetri ────────────────────────────────────────
+  SIMETRIK    (0.75-1.25) :  173  (88.7%)
+  ASIMETRIK   (<0.50/>1.50):    5  (2.6%)
+
+--Cross-Subject Tutarlilik (CV) — En Yuksek 10 ──────────
+  MV                 CV=0.394  ###############
+  AM                 CV=0.381  ###############
+  Hb                 CV=0.340  #############
+  sPf                CV=0.304  ############
+  AD                 CV=0.282  ###########
+  Pv                 CV=0.211  ########
+  LD                 CV=0.187  #######
+  AV                 CV=0.179  #######
+  PuI                CV=0.174  ######
+  LGNmc              CV=0.164  ######
+
+--Dikkat: En Sorunlu Labels (VPI zayif/orta) ────────────
+  Li                 5/5 subjectte zayif/orta
+  Hb                 4/5 subjectte zayif/orta
+  AM                 3/5 subjectte zayif/orta
+  Po                 3/5 subjectte zayif/orta
+  sPf                3/5 subjectte zayif/orta
+  AD                 2/5 subjectte zayif/orta
+  MDmc               2/5 subjectte zayif/orta
+  MV                 2/5 subjectte zayif/orta
+  PuI                2/5 subjectte zayif/orta
+  AV                 1/5 subjectte zayif/orta
+
+  CSV : C:\Users\ahmet\Desktop\BrainSeg-20260327T093216Z-1-001\outputs\quality\quality_report.csv
+================================================================

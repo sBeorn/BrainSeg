@@ -1,0 +1,15 @@
+# Markups fiducial file version = 5.0
+# CoordinateSystem = RAS
+# columns = id,x,y,z,ow,ox,oy,oz,vis,sel,lock,label,desc,associatedNodeID
+vtkMRMLMarkupsFiducialNode_0,-23.840,-6.570,22.208,0,0,0,1,1,1,0,LGNmc_left_On,,
+vtkMRMLMarkupsFiducialNode_1,-25.040,-7.945,21.434,0,0,0,1,1,1,0,LGNmc_left_Arka,,
+vtkMRMLMarkupsFiducialNode_2,-23.840,-7.517,22.447,0,0,0,1,1,1,0,LGNmc_left_Ust,,
+vtkMRMLMarkupsFiducialNode_3,-25.040,-7.687,21.079,0,0,0,1,1,1,0,LGNmc_left_Alt,,
+vtkMRMLMarkupsFiducialNode_4,-23.159,-7.647,21.397,0,0,0,1,1,1,0,LGNmc_left_Lat,,
+vtkMRMLMarkupsFiducialNode_5,-25.427,-7.647,21.397,0,0,0,1,1,1,0,LGNmc_left_Med,,
+vtkMRMLMarkupsFiducialNode_6,26.560,-8.311,21.479,0,0,0,1,1,1,0,LGNmc_right_On,,
+vtkMRMLMarkupsFiducialNode_7,22.960,-14.414,22.237,0,0,0,1,1,1,0,LGNmc_right_Arka,,
+vtkMRMLMarkupsFiducialNode_8,22.960,-14.041,23.160,0,0,0,1,1,1,0,LGNmc_right_Ust,,
+vtkMRMLMarkupsFiducialNode_9,25.360,-10.586,20.552,0,0,0,1,1,1,0,LGNmc_right_Alt,,
+vtkMRMLMarkupsFiducialNode_10,26.771,-8.578,21.512,0,0,0,1,1,1,0,LGNmc_right_Lat,,
+vtkMRMLMarkupsFiducialNode_11,22.283,-13.229,22.090,0,0,0,1,1,1,0,LGNmc_right_Med,,
