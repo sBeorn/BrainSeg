@@ -1,233 +1,230 @@
 ================================================================
-  3D SLICER KOMUT KILAVUZU — BrainSeg Morphometrics
-  Thalamic Nuclei Görselleştirme ve SSM Analizi
+  3D SLICER KOMUT KILAVUZU — STN Morfometri ve Görselleştirme
+  Subthalamic Nucleus (STN) Analizi — DBS Cerrahisi Bağlamı
 ================================================================
 
-Bu dosyada 3D Slicer üzerinde kullanacağınız tüm komutlar
-ve adım adım talimatlar yer almaktadır.
+NOT: Bu proje yalnızca STN (atlas etiketi: STh) üzerine
+     odaklanmaktadır. GPi bu atlasta mevcut değildir.
+     VIM karşılığı VLpv'dir (ayrı analizde kullanılabilir).
 
 ================================================================
-  ÖNKOŞULLAR — Slicer'ı açmadan önce bunlar yapılmış olmalı
+  ADIM 1 — Önce terminalde çalıştırın (bir kez yeterli)
 ================================================================
 
-Aşağıdaki Python scriptleri sırayla çalıştırılmış olmalıdır.
-(Proje klasöründe terminal açarak çalıştırın)
+Proje klasöründe terminal açın:
+  C:\Users\ahmet\Desktop\BrainSeg-20260327T093216Z-1-001\
 
-  1) python scripts/compute_morphometrics.py
-       → Hacim, yüzey alanı, kompaktlık vb. hesaplar.
-       → Çıktı: outputs/morphometrics/morphometrics_all.csv
-                outputs/morphometrics/<birey>_surface.fcsv
+Sırayla çalıştırın:
 
-  2) python scripts/export_3d_shapes.py
-       → Her nucleus için VTK 3D mesh dosyalarını üretir.
-       → Çıktı: outputs/shapes/<birey>/<nucleus>_left.vtk
-                outputs/shapes/<birey>/<nucleus>_right.vtk
+  1) python scripts/export_3d_shapes.py
+       → STN (STh_left.vtk, STh_right.vtk) dahil tüm VTK
+         mesh dosyalarını üretir.
+       → Çıktı: outputs/shapes/<birey>/STh_left.vtk
+                outputs/shapes/<birey>/STh_right.vtk
 
-  3) python scripts/compute_ssm.py
-       → Şekil varyasyonunu PCA ile modeller (SSM).
-       → Çıktı: outputs/ssm/<nucleus>_ssm.npz
+  2) python -X utf8 scripts/compute_stn_morphometrics.py
+       → 5 birey × sol/sağ STN morfometrisini hesaplar.
+       → Çıktı: outputs/stn/stn_morphometrics.csv
+                outputs/stn/stn_validation_report.txt
+                outputs/stn/<birey>_STN_centroids.fcsv
+                outputs/stn/<birey>_STN_axes.fcsv
 
-  4) python scripts/generate_report.py
-       → HTML raporu oluşturur.
-       → Çıktı: outputs/report.html
-
-================================================================
-  3D SLICER'I AÇMA VE PYTHON KONSOLU
-================================================================
-
-  1. 3D Slicer uygulamasını açın.
-  2. Üst menüden:  View → Python Interactor
-     (veya klavye kısayolu: Ctrl+3)
-  3. Alt kısımda açılan Python konsol penceresine
-     aşağıdaki komutları yapıştırın ve Enter'a basın.
+  NOT: Bu adımlar tamamlanmadan Slicer'da eksik veri görürsünüz.
 
 ================================================================
-  KOMUT 1 — Tüm Sahneleri Yükle (Anatomik Görüntüleyici)
+  ADIM 2 — 3D Slicer'ı açın ve Python konsoluna geçin
 ================================================================
 
-Bir bireyin tüm thalamic nucleus meshlerini aynı anda 3D
-sahneye yükler. MRI görüntüsü olmadan sadece nukleuslar görünür.
+  1. 3D Slicer'ı başlatın  (versiyon: 5.11.0-2026-02-27)
+  2. Üst menü: View → Python Interactor   (veya Ctrl+3)
+  3. Alttaki Python konsol kutusuna komutları yapıştırın.
 
-  KOMUT (Python konsoluna yapıştırın):
+================================================================
+  KOMUT — STN Görselleştirici
+================================================================
+
+Bir bireyin STN meshlerini, centroid noktalarını ve
+MRI arka planını 3 panelli düzende gösterir.
+
   ─────────────────────────────────────────────────────────────
-  exec(open(r"C:/Users/ahmet/Desktop/BrainSeg-20260327T093216Z-1-001/scripts/slicer_load_scene.py").read())
+  SUBJECT = "IXI002-Guys-0828"
+  exec(open(r"C:/Users/ahmet/Desktop/BrainSeg-20260327T093216Z-1-001/scripts/slicer_stn_viewer.py").read())
   ─────────────────────────────────────────────────────────────
-
-  Varsayılan birey: IXI002-Guys-0828
-
-  FARKLI BİREY YÜKLEMEK İÇİN:
-  scripts/slicer_load_scene.py dosyasını açın, üstteki
-  SUBJECT satırını değiştirin, sonra komutu tekrar çalıştırın.
 
   Mevcut bireyler:
-    SUBJECT = "IXI002-Guys-0828"
-    SUBJECT = "IXI012-HH-1211"
-    SUBJECT = "IXI013-HH-1212"
-    SUBJECT = "IXI015-HH-1258"
-    SUBJECT = "IXI016-Guys-0697"
+    IXI002-Guys-0828   (PASS)
+    IXI012-HH-1211     (PASS)
+    IXI013-HH-1212     (PASS)
+    IXI015-HH-1258     (WARN — hacim sınırda, görsel kontrol önerilir)
+    IXI016-Guys-0697   (PASS — sağ STN x=+18.28mm, native uzayda normal)
 
-  NE GÖRÜRSÜNÜZ?
-  → Sol, sağ taraf tüm nucleus meshler farklı renklerle görünür.
-  → 3D görünümde fare ile döndürebilir, yakınlaştırabilirsiniz.
-  → Sahne Hiyerarşisi panelinde her nucleus ayrı node olarak listelenir.
+  EKRAN DÜZENİ:
+  ┌──────────────┬────────────────────┬──────────────┐
+  │  Sol         │      Orta          │  Sag         │
+  │  2D Dilim    │      3D Sahne      │  Centroid    │
+  │  (Yon seçici │  (sol STN=kırmızı  │  (Coronal,   │
+  │   ile değişir│   sağ STN=mavi     │  her iki STN │
+  │              │   thalamus=gri     │  görünür)    │
+  │              │   cetvel=sarı)     │              │
+  └──────────────┴────────────────────┴──────────────┘
 
-================================================================
-  KOMUT 2 — İstatistiksel Şekil Modeli Görüntüleyici (SSM)
-================================================================
+  Ayrıca ekranın sağ alt köşesinde küçük bir
+  "2D Dilim Yonu" penceresi açılır:
+  ┌──────────────────────────────────────────┐
+  │  Sol panel yönünü seç:                   │
+  │  [ Üst (Axial) ] [Yan (Sagittal)] [Ön]  │
+  └──────────────────────────────────────────┘
 
-P1–P4 slider'ları ile nucleus şekillerini interaktif olarak
-keşfetmenizi sağlayan tam arayüzü açar.
+  RENK KODLARI:
+    Kırmızı mesh  = Sol STN
+    Mavi mesh     = Sağ STN
+    Gri mesh      = Thalamus body (yarı saydam, anatomik referans)
+    Altın nokta   = Centroid (merkez noktası)
+    Sarı çizgi    = L/R bilateral cetvel (arası mesafe)
+    2D kesimlerde renkli kesit çizgileri görünür.
 
-  KOMUT (Python konsoluna yapıştırın):
-  ─────────────────────────────────────────────────────────────
-  exec(open(r"C:/Users/ahmet/Desktop/BrainSeg-20260327T093216Z-1-001/scripts/slicer_ssm_viewer.py").read())
-  ─────────────────────────────────────────────────────────────
+  ARKAPLAN:
+    atlas_warped.nii.gz kullanılır — label koordinatlarıyla
+    garantili aynı uzayda olduğu için centroid noktaları
+    doğru yerde görünür.
 
-  EKRAN DÜZENİ — 4 bölge açılır:
-  ┌─────────────────────┬─────────────────────┐
-  │  GRİ  — Referans    │  MAVİ — SSM Modeli  │
-  │  (ortalamaya en     │  (slider ile         │
-  │  yakın birey)       │  şekil değişir)      │
-  ├─────────────────────┼─────────────────────┤
-  │  PCA Scatter Plot   │  SSM Skor Tablosu   │
-  │  (5 birey dağılımı) │  (birey skorları)   │
-  └─────────────────────┴─────────────────────┘
-
-  SOL PANEL — Kontroller:
-  ┌─────────────────────────────────────────────────────────┐
-  │ Yapı (Label): [açılır menü — nucleus seçin]             │
-  │ Referans Mesh: [açılır menü — birey seçin]              │
-  │                                                         │
-  │ Model Parametreleri (b, σ birimi):                      │
-  │  P1 [────────●────────]  +0.00σ   σ=x.xx (%YY.Y)       │
-  │  P2 [────────●────────]  +0.00σ   σ=x.xx (%YY.Y)       │
-  │  P3 [────────●────────]  +0.00σ   σ=x.xx (%YY.Y)       │
-  │  P4 [────────●────────]  +0.00σ   σ=x.xx (%YY.Y)       │
-  │                                                         │
-  │  [↺ Ortalamaya Dön]    [▶ Subject Göster]               │
-  └─────────────────────────────────────────────────────────┘
-
-  P1, P2, P3, P4 NE YAPAR?
-  ─────────────────────────────────────────────────────────
-  Her P (Principal Component / Ana Bileşen) bireyler arası
-  şekil farkının en büyük kaynağını sırayla temsil eder.
-
-  • P1: Şekil değişiminin en büyük kaynağı.
-        Slider sola/sağa çekilince mavi model bu yönde
-        küçülür/büyür veya uzar/kısalır.
-  • P2: İkinci büyük varyasyon yönü.
-  • P3, P4: Daha küçük, daha ince farklılıklar.
-
-  Slider değeri σ (sigma) cinsinden:
-    0.00σ  = ortalama şekil
-   +1.00σ  = ortalamadan 1 standart sapma ötede
-   -1.00σ  = ortalamadan 1 standart sapma geride
-   Aralık: −3σ ile +3σ arası
-
-  Yanındaki "%YY.Y" o P'nin toplam varyasyonun yüzde
-  kaçını açıkladığını gösterir. Yüksekse o P önemlidir.
-
-  DÜĞMELER:
-  • [↺ Ortalamaya Dön]   → Tüm slider'ları 0'a sıfırlar.
-  • [▶ Subject Göster]   → Seçili bireyin gerçek PCA konumunu
-                           mavi görünüme yükler.
+  KONTROL EDİLECEKLER (Slicer'da):
+    □ STN kırmızı/mavi mesh thalamus gri meshinin altında mı?
+    □ Sarı cetvel ~20-30 mm arası mı? (sağlıklı beklenti)
+    □ Coronal panelde altın noktalar mesh içinde mi?
+    □ Konsolda doğrulama durumu PASS mı?
 
 ================================================================
-  KOMUT 3 — Tek Bir Nucleus Yükle (Sürükle-Bırak)
+  DOGRULAMA — Nelere Bakmalısınız?
 ================================================================
 
-Sadece tek bir yapıyı 3D Slicer'da görmek istiyorsanız:
+  3D SAHNEDE:
+    □ Sol ve sağ STN yaklaşık aynı yükseklikte mi?
+    □ Her iki mesh benzer büyüklükte mi? (<20% fark normal)
+    □ Lens/badem biçimli yapı var mı?
 
-  1. Windows Gezgini'nde şu klasörü açın:
-     outputs\shapes\<birey>\
+  CENTROID PANELİNDE (Coronal):
+    □ Her iki altın nokta görünüyor mu?
+    □ Noktalar meshin içinde mi?
+    □ Sol/sağ simetrik konumda mı?
 
-  2. İstediğiniz dosyayı 3D Slicer penceresine sürükleyin:
-     Örnek:
-       outputs\shapes\IXI002-Guys-0828\AV_left.vtk   (sol AV)
-       outputs\shapes\IXI002-Guys-0828\AV_right.vtk  (sağ AV)
-       outputs\shapes\IXI002-Guys-0828\CL_left.vtk   (sol CL)
-
-  Dosya formatı: <nucleus_adı>_<taraf>.vtk
-  Taraf: left = sol hemisfer, right = sağ hemisfer
-
-================================================================
-  KOMUT 4 — Raporu Aç (Tarayıcıda)
-================================================================
-
-Tüm analiz sonuçlarını içeren HTML raporu açmak için:
-
-  Windows Gezgini'nde şu dosyaya çift tıklayın:
-    outputs\report.html
-
-  Veya Python konsolundan:
-  ─────────────────────────────────────────────────────────────
-  import subprocess, os
-  subprocess.Popen([r"outputs\report.html"], shell=True,
-      cwd=r"C:/Users/ahmet/Desktop/BrainSeg-20260327T093216Z-1-001")
-  ─────────────────────────────────────────────────────────────
-
-  Raporu güncellemek için terminalde:
-    python scripts/generate_report.py
+  2D DİLİM PANELİNDE:
+    □ Axial kesitte STN beyaz madde/bazal ganglia düzeyinde mi?
+    □ Mesh kesit çizgisi atlas yapısıyla örtüşüyor mu?
 
 ================================================================
-  MEVCUT NUCLEUS LİSTESİ (39 adet)
+  FCSV DOSYALARINI MANUEL AÇMAK
 ================================================================
 
-  Sol/Sag her biri icin VTK dosyasi mevcut:
+Slicer'a fcsv yüklemek için:
+  File → Add Data → dosyayı seçin → Open
 
-  AD    AV    AM    CeM   CL    CM    Hb    LD
-  LGNmc LGNpc Li    LP    MDmc  MDpc  MGN   mtt
-  MV    Pf    Po    PuA   PuI   PuL   PuM   Pv
-  RN    SG    sPf   STh   VAmc  VApc  VLa   VLpd
-  VLpv  VM    VPI   VPLa  VPLp  VPM
+  outputs/stn/<birey>_STN_centroids.fcsv
+      → Yalnızca sol/sağ centroid noktaları (2 nokta, temiz)
 
-  En büyük (güvenilir): CL, AV, MDpc, PuM, VLpd, VPLa
-  En küçük (dikkatli):  AD, MV, Pv, sPf  (< 20 mm³)
+  outputs/stn/<birey>_STN_axes.fcsv
+      → Uzun eksen uç noktaları (4 nokta, isteğe bağlı)
+
+  NOT: İkisini aynı anda açmayın — centroid görünümü karışır.
+
+================================================================
+  VTK MESHLERİNİ MANUEL AÇMAK
+================================================================
+
+  File → Add Data → STh_left.vtk veya STh_right.vtk
+
+  Dosya yolu:
+    outputs\shapes\IXI002-Guys-0828\STh_left.vtk
+    outputs\shapes\IXI002-Guys-0828\STh_right.vtk
+
+  Yükledikten sonra:
+    Models modülü → renk ve opaklık ayarlayın.
+
+================================================================
+  DOĞRULAMA RAPORUNU OKUMAK
+================================================================
+
+  Terminalde:
+    type outputs\stn\stn_validation_report.txt
+
+  Veya herhangi bir metin editörüyle:
+    outputs\stn\stn_validation_report.txt
+
+  CSV verisi:
+    outputs\stn\stn_morphometrics.csv
+    (Excel veya pandas ile açabilirsiniz)
 
 ================================================================
   SIK KARŞILAŞILAN SORUNLAR
 ================================================================
 
-  SORUN: "SSM verisi bulunamadı" hatası
-  ÇÖZÜM: Önce terminalde çalıştırın:
-         python scripts/compute_ssm.py
+  SORUN: Centroid noktaları STN meshin üstünde görünmüyor
+  ÇÖZÜM: atlas_warped.nii.gz arka plan olarak kullanıldığından
+         emin olun. T2/T1 raw dosyaları farklı koordinat
+         uzayında olabilir.
 
   SORUN: "mesh bulunamadı" uyarısı
-  ÇÖZÜM: Önce terminalde çalıştırın:
-         python scripts/export_3d_shapes.py
+  ÇÖZÜM: python scripts/export_3d_shapes.py
 
-  SORUN: Slicer'da sahnede hiçbir şey görünmüyor
+  SORUN: "fcsv bulunamadı" uyarısı
+  ÇÖZÜM: python -X utf8 scripts/compute_stn_morphometrics.py
+
+  SORUN: 3D sahnede hiçbir şey görünmüyor
   ÇÖZÜM: 3D görünümde klavyeden 'R' tuşuna basın
-         (kamerayı sıfırlar / fit to scene)
+         (kamerayı sahneye sığdırır)
 
-  SORUN: SSM viewer açılıyor ama model değişmiyor
-  ÇÖZÜM: Dropdown'dan farklı bir nucleus seçip
-         tekrar ilk nucleusa dönün.
+  SORUN: Yon seçici pencere görünmüyor
+  ÇÖZÜM: Slicer penceresinin arkasında kalmış olabilir,
+         görev çubuğundan "2D Dilim Yonu" penceresini seçin.
 
   SORUN: Konsola komut yapıştırılmıyor
-  ÇÖZÜM: Python Interactor altındaki metin kutusuna
-         tıkladıktan sonra Ctrl+V ile yapıştırın.
+  ÇÖZÜM: Python Interactor kutusuna tıklayıp Ctrl+V
 
 ================================================================
-  PROJE KLASÖR YAPISI
+  PROJE KLASÖR YAPISI (STN Odakli)
 ================================================================
 
   BrainSeg-20260327T093216Z-1-001\
   ├── scripts\
-  │   ├── compute_morphometrics.py   ← morphometri hesapla
-  │   ├── export_3d_shapes.py        ← VTK mesh üret
-  │   ├── compute_ssm.py             ← SSM/PCA hesapla
-  │   ├── generate_report.py         ← HTML rapor üret
-  │   ├── compute_quality.py         ← VPI kalite hesapla
-  │   ├── slicer_load_scene.py       ← Slicer sahne yükle
-  │   └── slicer_ssm_viewer.py       ← Slicer SSM arayüzü
+  │   ├── compute_stn_morphometrics.py  ← STN morfometri + dogrulama
+  │   ├── export_3d_shapes.py           ← VTK mesh üret (tüm labellar)
+  │   ├── slicer_stn_viewer.py          ← Slicer STN görselleştirici
+  │   └── slicer_komut.txt              ← Bu dosya
   ├── outputs\
-  │   ├── report.html                ← Ana rapor (tarayıcıda aç)
-  │   ├── morphometrics\             ← CSV + FCSV dosyaları
-  │   ├── shapes\                    ← VTK mesh dosyaları
-  │   ├── ssm\                       ← SSM NPZ dosyaları
-  │   └── quality\                   ← VPI kalite raporu
-  ├── data\atlas\                    ← MNI152 + Hakan atlas
-  └── slicer_komut.txt               ← Bu dosya
+  │   └── stn\
+  │       ├── stn_morphometrics.csv           ← Tam metrik tablosu
+  │       ├── stn_validation_report.txt       ← PASS/WARN/FAIL raporu
+  │       ├── <birey>_STN_centroids.fcsv      ← Slicer centroid noktaları
+  │       └── <birey>_STN_axes.fcsv           ← Slicer eksen uçları
+  │   └── shapes\
+  │       └── <birey>\
+  │           ├── STh_left.vtk                ← Sol STN mesh
+  │           ├── STh_right.vtk               ← Sağ STN mesh
+  │           ├── thalamus_body_left.vtk      ← Sol thalamus (Slicer'da gri)
+  │           └── thalamus_body_right.vtk     ← Sağ thalamus (Slicer'da gri)
+  ├── data\
+  │   ├── atlas\labels\left\STh.nii.gz        ← MNI referans STN
+  │   └── subjects\<birey>\
+  │       ├── raw\T1.nii.gz                   ← Ham T1 MRI
+  │       ├── raw\T2.nii.gz                   ← Ham T2 MRI
+  │       └── warped\
+  │           ├── atlas_warped.nii.gz          ← Slicer arkaplanı
+  │           └── labels\
+  │               ├── left_STh_warped.nii.gz  ← Sol STN maskesi
+  │               └── right_STh_warped.nii.gz ← Sağ STN maskesi
+  └── slicer_komut.txt
+
+  STN Beklenen Değerler (sağlıklı yetişkin):
+    Hacim      : 100 – 250 mm³
+    Uzun eksen : 9 – 14 mm
+    Elongasyon : > 4.0
+    Atlas centroid (MNI152, gerçek maske):
+      sol : (-11.8, -12.9, -7.2) mm
+      sağ : (+13.3, -13.1, -7.1) mm
+    NOT: Subject koordinatları native T1 uzayındadır, MNI ile
+         doğrudan karşılaştırma yapılmaz — yalnızca referanstır.
+
+  Bilateral STN Mesafesi (sağlıklı beklenti):
+    L-R centroid arası : ~20-30 mm  (Slicer'da sarı cetvel ile görünür)
 
 ================================================================

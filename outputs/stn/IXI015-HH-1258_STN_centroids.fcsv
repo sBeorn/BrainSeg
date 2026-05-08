@@ -1,0 +1,5 @@
+# Markups fiducial file version = 5.0
+# CoordinateSystem = RAS
+# columns = id,x,y,z,ow,ox,oy,oz,vis,sel,lock,label,desc,associatedNodeID
+vtkMRMLMarkupsFiducialNode_0,-10.732,13.696,15.318,0,0,0,1,1,1,0,STN_left_centroid,,
+vtkMRMLMarkupsFiducialNode_1,10.101,14.711,15.057,0,0,0,1,1,1,0,STN_right_centroid,,

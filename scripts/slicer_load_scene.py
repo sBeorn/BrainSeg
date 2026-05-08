@@ -26,8 +26,42 @@ except ImportError:
 # AYARLAR
 # ─────────────────────────────────────────────────────────────────────────────
 
-SUBJECT = "IXI002-Guys-0828"
-# Diger: IXI012-HH-1211 / IXI013-HH-1212 / IXI015-HH-1258 / IXI016-Guys-0697
+SUBJECTS = [
+    "IXI002-Guys-0828",
+    "IXI012-HH-1211",
+    "IXI013-HH-1212",
+    "IXI015-HH-1258",
+    "IXI016-Guys-0697",
+]
+
+# ── Birey Seçim Penceresi ────────────────────────────────────────────────────
+try:
+    import qt as _qt
+    _dlg    = _qt.QDialog(slicer.util.mainWindow())
+    _dlg.setWindowTitle("Birey Seç")
+    _dlg.setMinimumWidth(320)
+    _layout = _qt.QVBoxLayout(_dlg)
+
+    _lbl    = _qt.QLabel("Görüntülemek istediğiniz bireyi seçin:")
+    _layout.addWidget(_lbl)
+
+    _combo  = _qt.QComboBox()
+    for s in SUBJECTS:
+        _combo.addItem(s)
+    _layout.addWidget(_combo)
+
+    _btn    = _qt.QPushButton("Yükle")
+    _btn.connect("clicked()", _dlg.accept)
+    _layout.addWidget(_btn)
+
+    if _dlg.exec_():
+        SUBJECT = SUBJECTS[_combo.currentIndex]
+    else:
+        raise SystemExit("Seçim iptal edildi.")
+except Exception as _e:
+    # Qt kullanılamıyorsa ilk bireyi varsayılan al
+    SUBJECT = SUBJECTS[0]
+    print(f"  Seçim penceresi açılamadı, varsayılan: {SUBJECT}  ({_e})")
 
 BASE_DIR   = r"C:/Users/ahmet/Desktop/BrainSeg-20260327T093216Z-1-001"
 SHAPES_DIR = os.path.join(BASE_DIR, "outputs", "shapes", SUBJECT)
@@ -38,9 +72,11 @@ ATLAS_PATH = os.path.join(BASE_DIR, "data", "subjects", SUBJECT, "warped", "atla
 MESH_OPACITY   = 0.75   # nucleus mesh seffafligi
 BRAIN_OPACITY  = 0.25   # beyin yuzeyinin seffafligi — dusuk tutulur ki nuclei iceriden gorunsun
 PIN_SCALE        = 3.0    # centroid nokta boyutu (mesh icinde)
-PIN_TEXT_SCALE   = 0.0    # centroid etiketi gizli (kalabalik onlenir)
-SURF_PIN_SCALE   = 2.5    # yuzey nokta boyutu (mesh uzerinde)
-SURF_TEXT_SCALE  = 2.5    # yuzey nokta etiketi: "VApc_left_Ust" gibi gorunur
+PIN_TEXT_SCALE   = 0.0    # centroid etiketi gizli
+SURF_PIN_SCALE   = 1.5    # yuzey nokta boyutu
+SURF_TEXT_SCALE  = 0.0    # yuzey etiketi gizli
+SURF_VISIBLE     = False  # yuzey landmark noktalari varsayilan: KAPALI
+                          # Acmak icin: True yap veya Slicer'da Data panelinden goster
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Her label icin renk paleti (39 nucleus)
@@ -302,15 +338,15 @@ else:
                 surf_count += 1
 
         dn = mNode.GetDisplayNode()
-        dn.SetSelectedColor(1.0, 1.0, 0.0)   # seciliyken sari
-        dn.SetColor(1.0, 0.9, 0.0)            # sari — her renkteki mesh uzerinde gorulur
+        dn.SetSelectedColor(1.0, 1.0, 0.0)
+        dn.SetColor(1.0, 0.9, 0.0)
         dn.SetGlyphScale(SURF_PIN_SCALE)
         dn.SetTextScale(SURF_TEXT_SCALE)
-        dn.SetGlyphType(13)          # Sphere3D
-        dn.SetVisibility(True)
+        dn.SetGlyphType(13)
+        dn.SetVisibility(SURF_VISIBLE)
 
-    print(f"  {surf_count} yuzey nokta yuklendi ({len(surf_groups)} label, her biri 6 yon x 2 taraf).")
-    print(f"  Etiketler: <label>_<taraf>_<yon>  ornek: VApc_left_Ust")
+    durum = "ACIK" if SURF_VISIBLE else "KAPALI (Data panelinden acilabilir)"
+    print(f"  {surf_count} yuzey nokta yuklendi — gorunurluk: {durum}")
 
 
 # ── 6. Gorunum Ayarlari ───────────────────────────────────────────────────────
