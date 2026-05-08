@@ -146,10 +146,11 @@ def _validation_status(subject):
     try:
         with open(RPT_PATH, encoding="utf-8") as f:
             rpt = f.read()
-        m = re.search(
-            r'──\s*' + re.escape(subject) + r'.*?└──\s*Genel:\s*(\w+)',
-            rpt, re.DOTALL
-        )
+        # Subject adini bul, ondan sonra gelen ilk "Genel:" satirini oku
+        idx = rpt.find(subject)
+        if idx < 0:
+            return None
+        m = re.search(r'Genel:\s*(\w+)', rpt[idx:])
         return m.group(1) if m else None
     except Exception:
         return None
@@ -209,9 +210,9 @@ def _load_scene(subject):
 
     # 3. Thalamus body — yari saydam gri
     tl = _load_mesh(os.path.join(shapes_dir, "thalamus_body_left.vtk"),
-                    "Thal_sol", (0.75, 0.75, 0.75), opacity=0.13, slice_intersect=False)
+                    "Thal_sol", (0.78, 0.78, 0.78), opacity=0.22, slice_intersect=False)
     tr = _load_mesh(os.path.join(shapes_dir, "thalamus_body_right.vtk"),
-                    "Thal_sag", (0.75, 0.75, 0.75), opacity=0.13, slice_intersect=False)
+                    "Thal_sag", (0.78, 0.78, 0.78), opacity=0.22, slice_intersect=False)
     n_thal = sum(x is not None for x in [tl, tr])
     if n_thal:
         print(f"  Thalamus: {n_thal}/2  (gri, anatomik referans)")
@@ -228,7 +229,7 @@ def _load_scene(subject):
         mn.SetName(f"STN_centroid_{subject}")
         d = mn.GetDisplayNode()
         if d:
-            d.SetGlyphType(13); d.SetGlyphScale(4.0); d.SetTextScale(4.5)
+            d.SetGlyphType(13); d.SetGlyphScale(3.5); d.SetTextScale(0)
             d.SetColor(1.0, 0.80, 0.0); d.SetSelectedColor(1.0, 1.0, 0.3)
             d.SetVisibility(True)
             if hasattr(d, "SetVisibility2D"):
@@ -254,8 +255,8 @@ def _load_scene(subject):
             r.AddControlPoint(*cc["right"])
             rd = r.GetDisplayNode()
             if rd:
-                rd.SetColor(1.0, 0.95, 0.2); rd.SetTextScale(3.5)
-                rd.SetGlyphScale(2.5); rd.SetLineThickness(0.4)
+                rd.SetColor(1.0, 0.95, 0.2); rd.SetTextScale(2.0)
+                rd.SetGlyphScale(2.0); rd.SetLineThickness(0.4)
                 rd.SetVisibility(True)
             if _NP:
                 bilateral_dist = round(float(
@@ -280,7 +281,7 @@ def _load_scene(subject):
         node.AddControlPoint(*p2)
         d = node.GetDisplayNode()
         if d:
-            d.SetColor(*col); d.SetTextScale(3.0)
+            d.SetColor(*col); d.SetTextScale(2.0)
             d.SetGlyphScale(2.0); d.SetLineThickness(0.6)
             d.SetVisibility(_g["axis_visible"].get(side, False))
         _g["axis_nodes"][side] = node
