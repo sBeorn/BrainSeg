@@ -475,7 +475,7 @@ load_btn.setStyleSheet(
     "QPushButton{background:#4caf50;color:white;border-radius:4px;font-size:12px;font-weight:bold;padding:6px 14px;} QPushButton:hover{background:#5cb860;}"
 )
 load_btn.setFixedHeight(32)
-load_btn.clicked.connect(lambda: _load_scene(combo.currentText()))
+load_btn.clicked.connect(lambda: _load_scene(combo.currentText))
 row_s.addWidget(load_btn)
 vbox.addLayout(row_s)
 
